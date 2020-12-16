@@ -111,8 +111,32 @@ def gradient_wrt_data_OE(model,device,data,lbl):
     return grad.data.detach()
 
 
+def gradient_wrt_data_OE_BCE(model,device,data,lbl):
+    # Manually Normalize
+    mean = torch.tensor([0.5], dtype=torch.float32).view([1,1,1]).to(device)
+    std = torch.tensor([0.5], dtype=torch.float32).view([1,1,1]).to(device)
+    dat = (data-mean)/std
+    # Forward pass through the model
+    dat.requires_grad = True
+    out = model(dat)
+    # Calculate loss
+    criterion = BCELoss()
+    loss = criterion(out, lbl)
+    # zero all old gradients in the model
+    model.zero_grad()
+    # Back prop the loss to calculate gradients
+    loss.backward()
+    # Extract gradient of loss w.r.t data
+    data_grad = dat.grad.data
+    # Unnorm gradients back into [0,1] space
+    #   As shown in foolbox/models/base.py
+    grad = data_grad / std
+    return grad.data.detach()
+
+
+
 # Projected Gradient Descent Attack (PGD) with random start
-def PGD_Linf_attack(model, device, dat, lbl, eps, alpha, iters, withOE=False):
+def PGD_Linf_attack(model, device, dat, lbl, eps, alpha, iters, withOE=False, cls_method='softmax'):
     x_nat = dat.clone().detach()
     # Randomly perturb within small eps-norm ball
     x_adv = dat.clone().detach() + torch.FloatTensor(dat.shape).uniform_(-eps, eps).to(device)
@@ -123,10 +147,12 @@ def PGD_Linf_attack(model, device, dat, lbl, eps, alpha, iters, withOE=False):
         model.zero_grad()
         # Calculate gradient w.r.t. data
         grad=None
-        if withOE:
+        if cls_method == 'ilr':
+            grad = gradient_wrt_data_OE_BCE(model,device,x_adv.clone().detach(),lbl.clone().detach())
+        elif withOE:
             grad = gradient_wrt_data_OE(model,device,x_adv.clone().detach(),lbl.clone().detach())
         else:
-            grad = gradient_wrt_data(model,device,x_adv.clone().detach(),lbl)
+            grad = gradient_wrt_data(model, device, x_adv.clone().detach(),lbl.clone().detach())
         # Perturb by the small amount a
         x_adv = x_adv + alpha*grad.sign()
         # Clip the perturbations w.r.t. the original data so we still satisfy l_infinity
@@ -442,9 +468,9 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
 
     #LBLSMOOTHING_PARAM = 0.1 # Only for label smoothing
     #MIXUP_ALPHA = 0.1  # Only for mixup
-    AT_EPS = 2./255.; AT_ALPHA = 0.5/255.; AT_ITERS = 7
-    #AT_EPS = 4./255.; AT_ALPHA = 1./255. ; AT_ITERS = 7
-    # AT_EPS = 8./255.; AT_ALPHA = 2./255. ; AT_ITERS = 7
+    #AT_EPS = 2./255.; AT_ALPHA = 0.5/255.; AT_ITERS = 7
+    AT_EPS = 4./255.; AT_ALPHA = 1./255. ; AT_ITERS = 7
+    #AT_EPS = 8./255.; AT_ALPHA = 2./255. ; AT_ITERS = 7
 
     best_acc = 0.
 
@@ -476,13 +502,15 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
                 #mixed_data = torch.clamp(mixed_data, 0, 1);
 
             # ADVERSARIALLY PERTURB DATA
-            data = PGD_Linf_attack(net, device, data.clone().detach(), labels,
-                                       eps=AT_EPS, alpha=AT_ALPHA, iters=AT_ITERS)
             if net.cls_method == 'ilr':
+                data = PGD_Linf_attack(net, device, data.clone().detach(), labels,
+                                       eps=AT_EPS, alpha=AT_ALPHA, iters=AT_ITERS, cls_method='ilr')
                 oedata = PGD_Linf_attack(net, device, oedata.clone().detach(), oelabels,
-                                         eps=AT_EPS, alpha=AT_ALPHA, iters=AT_ITERS)
+                                         eps=AT_EPS, alpha=AT_ALPHA, iters=AT_ITERS, withOE=True, cls_method='ilr')
             elif net.cls_method == 'softmax':
-                oedata = PGD_Linf_attack(net, device, oedata.clone().detach(),
+                data = PGD_Linf_attack(net, device, data.clone().detach(), labels,
+                                       eps=AT_EPS, alpha=AT_ALPHA, iters=AT_ITERS)
+                oedata = PGD_Linf_attack(net, device, oedata.clone().detach(), oelabels,
                                          eps=AT_EPS, alpha=AT_ALPHA,
                                          iters=AT_ITERS, withOE=True)
             else:
@@ -534,10 +562,12 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
             # Measure accuracy and loss for this batch
             try:
                 preds = net.predict(outputs)
+                oepreds = net.predict(oeoutputs)
             except:
                 _, preds= outputs.max(1)
-            running_total += labels.size(0)
+            running_total += labels.size(0) + oelabels.size(0)
             running_correct += preds.eq(labels).sum().item()
+            running_correct += oepreds.eq(oelabels).sum().item()
             #running_correct += (lam * preds.eq(targets_a.data).cpu().sum().float() + (1 - lam) * preds.eq(targets_b.data).cpu().sum().float()) # MIXUP
             running_loss_sum += loss.item()
 

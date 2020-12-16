@@ -71,7 +71,7 @@ CLS = ['ilr']
 OODS = ['baseline', 'odin', 'odin_ipp', 'mahala', 'mahala_ipp']
 STAT_accuracy = {}
 STAT_ood = {}
-SAVE_CKPT = "ckpts/bce_ensemble_exp0/"
+SAVE_CKPT = "ckpts/bce_ensemble_advoe_exp0/"
 
 for c in CLS:
     STAT_accuracy[c] = []
@@ -103,7 +103,7 @@ for cls_method in CLS:
                 splits = create_split.create_bce_dataset_splits(
                     dataset_root, K, holdout_classes, submod, advOE=True)
                 ID_trainlist, ID_testlist, OOD_testlist, OE_trainlist = splits
-                ID_trainloader, ID_testloader, OOD_testloader OE_trainloader = \
+                ID_trainloader, ID_testloader, OOD_testloader, OE_trainloader = \
                     create_split.get_data_loaders(
                         ID_trainlist, ID_testlist, OOD_testlist, OE_trainlist,
                         batch_size=batch_size)
