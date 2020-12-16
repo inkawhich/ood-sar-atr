@@ -1,0 +1,2121 @@
+**********************************************************
+Starting Iter: 0 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [4]
+Remaining Classes:  [0, 1, 2, 3, 5, 6, 7, 8, 9]
+# ID Train:  731
+# ID Test:   486
+# OOD Test:  53
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[0] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.14090 TrainLoss: 2.31520 %-Real: 0.0
+	[0] Epoch [ 0 / 60 ]; TestAccuracy: 0.11934 TestLoss: 2.20453
+Starting Epoch 1/60. lr = 0.001
+[0] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.20793 TrainLoss: 2.12711 %-Real: 0.0
+	[0] Epoch [ 1 / 60 ]; TestAccuracy: 0.12346 TestLoss: 2.27150
+Starting Epoch 2/60. lr = 0.001
+[0] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.32695 TrainLoss: 1.74213 %-Real: 0.0
+	[0] Epoch [ 2 / 60 ]; TestAccuracy: 0.12346 TestLoss: 2.32845
+Starting Epoch 3/60. lr = 0.001
+[0] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.40766 TrainLoss: 1.51086 %-Real: 0.0
+	[0] Epoch [ 3 / 60 ]; TestAccuracy: 0.31893 TestLoss: 2.29244
+Starting Epoch 4/60. lr = 0.001
+[0] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.53215 TrainLoss: 1.18752 %-Real: 0.0
+	[0] Epoch [ 4 / 60 ]; TestAccuracy: 0.38272 TestLoss: 1.94445
+Starting Epoch 5/60. lr = 0.001
+[0] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.61970 TrainLoss: 1.00892 %-Real: 0.0
+	[0] Epoch [ 5 / 60 ]; TestAccuracy: 0.26132 TestLoss: 1.90797
+Starting Epoch 6/60. lr = 0.001
+[0] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.67715 TrainLoss: 0.78711 %-Real: 0.0
+	[0] Epoch [ 6 / 60 ]; TestAccuracy: 0.56379 TestLoss: 1.14364
+Starting Epoch 7/60. lr = 0.001
+[0] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.71546 TrainLoss: 0.69522 %-Real: 0.0
+	[0] Epoch [ 7 / 60 ]; TestAccuracy: 0.69547 TestLoss: 0.90226
+Starting Epoch 8/60. lr = 0.001
+[0] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.76060 TrainLoss: 0.60423 %-Real: 0.0
+	[0] Epoch [ 8 / 60 ]; TestAccuracy: 0.40535 TestLoss: 2.10325
+Starting Epoch 9/60. lr = 0.001
+[0] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.81395 TrainLoss: 0.50675 %-Real: 0.0
+	[0] Epoch [ 9 / 60 ]; TestAccuracy: 0.67284 TestLoss: 1.06024
+Starting Epoch 10/60. lr = 0.001
+[0] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.82627 TrainLoss: 0.46591 %-Real: 0.0
+	[0] Epoch [ 10 / 60 ]; TestAccuracy: 0.55967 TestLoss: 1.37224
+Starting Epoch 11/60. lr = 0.001
+[0] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.84268 TrainLoss: 0.40346 %-Real: 0.0
+	[0] Epoch [ 11 / 60 ]; TestAccuracy: 0.61111 TestLoss: 1.44646
+Starting Epoch 12/60. lr = 0.001
+[0] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.90150 TrainLoss: 0.27548 %-Real: 0.0
+	[0] Epoch [ 12 / 60 ]; TestAccuracy: 0.66049 TestLoss: 1.32885
+Starting Epoch 13/60. lr = 0.001
+[0] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.89056 TrainLoss: 0.27274 %-Real: 0.0
+	[0] Epoch [ 13 / 60 ]; TestAccuracy: 0.67901 TestLoss: 0.98660
+Starting Epoch 14/60. lr = 0.001
+[0] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.93297 TrainLoss: 0.18277 %-Real: 0.0
+	[0] Epoch [ 14 / 60 ]; TestAccuracy: 0.72222 TestLoss: 1.11847
+Starting Epoch 15/60. lr = 0.001
+[0] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.92613 TrainLoss: 0.22614 %-Real: 0.0
+	[0] Epoch [ 15 / 60 ]; TestAccuracy: 0.80864 TestLoss: 0.52431
+Starting Epoch 16/60. lr = 0.001
+[0] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.91929 TrainLoss: 0.20915 %-Real: 0.0
+	[0] Epoch [ 16 / 60 ]; TestAccuracy: 0.69136 TestLoss: 1.18163
+Starting Epoch 17/60. lr = 0.001
+[0] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.93844 TrainLoss: 0.17251 %-Real: 0.0
+	[0] Epoch [ 17 / 60 ]; TestAccuracy: 0.67284 TestLoss: 1.18282
+Starting Epoch 18/60. lr = 0.001
+[0] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.95486 TrainLoss: 0.11945 %-Real: 0.0
+	[0] Epoch [ 18 / 60 ]; TestAccuracy: 0.77160 TestLoss: 0.71369
+Starting Epoch 19/60. lr = 0.001
+[0] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.93844 TrainLoss: 0.17145 %-Real: 0.0
+	[0] Epoch [ 19 / 60 ]; TestAccuracy: 0.73045 TestLoss: 0.97916
+Starting Epoch 20/60. lr = 0.001
+[0] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.95075 TrainLoss: 0.16398 %-Real: 0.0
+	[0] Epoch [ 20 / 60 ]; TestAccuracy: 0.74691 TestLoss: 0.98568
+Starting Epoch 21/60. lr = 0.001
+[0] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.94254 TrainLoss: 0.14333 %-Real: 0.0
+	[0] Epoch [ 21 / 60 ]; TestAccuracy: 0.73045 TestLoss: 0.81179
+Starting Epoch 22/60. lr = 0.001
+[0] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.94528 TrainLoss: 0.15214 %-Real: 0.0
+	[0] Epoch [ 22 / 60 ]; TestAccuracy: 0.80453 TestLoss: 0.63743
+Starting Epoch 23/60. lr = 0.001
+[0] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.95622 TrainLoss: 0.13329 %-Real: 0.0
+	[0] Epoch [ 23 / 60 ]; TestAccuracy: 0.81070 TestLoss: 0.82647
+Starting Epoch 24/60. lr = 0.001
+[0] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.95075 TrainLoss: 0.13784 %-Real: 0.0
+	[0] Epoch [ 24 / 60 ]; TestAccuracy: 0.84774 TestLoss: 0.46355
+Starting Epoch 25/60. lr = 0.001
+[0] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.96443 TrainLoss: 0.11227 %-Real: 0.0
+	[0] Epoch [ 25 / 60 ]; TestAccuracy: 0.84156 TestLoss: 0.48416
+Starting Epoch 26/60. lr = 0.001
+[0] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.95759 TrainLoss: 0.10966 %-Real: 0.0
+	[0] Epoch [ 26 / 60 ]; TestAccuracy: 0.89300 TestLoss: 0.29558
+Starting Epoch 27/60. lr = 0.001
+[0] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.96717 TrainLoss: 0.07947 %-Real: 0.0
+	[0] Epoch [ 27 / 60 ]; TestAccuracy: 0.81070 TestLoss: 0.58399
+Starting Epoch 28/60. lr = 0.001
+[0] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.96033 TrainLoss: 0.11787 %-Real: 0.0
+	[0] Epoch [ 28 / 60 ]; TestAccuracy: 0.81481 TestLoss: 0.60465
+Starting Epoch 29/60. lr = 0.001
+[0] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.96717 TrainLoss: 0.07695 %-Real: 0.0
+	[0] Epoch [ 29 / 60 ]; TestAccuracy: 0.89300 TestLoss: 0.36995
+Starting Epoch 30/60. lr = 0.001
+[0] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.96990 TrainLoss: 0.09267 %-Real: 0.0
+	[0] Epoch [ 30 / 60 ]; TestAccuracy: 0.83128 TestLoss: 0.55463
+Starting Epoch 31/60. lr = 0.001
+[0] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.97811 TrainLoss: 0.06592 %-Real: 0.0
+	[0] Epoch [ 31 / 60 ]; TestAccuracy: 0.89095 TestLoss: 0.32211
+Starting Epoch 32/60. lr = 0.001
+[0] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.96170 TrainLoss: 0.11289 %-Real: 0.0
+	[0] Epoch [ 32 / 60 ]; TestAccuracy: 0.81893 TestLoss: 0.61429
+Starting Epoch 33/60. lr = 0.001
+[0] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.96990 TrainLoss: 0.08442 %-Real: 0.0
+	[0] Epoch [ 33 / 60 ]; TestAccuracy: 0.76749 TestLoss: 0.97968
+Starting Epoch 34/60. lr = 0.001
+[0] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.97401 TrainLoss: 0.07583 %-Real: 0.0
+	[0] Epoch [ 34 / 60 ]; TestAccuracy: 0.78601 TestLoss: 0.79274
+Starting Epoch 35/60. lr = 0.001
+[0] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.96580 TrainLoss: 0.10400 %-Real: 0.0
+	[0] Epoch [ 35 / 60 ]; TestAccuracy: 0.84362 TestLoss: 0.49555
+Starting Epoch 36/60. lr = 0.001
+[0] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.97674 TrainLoss: 0.07547 %-Real: 0.0
+	[0] Epoch [ 36 / 60 ]; TestAccuracy: 0.86831 TestLoss: 0.47273
+Starting Epoch 37/60. lr = 0.001
+[0] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.98358 TrainLoss: 0.06026 %-Real: 0.0
+	[0] Epoch [ 37 / 60 ]; TestAccuracy: 0.87449 TestLoss: 0.40004
+Starting Epoch 38/60. lr = 0.001
+[0] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.97674 TrainLoss: 0.05912 %-Real: 0.0
+	[0] Epoch [ 38 / 60 ]; TestAccuracy: 0.89506 TestLoss: 0.34370
+Starting Epoch 39/60. lr = 0.001
+[0] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.97948 TrainLoss: 0.06136 %-Real: 0.0
+	[0] Epoch [ 39 / 60 ]; TestAccuracy: 0.83128 TestLoss: 0.51860
+Starting Epoch 40/60. lr = 0.001
+[0] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.97538 TrainLoss: 0.06461 %-Real: 0.0
+	[0] Epoch [ 40 / 60 ]; TestAccuracy: 0.83333 TestLoss: 0.61462
+Starting Epoch 41/60. lr = 0.001
+[0] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.96580 TrainLoss: 0.10064 %-Real: 0.0
+	[0] Epoch [ 41 / 60 ]; TestAccuracy: 0.92593 TestLoss: 0.23629
+Starting Epoch 42/60. lr = 0.001
+[0] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.97401 TrainLoss: 0.06716 %-Real: 0.0
+	[0] Epoch [ 42 / 60 ]; TestAccuracy: 0.91152 TestLoss: 0.34749
+Starting Epoch 43/60. lr = 0.001
+[0] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.97401 TrainLoss: 0.06724 %-Real: 0.0
+	[0] Epoch [ 43 / 60 ]; TestAccuracy: 0.85597 TestLoss: 0.50744
+Starting Epoch 44/60. lr = 0.001
+[0] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.96854 TrainLoss: 0.06673 %-Real: 0.0
+	[0] Epoch [ 44 / 60 ]; TestAccuracy: 0.87860 TestLoss: 0.34220
+Starting Epoch 45/60. lr = 0.001
+[0] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.98632 TrainLoss: 0.05790 %-Real: 0.0
+	[0] Epoch [ 45 / 60 ]; TestAccuracy: 0.89918 TestLoss: 0.30392
+Starting Epoch 46/60. lr = 0.001
+[0] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98632 TrainLoss: 0.04853 %-Real: 0.0
+	[0] Epoch [ 46 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.23720
+Starting Epoch 47/60. lr = 0.001
+[0] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.97811 TrainLoss: 0.05645 %-Real: 0.0
+	[0] Epoch [ 47 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.23042
+Starting Epoch 48/60. lr = 0.001
+[0] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.98085 TrainLoss: 0.05577 %-Real: 0.0
+	[0] Epoch [ 48 / 60 ]; TestAccuracy: 0.88477 TestLoss: 0.31563
+Starting Epoch 49/60. lr = 0.001
+[0] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.97401 TrainLoss: 0.06334 %-Real: 0.0
+	[0] Epoch [ 49 / 60 ]; TestAccuracy: 0.85391 TestLoss: 0.42784
+Starting Epoch 50/60. lr = 0.0001
+[0] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98222 TrainLoss: 0.07042 %-Real: 0.0
+	[0] Epoch [ 50 / 60 ]; TestAccuracy: 0.86214 TestLoss: 0.40500
+Starting Epoch 51/60. lr = 0.0001
+[0] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.97811 TrainLoss: 0.05240 %-Real: 0.0
+	[0] Epoch [ 51 / 60 ]; TestAccuracy: 0.88272 TestLoss: 0.34713
+Starting Epoch 52/60. lr = 0.0001
+[0] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98632 TrainLoss: 0.04542 %-Real: 0.0
+	[0] Epoch [ 52 / 60 ]; TestAccuracy: 0.89918 TestLoss: 0.31645
+Starting Epoch 53/60. lr = 0.0001
+[0] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98085 TrainLoss: 0.04965 %-Real: 0.0
+	[0] Epoch [ 53 / 60 ]; TestAccuracy: 0.91564 TestLoss: 0.29937
+Starting Epoch 54/60. lr = 0.0001
+[0] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98769 TrainLoss: 0.02479 %-Real: 0.0
+	[0] Epoch [ 54 / 60 ]; TestAccuracy: 0.91358 TestLoss: 0.29576
+Starting Epoch 55/60. lr = 0.0001
+[0] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99453 TrainLoss: 0.01725 %-Real: 0.0
+	[0] Epoch [ 55 / 60 ]; TestAccuracy: 0.90947 TestLoss: 0.31080
+Starting Epoch 56/60. lr = 0.0001
+[0] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98906 TrainLoss: 0.04062 %-Real: 0.0
+	[0] Epoch [ 56 / 60 ]; TestAccuracy: 0.90947 TestLoss: 0.31113
+Starting Epoch 57/60. lr = 0.0001
+[0] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98632 TrainLoss: 0.03855 %-Real: 0.0
+	[0] Epoch [ 57 / 60 ]; TestAccuracy: 0.91358 TestLoss: 0.31239
+Starting Epoch 58/60. lr = 0.0001
+[0] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98906 TrainLoss: 0.03741 %-Real: 0.0
+	[0] Epoch [ 58 / 60 ]; TestAccuracy: 0.91564 TestLoss: 0.29219
+Starting Epoch 59/60. lr = 0.0001
+[0] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98632 TrainLoss: 0.03110 %-Real: 0.0
+	[0] Epoch [ 59 / 60 ]; TestAccuracy: 0.91975 TestLoss: 0.27492
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.8732. TNR@95TPR: 0.2642. DetAcc: 0.8266
+	ODIN (T=1000).     AUROC: 0.9182. TNR@95TPR: 0.5283. DetAcc: 0.8673
+	ODIN (T=1000) IPP. AUROC: 0.8869. TNR@95TPR: 0.3396. DetAcc: 0.8446
+**********************************************************
+Starting Iter: 1 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [2]
+Remaining Classes:  [0, 1, 3, 4, 5, 6, 7, 8, 9]
+# ID Train:  763
+# ID Test:   490
+# OOD Test:  49
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'bmp2', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[1] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.14941 TrainLoss: 2.31497 %-Real: 0.0
+	[1] Epoch [ 0 / 60 ]; TestAccuracy: 0.12245 TestLoss: 2.19808
+Starting Epoch 1/60. lr = 0.001
+[1] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.21756 TrainLoss: 2.09363 %-Real: 0.0
+	[1] Epoch [ 1 / 60 ]; TestAccuracy: 0.11837 TestLoss: 2.19738
+Starting Epoch 2/60. lr = 0.001
+[1] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.35256 TrainLoss: 1.73197 %-Real: 0.0
+	[1] Epoch [ 2 / 60 ]; TestAccuracy: 0.23265 TestLoss: 2.16827
+Starting Epoch 3/60. lr = 0.001
+[1] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.46265 TrainLoss: 1.37856 %-Real: 0.0
+	[1] Epoch [ 3 / 60 ]; TestAccuracy: 0.29796 TestLoss: 2.00011
+Starting Epoch 4/60. lr = 0.001
+[1] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.57012 TrainLoss: 1.05670 %-Real: 0.0
+	[1] Epoch [ 4 / 60 ]; TestAccuracy: 0.43469 TestLoss: 1.47275
+Starting Epoch 5/60. lr = 0.001
+[1] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.66972 TrainLoss: 0.84335 %-Real: 0.0
+	[1] Epoch [ 5 / 60 ]; TestAccuracy: 0.46327 TestLoss: 1.55796
+Starting Epoch 6/60. lr = 0.001
+[1] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.73132 TrainLoss: 0.71763 %-Real: 0.0
+	[1] Epoch [ 6 / 60 ]; TestAccuracy: 0.57143 TestLoss: 1.12425
+Starting Epoch 7/60. lr = 0.001
+[1] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.77064 TrainLoss: 0.64612 %-Real: 0.0
+	[1] Epoch [ 7 / 60 ]; TestAccuracy: 0.54694 TestLoss: 1.74589
+Starting Epoch 8/60. lr = 0.001
+[1] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.77982 TrainLoss: 0.54252 %-Real: 0.0
+	[1] Epoch [ 8 / 60 ]; TestAccuracy: 0.65918 TestLoss: 0.99554
+Starting Epoch 9/60. lr = 0.001
+[1] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.82176 TrainLoss: 0.48883 %-Real: 0.0
+	[1] Epoch [ 9 / 60 ]; TestAccuracy: 0.67551 TestLoss: 0.88283
+Starting Epoch 10/60. lr = 0.001
+[1] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.83486 TrainLoss: 0.41474 %-Real: 0.0
+	[1] Epoch [ 10 / 60 ]; TestAccuracy: 0.60816 TestLoss: 1.36203
+Starting Epoch 11/60. lr = 0.001
+[1] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.87156 TrainLoss: 0.35841 %-Real: 0.0
+	[1] Epoch [ 11 / 60 ]; TestAccuracy: 0.69796 TestLoss: 0.94160
+Starting Epoch 12/60. lr = 0.001
+[1] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.88467 TrainLoss: 0.30834 %-Real: 0.0
+	[1] Epoch [ 12 / 60 ]; TestAccuracy: 0.72857 TestLoss: 0.88984
+Starting Epoch 13/60. lr = 0.001
+[1] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.90564 TrainLoss: 0.24931 %-Real: 0.0
+	[1] Epoch [ 13 / 60 ]; TestAccuracy: 0.74490 TestLoss: 0.80456
+Starting Epoch 14/60. lr = 0.001
+[1] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.91481 TrainLoss: 0.24916 %-Real: 0.0
+	[1] Epoch [ 14 / 60 ]; TestAccuracy: 0.80000 TestLoss: 0.60637
+Starting Epoch 15/60. lr = 0.001
+[1] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.92398 TrainLoss: 0.18859 %-Real: 0.0
+	[1] Epoch [ 15 / 60 ]; TestAccuracy: 0.77551 TestLoss: 0.61684
+Starting Epoch 16/60. lr = 0.001
+[1] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.92529 TrainLoss: 0.22724 %-Real: 0.0
+	[1] Epoch [ 16 / 60 ]; TestAccuracy: 0.87551 TestLoss: 0.37237
+Starting Epoch 17/60. lr = 0.001
+[1] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.94495 TrainLoss: 0.18098 %-Real: 0.0
+	[1] Epoch [ 17 / 60 ]; TestAccuracy: 0.88163 TestLoss: 0.34478
+Starting Epoch 18/60. lr = 0.001
+[1] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.94626 TrainLoss: 0.13333 %-Real: 0.0
+	[1] Epoch [ 18 / 60 ]; TestAccuracy: 0.84082 TestLoss: 0.51913
+Starting Epoch 19/60. lr = 0.001
+[1] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.95806 TrainLoss: 0.12988 %-Real: 0.0
+	[1] Epoch [ 19 / 60 ]; TestAccuracy: 0.83878 TestLoss: 0.49846
+Starting Epoch 20/60. lr = 0.001
+[1] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.94626 TrainLoss: 0.18382 %-Real: 0.0
+	[1] Epoch [ 20 / 60 ]; TestAccuracy: 0.86531 TestLoss: 0.45188
+Starting Epoch 21/60. lr = 0.001
+[1] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.95806 TrainLoss: 0.13729 %-Real: 0.0
+	[1] Epoch [ 21 / 60 ]; TestAccuracy: 0.86327 TestLoss: 0.39828
+Starting Epoch 22/60. lr = 0.001
+[1] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.95151 TrainLoss: 0.13326 %-Real: 0.0
+	[1] Epoch [ 22 / 60 ]; TestAccuracy: 0.85714 TestLoss: 0.44966
+Starting Epoch 23/60. lr = 0.001
+[1] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.96330 TrainLoss: 0.11263 %-Real: 0.0
+	[1] Epoch [ 23 / 60 ]; TestAccuracy: 0.85510 TestLoss: 0.48645
+Starting Epoch 24/60. lr = 0.001
+[1] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.96986 TrainLoss: 0.08941 %-Real: 0.0
+	[1] Epoch [ 24 / 60 ]; TestAccuracy: 0.86531 TestLoss: 0.37857
+Starting Epoch 25/60. lr = 0.001
+[1] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.95675 TrainLoss: 0.13070 %-Real: 0.0
+	[1] Epoch [ 25 / 60 ]; TestAccuracy: 0.90204 TestLoss: 0.27893
+Starting Epoch 26/60. lr = 0.001
+[1] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.08768 %-Real: 0.0
+	[1] Epoch [ 26 / 60 ]; TestAccuracy: 0.90612 TestLoss: 0.33795
+Starting Epoch 27/60. lr = 0.001
+[1] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.97510 TrainLoss: 0.07299 %-Real: 0.0
+	[1] Epoch [ 27 / 60 ]; TestAccuracy: 0.89592 TestLoss: 0.34358
+Starting Epoch 28/60. lr = 0.001
+[1] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.96855 TrainLoss: 0.08180 %-Real: 0.0
+	[1] Epoch [ 28 / 60 ]; TestAccuracy: 0.85510 TestLoss: 0.50448
+Starting Epoch 29/60. lr = 0.001
+[1] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.97248 TrainLoss: 0.07390 %-Real: 0.0
+	[1] Epoch [ 29 / 60 ]; TestAccuracy: 0.87551 TestLoss: 0.33673
+Starting Epoch 30/60. lr = 0.001
+[1] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.08720 %-Real: 0.0
+	[1] Epoch [ 30 / 60 ]; TestAccuracy: 0.89388 TestLoss: 0.32696
+Starting Epoch 31/60. lr = 0.001
+[1] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.96986 TrainLoss: 0.09771 %-Real: 0.0
+	[1] Epoch [ 31 / 60 ]; TestAccuracy: 0.84490 TestLoss: 0.58508
+Starting Epoch 32/60. lr = 0.001
+[1] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.97772 TrainLoss: 0.07046 %-Real: 0.0
+	[1] Epoch [ 32 / 60 ]; TestAccuracy: 0.88980 TestLoss: 0.44649
+Starting Epoch 33/60. lr = 0.001
+[1] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.97510 TrainLoss: 0.07639 %-Real: 0.0
+	[1] Epoch [ 33 / 60 ]; TestAccuracy: 0.94082 TestLoss: 0.18921
+Starting Epoch 34/60. lr = 0.001
+[1] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.97641 TrainLoss: 0.07590 %-Real: 0.0
+	[1] Epoch [ 34 / 60 ]; TestAccuracy: 0.91224 TestLoss: 0.27239
+Starting Epoch 35/60. lr = 0.001
+[1] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.97248 TrainLoss: 0.08028 %-Real: 0.0
+	[1] Epoch [ 35 / 60 ]; TestAccuracy: 0.88367 TestLoss: 0.47242
+Starting Epoch 36/60. lr = 0.001
+[1] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.97248 TrainLoss: 0.07355 %-Real: 0.0
+	[1] Epoch [ 36 / 60 ]; TestAccuracy: 0.92041 TestLoss: 0.28949
+Starting Epoch 37/60. lr = 0.001
+[1] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.97772 TrainLoss: 0.05525 %-Real: 0.0
+	[1] Epoch [ 37 / 60 ]; TestAccuracy: 0.91837 TestLoss: 0.37917
+Starting Epoch 38/60. lr = 0.001
+[1] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.97903 TrainLoss: 0.06344 %-Real: 0.0
+	[1] Epoch [ 38 / 60 ]; TestAccuracy: 0.87551 TestLoss: 0.64034
+Starting Epoch 39/60. lr = 0.001
+[1] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.97117 TrainLoss: 0.07296 %-Real: 0.0
+	[1] Epoch [ 39 / 60 ]; TestAccuracy: 0.93673 TestLoss: 0.19303
+Starting Epoch 40/60. lr = 0.001
+[1] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.96986 TrainLoss: 0.08917 %-Real: 0.0
+	[1] Epoch [ 40 / 60 ]; TestAccuracy: 0.90408 TestLoss: 0.42669
+Starting Epoch 41/60. lr = 0.001
+[1] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.97510 TrainLoss: 0.07429 %-Real: 0.0
+	[1] Epoch [ 41 / 60 ]; TestAccuracy: 0.88571 TestLoss: 0.53118
+Starting Epoch 42/60. lr = 0.001
+[1] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.96855 TrainLoss: 0.08272 %-Real: 0.0
+	[1] Epoch [ 42 / 60 ]; TestAccuracy: 0.90408 TestLoss: 0.31711
+Starting Epoch 43/60. lr = 0.001
+[1] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.97510 TrainLoss: 0.06346 %-Real: 0.0
+	[1] Epoch [ 43 / 60 ]; TestAccuracy: 0.90204 TestLoss: 0.29705
+Starting Epoch 44/60. lr = 0.001
+[1] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.97641 TrainLoss: 0.06635 %-Real: 0.0
+	[1] Epoch [ 44 / 60 ]; TestAccuracy: 0.92653 TestLoss: 0.26965
+Starting Epoch 45/60. lr = 0.001
+[1] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.97772 TrainLoss: 0.06811 %-Real: 0.0
+	[1] Epoch [ 45 / 60 ]; TestAccuracy: 0.91837 TestLoss: 0.28896
+Starting Epoch 46/60. lr = 0.001
+[1] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98427 TrainLoss: 0.06111 %-Real: 0.0
+	[1] Epoch [ 46 / 60 ]; TestAccuracy: 0.89184 TestLoss: 0.42808
+Starting Epoch 47/60. lr = 0.001
+[1] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.96855 TrainLoss: 0.08569 %-Real: 0.0
+	[1] Epoch [ 47 / 60 ]; TestAccuracy: 0.87347 TestLoss: 0.50940
+Starting Epoch 48/60. lr = 0.001
+[1] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.98296 TrainLoss: 0.04230 %-Real: 0.0
+	[1] Epoch [ 48 / 60 ]; TestAccuracy: 0.89796 TestLoss: 0.36517
+Starting Epoch 49/60. lr = 0.001
+[1] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.98296 TrainLoss: 0.04236 %-Real: 0.0
+	[1] Epoch [ 49 / 60 ]; TestAccuracy: 0.91224 TestLoss: 0.31382
+Starting Epoch 50/60. lr = 0.0001
+[1] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.97903 TrainLoss: 0.05014 %-Real: 0.0
+	[1] Epoch [ 50 / 60 ]; TestAccuracy: 0.91837 TestLoss: 0.32794
+Starting Epoch 51/60. lr = 0.0001
+[1] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98427 TrainLoss: 0.05900 %-Real: 0.0
+	[1] Epoch [ 51 / 60 ]; TestAccuracy: 0.90408 TestLoss: 0.35207
+Starting Epoch 52/60. lr = 0.0001
+[1] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98427 TrainLoss: 0.05392 %-Real: 0.0
+	[1] Epoch [ 52 / 60 ]; TestAccuracy: 0.90612 TestLoss: 0.36812
+Starting Epoch 53/60. lr = 0.0001
+[1] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98427 TrainLoss: 0.05097 %-Real: 0.0
+	[1] Epoch [ 53 / 60 ]; TestAccuracy: 0.90408 TestLoss: 0.39413
+Starting Epoch 54/60. lr = 0.0001
+[1] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98820 TrainLoss: 0.03109 %-Real: 0.0
+	[1] Epoch [ 54 / 60 ]; TestAccuracy: 0.90612 TestLoss: 0.37907
+Starting Epoch 55/60. lr = 0.0001
+[1] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98296 TrainLoss: 0.03755 %-Real: 0.0
+	[1] Epoch [ 55 / 60 ]; TestAccuracy: 0.91633 TestLoss: 0.33877
+Starting Epoch 56/60. lr = 0.0001
+[1] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98689 TrainLoss: 0.04183 %-Real: 0.0
+	[1] Epoch [ 56 / 60 ]; TestAccuracy: 0.91633 TestLoss: 0.32132
+Starting Epoch 57/60. lr = 0.0001
+[1] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99214 TrainLoss: 0.04153 %-Real: 0.0
+	[1] Epoch [ 57 / 60 ]; TestAccuracy: 0.91429 TestLoss: 0.33351
+Starting Epoch 58/60. lr = 0.0001
+[1] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98820 TrainLoss: 0.03506 %-Real: 0.0
+	[1] Epoch [ 58 / 60 ]; TestAccuracy: 0.91224 TestLoss: 0.32950
+Starting Epoch 59/60. lr = 0.0001
+[1] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98820 TrainLoss: 0.03406 %-Real: 0.0
+	[1] Epoch [ 59 / 60 ]; TestAccuracy: 0.91429 TestLoss: 0.31611
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.7169. TNR@95TPR: 0.0612. DetAcc: 0.6969
+	ODIN (T=1000).     AUROC: 0.7523. TNR@95TPR: 0.0000. DetAcc: 0.7439
+	ODIN (T=1000) IPP. AUROC: 0.7531. TNR@95TPR: 0.0000. DetAcc: 0.7296
+**********************************************************
+Starting Iter: 2 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [2]
+Remaining Classes:  [0, 1, 3, 4, 5, 6, 7, 8, 9]
+# ID Train:  763
+# ID Test:   490
+# OOD Test:  49
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'bmp2', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[2] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.13499 TrainLoss: 2.35205 %-Real: 0.0
+	[2] Epoch [ 0 / 60 ]; TestAccuracy: 0.10408 TestLoss: 2.19913
+Starting Epoch 1/60. lr = 0.001
+[2] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.18480 TrainLoss: 2.15932 %-Real: 0.0
+	[2] Epoch [ 1 / 60 ]; TestAccuracy: 0.10816 TestLoss: 2.21816
+Starting Epoch 2/60. lr = 0.001
+[2] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.32110 TrainLoss: 1.81973 %-Real: 0.0
+	[2] Epoch [ 2 / 60 ]; TestAccuracy: 0.10816 TestLoss: 2.30047
+Starting Epoch 3/60. lr = 0.001
+[2] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.45740 TrainLoss: 1.47367 %-Real: 0.0
+	[2] Epoch [ 3 / 60 ]; TestAccuracy: 0.18776 TestLoss: 2.15978
+Starting Epoch 4/60. lr = 0.001
+[2] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.55308 TrainLoss: 1.17329 %-Real: 0.0
+	[2] Epoch [ 4 / 60 ]; TestAccuracy: 0.37551 TestLoss: 1.52809
+Starting Epoch 5/60. lr = 0.001
+[2] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.61730 TrainLoss: 0.99816 %-Real: 0.0
+	[2] Epoch [ 5 / 60 ]; TestAccuracy: 0.42041 TestLoss: 1.43334
+Starting Epoch 6/60. lr = 0.001
+[2] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.64744 TrainLoss: 0.89022 %-Real: 0.0
+	[2] Epoch [ 6 / 60 ]; TestAccuracy: 0.50816 TestLoss: 1.41183
+Starting Epoch 7/60. lr = 0.001
+[2] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.70249 TrainLoss: 0.74155 %-Real: 0.0
+	[2] Epoch [ 7 / 60 ]; TestAccuracy: 0.60816 TestLoss: 1.11369
+Starting Epoch 8/60. lr = 0.001
+[2] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.75491 TrainLoss: 0.62729 %-Real: 0.0
+	[2] Epoch [ 8 / 60 ]; TestAccuracy: 0.63673 TestLoss: 1.11118
+Starting Epoch 9/60. lr = 0.001
+[2] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.74967 TrainLoss: 0.65641 %-Real: 0.0
+	[2] Epoch [ 9 / 60 ]; TestAccuracy: 0.52653 TestLoss: 1.51017
+Starting Epoch 10/60. lr = 0.001
+[2] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.82307 TrainLoss: 0.49311 %-Real: 0.0
+	[2] Epoch [ 10 / 60 ]; TestAccuracy: 0.67347 TestLoss: 0.91300
+Starting Epoch 11/60. lr = 0.001
+[2] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.84010 TrainLoss: 0.42409 %-Real: 0.0
+	[2] Epoch [ 11 / 60 ]; TestAccuracy: 0.72653 TestLoss: 0.77618
+Starting Epoch 12/60. lr = 0.001
+[2] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.87025 TrainLoss: 0.36104 %-Real: 0.0
+	[2] Epoch [ 12 / 60 ]; TestAccuracy: 0.64898 TestLoss: 1.09996
+Starting Epoch 13/60. lr = 0.001
+[2] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.87287 TrainLoss: 0.33860 %-Real: 0.0
+	[2] Epoch [ 13 / 60 ]; TestAccuracy: 0.67551 TestLoss: 0.96234
+Starting Epoch 14/60. lr = 0.001
+[2] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.92398 TrainLoss: 0.23483 %-Real: 0.0
+	[2] Epoch [ 14 / 60 ]; TestAccuracy: 0.84286 TestLoss: 0.40694
+Starting Epoch 15/60. lr = 0.001
+[2] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.92792 TrainLoss: 0.21854 %-Real: 0.0
+	[2] Epoch [ 15 / 60 ]; TestAccuracy: 0.75510 TestLoss: 0.67944
+Starting Epoch 16/60. lr = 0.001
+[2] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.92267 TrainLoss: 0.22471 %-Real: 0.0
+	[2] Epoch [ 16 / 60 ]; TestAccuracy: 0.84286 TestLoss: 0.52153
+Starting Epoch 17/60. lr = 0.001
+[2] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.93447 TrainLoss: 0.15766 %-Real: 0.0
+	[2] Epoch [ 17 / 60 ]; TestAccuracy: 0.92857 TestLoss: 0.19418
+Starting Epoch 18/60. lr = 0.001
+[2] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.93578 TrainLoss: 0.17111 %-Real: 0.0
+	[2] Epoch [ 18 / 60 ]; TestAccuracy: 0.83265 TestLoss: 0.48133
+Starting Epoch 19/60. lr = 0.001
+[2] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.93840 TrainLoss: 0.17974 %-Real: 0.0
+	[2] Epoch [ 19 / 60 ]; TestAccuracy: 0.80816 TestLoss: 0.55365
+Starting Epoch 20/60. lr = 0.001
+[2] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.94495 TrainLoss: 0.16931 %-Real: 0.0
+	[2] Epoch [ 20 / 60 ]; TestAccuracy: 0.90000 TestLoss: 0.28975
+Starting Epoch 21/60. lr = 0.001
+[2] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.94758 TrainLoss: 0.15385 %-Real: 0.0
+	[2] Epoch [ 21 / 60 ]; TestAccuracy: 0.82857 TestLoss: 0.48696
+Starting Epoch 22/60. lr = 0.001
+[2] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.94495 TrainLoss: 0.15180 %-Real: 0.0
+	[2] Epoch [ 22 / 60 ]; TestAccuracy: 0.89592 TestLoss: 0.28832
+Starting Epoch 23/60. lr = 0.001
+[2] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.95151 TrainLoss: 0.13903 %-Real: 0.0
+	[2] Epoch [ 23 / 60 ]; TestAccuracy: 0.84490 TestLoss: 0.46346
+Starting Epoch 24/60. lr = 0.001
+[2] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.95020 TrainLoss: 0.14014 %-Real: 0.0
+	[2] Epoch [ 24 / 60 ]; TestAccuracy: 0.76327 TestLoss: 0.86802
+Starting Epoch 25/60. lr = 0.001
+[2] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.95675 TrainLoss: 0.10466 %-Real: 0.0
+	[2] Epoch [ 25 / 60 ]; TestAccuracy: 0.86939 TestLoss: 0.37451
+Starting Epoch 26/60. lr = 0.001
+[2] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.08619 %-Real: 0.0
+	[2] Epoch [ 26 / 60 ]; TestAccuracy: 0.90204 TestLoss: 0.27568
+Starting Epoch 27/60. lr = 0.001
+[2] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.96986 TrainLoss: 0.09369 %-Real: 0.0
+	[2] Epoch [ 27 / 60 ]; TestAccuracy: 0.89184 TestLoss: 0.42209
+Starting Epoch 28/60. lr = 0.001
+[2] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.96855 TrainLoss: 0.10787 %-Real: 0.0
+	[2] Epoch [ 28 / 60 ]; TestAccuracy: 0.88367 TestLoss: 0.36972
+Starting Epoch 29/60. lr = 0.001
+[2] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.96592 TrainLoss: 0.08917 %-Real: 0.0
+	[2] Epoch [ 29 / 60 ]; TestAccuracy: 0.88776 TestLoss: 0.31628
+Starting Epoch 30/60. lr = 0.001
+[2] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.96330 TrainLoss: 0.09195 %-Real: 0.0
+	[2] Epoch [ 30 / 60 ]; TestAccuracy: 0.87143 TestLoss: 0.42019
+Starting Epoch 31/60. lr = 0.001
+[2] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.96199 TrainLoss: 0.09853 %-Real: 0.0
+	[2] Epoch [ 31 / 60 ]; TestAccuracy: 0.84694 TestLoss: 0.53515
+Starting Epoch 32/60. lr = 0.001
+[2] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.96986 TrainLoss: 0.09351 %-Real: 0.0
+	[2] Epoch [ 32 / 60 ]; TestAccuracy: 0.82449 TestLoss: 0.55743
+Starting Epoch 33/60. lr = 0.001
+[2] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.96592 TrainLoss: 0.09972 %-Real: 0.0
+	[2] Epoch [ 33 / 60 ]; TestAccuracy: 0.90408 TestLoss: 0.29523
+Starting Epoch 34/60. lr = 0.001
+[2] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.97903 TrainLoss: 0.07587 %-Real: 0.0
+	[2] Epoch [ 34 / 60 ]; TestAccuracy: 0.87551 TestLoss: 0.40949
+Starting Epoch 35/60. lr = 0.001
+[2] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.97641 TrainLoss: 0.06676 %-Real: 0.0
+	[2] Epoch [ 35 / 60 ]; TestAccuracy: 0.80408 TestLoss: 0.57954
+Starting Epoch 36/60. lr = 0.001
+[2] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.96592 TrainLoss: 0.09209 %-Real: 0.0
+	[2] Epoch [ 36 / 60 ]; TestAccuracy: 0.87551 TestLoss: 0.39778
+Starting Epoch 37/60. lr = 0.001
+[2] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.97248 TrainLoss: 0.08563 %-Real: 0.0
+	[2] Epoch [ 37 / 60 ]; TestAccuracy: 0.86735 TestLoss: 0.42658
+Starting Epoch 38/60. lr = 0.001
+[2] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.96068 TrainLoss: 0.09831 %-Real: 0.0
+	[2] Epoch [ 38 / 60 ]; TestAccuracy: 0.90612 TestLoss: 0.26074
+Starting Epoch 39/60. lr = 0.001
+[2] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.97117 TrainLoss: 0.06491 %-Real: 0.0
+	[2] Epoch [ 39 / 60 ]; TestAccuracy: 0.91837 TestLoss: 0.27948
+Starting Epoch 40/60. lr = 0.001
+[2] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.97510 TrainLoss: 0.07643 %-Real: 0.0
+	[2] Epoch [ 40 / 60 ]; TestAccuracy: 0.88980 TestLoss: 0.35140
+Starting Epoch 41/60. lr = 0.001
+[2] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.97117 TrainLoss: 0.08227 %-Real: 0.0
+	[2] Epoch [ 41 / 60 ]; TestAccuracy: 0.92653 TestLoss: 0.20637
+Starting Epoch 42/60. lr = 0.001
+[2] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.97510 TrainLoss: 0.07854 %-Real: 0.0
+	[2] Epoch [ 42 / 60 ]; TestAccuracy: 0.89388 TestLoss: 0.36108
+Starting Epoch 43/60. lr = 0.001
+[2] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.97510 TrainLoss: 0.07849 %-Real: 0.0
+	[2] Epoch [ 43 / 60 ]; TestAccuracy: 0.86939 TestLoss: 0.45751
+Starting Epoch 44/60. lr = 0.001
+[2] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.97772 TrainLoss: 0.05898 %-Real: 0.0
+	[2] Epoch [ 44 / 60 ]; TestAccuracy: 0.90816 TestLoss: 0.27651
+Starting Epoch 45/60. lr = 0.001
+[2] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.98165 TrainLoss: 0.05718 %-Real: 0.0
+	[2] Epoch [ 45 / 60 ]; TestAccuracy: 0.89388 TestLoss: 0.36355
+Starting Epoch 46/60. lr = 0.001
+[2] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.08746 %-Real: 0.0
+	[2] Epoch [ 46 / 60 ]; TestAccuracy: 0.87347 TestLoss: 0.49695
+Starting Epoch 47/60. lr = 0.001
+[2] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.97903 TrainLoss: 0.05371 %-Real: 0.0
+	[2] Epoch [ 47 / 60 ]; TestAccuracy: 0.91020 TestLoss: 0.22541
+Starting Epoch 48/60. lr = 0.001
+[2] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.99214 TrainLoss: 0.03028 %-Real: 0.0
+	[2] Epoch [ 48 / 60 ]; TestAccuracy: 0.92041 TestLoss: 0.24720
+Starting Epoch 49/60. lr = 0.001
+[2] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.98034 TrainLoss: 0.06819 %-Real: 0.0
+	[2] Epoch [ 49 / 60 ]; TestAccuracy: 0.87959 TestLoss: 0.37972
+Starting Epoch 50/60. lr = 0.0001
+[2] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98034 TrainLoss: 0.04958 %-Real: 0.0
+	[2] Epoch [ 50 / 60 ]; TestAccuracy: 0.90612 TestLoss: 0.30973
+Starting Epoch 51/60. lr = 0.0001
+[2] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98034 TrainLoss: 0.04996 %-Real: 0.0
+	[2] Epoch [ 51 / 60 ]; TestAccuracy: 0.92041 TestLoss: 0.25177
+Starting Epoch 52/60. lr = 0.0001
+[2] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98558 TrainLoss: 0.04552 %-Real: 0.0
+	[2] Epoch [ 52 / 60 ]; TestAccuracy: 0.92041 TestLoss: 0.22405
+Starting Epoch 53/60. lr = 0.0001
+[2] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98689 TrainLoss: 0.03401 %-Real: 0.0
+	[2] Epoch [ 53 / 60 ]; TestAccuracy: 0.93061 TestLoss: 0.19486
+Starting Epoch 54/60. lr = 0.0001
+[2] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98820 TrainLoss: 0.03259 %-Real: 0.0
+	[2] Epoch [ 54 / 60 ]; TestAccuracy: 0.93265 TestLoss: 0.18642
+Starting Epoch 55/60. lr = 0.0001
+[2] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98296 TrainLoss: 0.04764 %-Real: 0.0
+	[2] Epoch [ 55 / 60 ]; TestAccuracy: 0.94082 TestLoss: 0.17375
+Starting Epoch 56/60. lr = 0.0001
+[2] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98558 TrainLoss: 0.04682 %-Real: 0.0
+	[2] Epoch [ 56 / 60 ]; TestAccuracy: 0.93878 TestLoss: 0.16591
+Starting Epoch 57/60. lr = 0.0001
+[2] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98558 TrainLoss: 0.04931 %-Real: 0.0
+	[2] Epoch [ 57 / 60 ]; TestAccuracy: 0.94082 TestLoss: 0.16556
+Starting Epoch 58/60. lr = 0.0001
+[2] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99083 TrainLoss: 0.03118 %-Real: 0.0
+	[2] Epoch [ 58 / 60 ]; TestAccuracy: 0.94286 TestLoss: 0.16975
+Starting Epoch 59/60. lr = 0.0001
+[2] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99083 TrainLoss: 0.02840 %-Real: 0.0
+	[2] Epoch [ 59 / 60 ]; TestAccuracy: 0.93469 TestLoss: 0.17466
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.7221. TNR@95TPR: 0.1020. DetAcc: 0.6918
+	ODIN (T=1000).     AUROC: 0.7878. TNR@95TPR: 0.0816. DetAcc: 0.7367
+	ODIN (T=1000) IPP. AUROC: 0.8047. TNR@95TPR: 0.1837. DetAcc: 0.7408
+**********************************************************
+Starting Iter: 3 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [1]
+Remaining Classes:  [0, 2, 3, 4, 5, 6, 7, 8, 9]
+# ID Train:  751
+# ID Test:   487
+# OOD Test:  52
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'btr70', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'btr70', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[3] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.13449 TrainLoss: 2.33260 %-Real: 0.0
+	[3] Epoch [ 0 / 60 ]; TestAccuracy: 0.11294 TestLoss: 2.20413
+Starting Epoch 1/60. lr = 0.001
+[3] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.19707 TrainLoss: 2.16610 %-Real: 0.0
+	[3] Epoch [ 1 / 60 ]; TestAccuracy: 0.11910 TestLoss: 2.18057
+Starting Epoch 2/60. lr = 0.001
+[3] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.32091 TrainLoss: 1.83311 %-Real: 0.0
+	[3] Epoch [ 2 / 60 ]; TestAccuracy: 0.31622 TestLoss: 2.06602
+Starting Epoch 3/60. lr = 0.001
+[3] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.44341 TrainLoss: 1.44333 %-Real: 0.0
+	[3] Epoch [ 3 / 60 ]; TestAccuracy: 0.33265 TestLoss: 1.73807
+Starting Epoch 4/60. lr = 0.001
+[3] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.58988 TrainLoss: 1.06760 %-Real: 0.0
+	[3] Epoch [ 4 / 60 ]; TestAccuracy: 0.51335 TestLoss: 1.35944
+Starting Epoch 5/60. lr = 0.001
+[3] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.67643 TrainLoss: 0.83569 %-Real: 0.0
+	[3] Epoch [ 5 / 60 ]; TestAccuracy: 0.61191 TestLoss: 1.07300
+Starting Epoch 6/60. lr = 0.001
+[3] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.72037 TrainLoss: 0.69997 %-Real: 0.0
+	[3] Epoch [ 6 / 60 ]; TestAccuracy: 0.61396 TestLoss: 1.12152
+Starting Epoch 7/60. lr = 0.001
+[3] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.76032 TrainLoss: 0.62273 %-Real: 0.0
+	[3] Epoch [ 7 / 60 ]; TestAccuracy: 0.67146 TestLoss: 0.97215
+Starting Epoch 8/60. lr = 0.001
+[3] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.80559 TrainLoss: 0.52564 %-Real: 0.0
+	[3] Epoch [ 8 / 60 ]; TestAccuracy: 0.58727 TestLoss: 1.27283
+Starting Epoch 9/60. lr = 0.001
+[3] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.85619 TrainLoss: 0.41289 %-Real: 0.0
+	[3] Epoch [ 9 / 60 ]; TestAccuracy: 0.70431 TestLoss: 0.92896
+Starting Epoch 10/60. lr = 0.001
+[3] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.87084 TrainLoss: 0.38508 %-Real: 0.0
+	[3] Epoch [ 10 / 60 ]; TestAccuracy: 0.66530 TestLoss: 0.99426
+Starting Epoch 11/60. lr = 0.001
+[3] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.88815 TrainLoss: 0.29897 %-Real: 0.0
+	[3] Epoch [ 11 / 60 ]; TestAccuracy: 0.65092 TestLoss: 1.03259
+Starting Epoch 12/60. lr = 0.001
+[3] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.89747 TrainLoss: 0.27109 %-Real: 0.0
+	[3] Epoch [ 12 / 60 ]; TestAccuracy: 0.71047 TestLoss: 0.86672
+Starting Epoch 13/60. lr = 0.001
+[3] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.94008 TrainLoss: 0.20924 %-Real: 0.0
+	[3] Epoch [ 13 / 60 ]; TestAccuracy: 0.78850 TestLoss: 0.67378
+Starting Epoch 14/60. lr = 0.001
+[3] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.94141 TrainLoss: 0.18093 %-Real: 0.0
+	[3] Epoch [ 14 / 60 ]; TestAccuracy: 0.77002 TestLoss: 0.85962
+Starting Epoch 15/60. lr = 0.001
+[3] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.93475 TrainLoss: 0.19845 %-Real: 0.0
+	[3] Epoch [ 15 / 60 ]; TestAccuracy: 0.80493 TestLoss: 0.73358
+Starting Epoch 16/60. lr = 0.001
+[3] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.95073 TrainLoss: 0.14463 %-Real: 0.0
+	[3] Epoch [ 16 / 60 ]; TestAccuracy: 0.81109 TestLoss: 0.57212
+Starting Epoch 17/60. lr = 0.001
+[3] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.94274 TrainLoss: 0.13653 %-Real: 0.0
+	[3] Epoch [ 17 / 60 ]; TestAccuracy: 0.83984 TestLoss: 0.43658
+Starting Epoch 18/60. lr = 0.001
+[3] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.94807 TrainLoss: 0.14746 %-Real: 0.0
+	[3] Epoch [ 18 / 60 ]; TestAccuracy: 0.87474 TestLoss: 0.38929
+Starting Epoch 19/60. lr = 0.001
+[3] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.96272 TrainLoss: 0.10314 %-Real: 0.0
+	[3] Epoch [ 19 / 60 ]; TestAccuracy: 0.84394 TestLoss: 0.47297
+Starting Epoch 20/60. lr = 0.001
+[3] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.96005 TrainLoss: 0.11638 %-Real: 0.0
+	[3] Epoch [ 20 / 60 ]; TestAccuracy: 0.83368 TestLoss: 0.55424
+Starting Epoch 21/60. lr = 0.001
+[3] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.96538 TrainLoss: 0.10221 %-Real: 0.0
+	[3] Epoch [ 21 / 60 ]; TestAccuracy: 0.84394 TestLoss: 0.50457
+Starting Epoch 22/60. lr = 0.001
+[3] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.97071 TrainLoss: 0.09565 %-Real: 0.0
+	[3] Epoch [ 22 / 60 ]; TestAccuracy: 0.90144 TestLoss: 0.32522
+Starting Epoch 23/60. lr = 0.001
+[3] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.96937 TrainLoss: 0.08515 %-Real: 0.0
+	[3] Epoch [ 23 / 60 ]; TestAccuracy: 0.87885 TestLoss: 0.47795
+Starting Epoch 24/60. lr = 0.001
+[3] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.97204 TrainLoss: 0.08431 %-Real: 0.0
+	[3] Epoch [ 24 / 60 ]; TestAccuracy: 0.88501 TestLoss: 0.45090
+Starting Epoch 25/60. lr = 0.001
+[3] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.96937 TrainLoss: 0.10258 %-Real: 0.0
+	[3] Epoch [ 25 / 60 ]; TestAccuracy: 0.88912 TestLoss: 0.36668
+Starting Epoch 26/60. lr = 0.001
+[3] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.96937 TrainLoss: 0.09945 %-Real: 0.0
+	[3] Epoch [ 26 / 60 ]; TestAccuracy: 0.90554 TestLoss: 0.27483
+Starting Epoch 27/60. lr = 0.001
+[3] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.97204 TrainLoss: 0.07356 %-Real: 0.0
+	[3] Epoch [ 27 / 60 ]; TestAccuracy: 0.86653 TestLoss: 0.37966
+Starting Epoch 28/60. lr = 0.001
+[3] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.97736 TrainLoss: 0.07007 %-Real: 0.0
+	[3] Epoch [ 28 / 60 ]; TestAccuracy: 0.86653 TestLoss: 0.56675
+Starting Epoch 29/60. lr = 0.001
+[3] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.96804 TrainLoss: 0.08051 %-Real: 0.0
+	[3] Epoch [ 29 / 60 ]; TestAccuracy: 0.91170 TestLoss: 0.23091
+Starting Epoch 30/60. lr = 0.001
+[3] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.96804 TrainLoss: 0.08402 %-Real: 0.0
+	[3] Epoch [ 30 / 60 ]; TestAccuracy: 0.88501 TestLoss: 0.31583
+Starting Epoch 31/60. lr = 0.001
+[3] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.97337 TrainLoss: 0.07633 %-Real: 0.0
+	[3] Epoch [ 31 / 60 ]; TestAccuracy: 0.88090 TestLoss: 0.59099
+Starting Epoch 32/60. lr = 0.001
+[3] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.96937 TrainLoss: 0.09383 %-Real: 0.0
+	[3] Epoch [ 32 / 60 ]; TestAccuracy: 0.87064 TestLoss: 0.44880
+Starting Epoch 33/60. lr = 0.001
+[3] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.96671 TrainLoss: 0.08448 %-Real: 0.0
+	[3] Epoch [ 33 / 60 ]; TestAccuracy: 0.93634 TestLoss: 0.18705
+Starting Epoch 34/60. lr = 0.001
+[3] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.96538 TrainLoss: 0.08228 %-Real: 0.0
+	[3] Epoch [ 34 / 60 ]; TestAccuracy: 0.89117 TestLoss: 0.37762
+Starting Epoch 35/60. lr = 0.001
+[3] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.97204 TrainLoss: 0.06190 %-Real: 0.0
+	[3] Epoch [ 35 / 60 ]; TestAccuracy: 0.88296 TestLoss: 0.42123
+Starting Epoch 36/60. lr = 0.001
+[3] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.98269 TrainLoss: 0.06575 %-Real: 0.0
+	[3] Epoch [ 36 / 60 ]; TestAccuracy: 0.86858 TestLoss: 0.43836
+Starting Epoch 37/60. lr = 0.001
+[3] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.98269 TrainLoss: 0.04813 %-Real: 0.0
+	[3] Epoch [ 37 / 60 ]; TestAccuracy: 0.86242 TestLoss: 0.53564
+Starting Epoch 38/60. lr = 0.001
+[3] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.98136 TrainLoss: 0.05769 %-Real: 0.0
+	[3] Epoch [ 38 / 60 ]; TestAccuracy: 0.84189 TestLoss: 0.75779
+Starting Epoch 39/60. lr = 0.001
+[3] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.98535 TrainLoss: 0.04741 %-Real: 0.0
+	[3] Epoch [ 39 / 60 ]; TestAccuracy: 0.89322 TestLoss: 0.37580
+Starting Epoch 40/60. lr = 0.001
+[3] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.98535 TrainLoss: 0.04447 %-Real: 0.0
+	[3] Epoch [ 40 / 60 ]; TestAccuracy: 0.85216 TestLoss: 0.49101
+Starting Epoch 41/60. lr = 0.001
+[3] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.98402 TrainLoss: 0.05099 %-Real: 0.0
+	[3] Epoch [ 41 / 60 ]; TestAccuracy: 0.86242 TestLoss: 0.41227
+Starting Epoch 42/60. lr = 0.001
+[3] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.98402 TrainLoss: 0.05968 %-Real: 0.0
+	[3] Epoch [ 42 / 60 ]; TestAccuracy: 0.92608 TestLoss: 0.21928
+Starting Epoch 43/60. lr = 0.001
+[3] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.99068 TrainLoss: 0.03225 %-Real: 0.0
+	[3] Epoch [ 43 / 60 ]; TestAccuracy: 0.91786 TestLoss: 0.28059
+Starting Epoch 44/60. lr = 0.001
+[3] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.98269 TrainLoss: 0.05787 %-Real: 0.0
+	[3] Epoch [ 44 / 60 ]; TestAccuracy: 0.90760 TestLoss: 0.33751
+Starting Epoch 45/60. lr = 0.001
+[3] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.98668 TrainLoss: 0.04294 %-Real: 0.0
+	[3] Epoch [ 45 / 60 ]; TestAccuracy: 0.88912 TestLoss: 0.34425
+Starting Epoch 46/60. lr = 0.001
+[3] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98402 TrainLoss: 0.05674 %-Real: 0.0
+	[3] Epoch [ 46 / 60 ]; TestAccuracy: 0.88912 TestLoss: 0.40299
+Starting Epoch 47/60. lr = 0.001
+[3] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.98535 TrainLoss: 0.04575 %-Real: 0.0
+	[3] Epoch [ 47 / 60 ]; TestAccuracy: 0.87474 TestLoss: 0.56841
+Starting Epoch 48/60. lr = 0.001
+[3] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.98935 TrainLoss: 0.04357 %-Real: 0.0
+	[3] Epoch [ 48 / 60 ]; TestAccuracy: 0.91376 TestLoss: 0.29867
+Starting Epoch 49/60. lr = 0.001
+[3] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.98802 TrainLoss: 0.04760 %-Real: 0.0
+	[3] Epoch [ 49 / 60 ]; TestAccuracy: 0.90349 TestLoss: 0.31061
+Starting Epoch 50/60. lr = 0.0001
+[3] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98269 TrainLoss: 0.05130 %-Real: 0.0
+	[3] Epoch [ 50 / 60 ]; TestAccuracy: 0.89528 TestLoss: 0.32250
+Starting Epoch 51/60. lr = 0.0001
+[3] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98402 TrainLoss: 0.03754 %-Real: 0.0
+	[3] Epoch [ 51 / 60 ]; TestAccuracy: 0.89733 TestLoss: 0.33325
+Starting Epoch 52/60. lr = 0.0001
+[3] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98668 TrainLoss: 0.03548 %-Real: 0.0
+	[3] Epoch [ 52 / 60 ]; TestAccuracy: 0.90760 TestLoss: 0.33067
+Starting Epoch 53/60. lr = 0.0001
+[3] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98535 TrainLoss: 0.03882 %-Real: 0.0
+	[3] Epoch [ 53 / 60 ]; TestAccuracy: 0.91581 TestLoss: 0.33006
+Starting Epoch 54/60. lr = 0.0001
+[3] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98935 TrainLoss: 0.03367 %-Real: 0.0
+	[3] Epoch [ 54 / 60 ]; TestAccuracy: 0.91581 TestLoss: 0.33401
+Starting Epoch 55/60. lr = 0.0001
+[3] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99201 TrainLoss: 0.03066 %-Real: 0.0
+	[3] Epoch [ 55 / 60 ]; TestAccuracy: 0.91992 TestLoss: 0.32950
+Starting Epoch 56/60. lr = 0.0001
+[3] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98668 TrainLoss: 0.03476 %-Real: 0.0
+	[3] Epoch [ 56 / 60 ]; TestAccuracy: 0.91581 TestLoss: 0.33026
+Starting Epoch 57/60. lr = 0.0001
+[3] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99334 TrainLoss: 0.01774 %-Real: 0.0
+	[3] Epoch [ 57 / 60 ]; TestAccuracy: 0.91992 TestLoss: 0.29562
+Starting Epoch 58/60. lr = 0.0001
+[3] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99201 TrainLoss: 0.02784 %-Real: 0.0
+	[3] Epoch [ 58 / 60 ]; TestAccuracy: 0.91581 TestLoss: 0.27950
+Starting Epoch 59/60. lr = 0.0001
+[3] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99068 TrainLoss: 0.02205 %-Real: 0.0
+	[3] Epoch [ 59 / 60 ]; TestAccuracy: 0.92197 TestLoss: 0.26626
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.5937. TNR@95TPR: 0.0000. DetAcc: 0.6216
+	ODIN (T=1000).     AUROC: 0.5985. TNR@95TPR: 0.0000. DetAcc: 0.6069
+	ODIN (T=1000) IPP. AUROC: 0.5834. TNR@95TPR: 0.0000. DetAcc: 0.6034
+**********************************************************
+Starting Iter: 4 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [6]
+Remaining Classes:  [0, 1, 2, 3, 4, 5, 7, 8, 9]
+# ID Train:  731
+# ID Test:   486
+# OOD Test:  53
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[4] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.15732 TrainLoss: 2.31759 %-Real: 0.0
+	[4] Epoch [ 0 / 60 ]; TestAccuracy: 0.12346 TestLoss: 2.20101
+Starting Epoch 1/60. lr = 0.001
+[4] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.17237 TrainLoss: 2.22594 %-Real: 0.0
+	[4] Epoch [ 1 / 60 ]; TestAccuracy: 0.12346 TestLoss: 2.25185
+Starting Epoch 2/60. lr = 0.001
+[4] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.25855 TrainLoss: 2.03187 %-Real: 0.0
+	[4] Epoch [ 2 / 60 ]; TestAccuracy: 0.16461 TestLoss: 2.16475
+Starting Epoch 3/60. lr = 0.001
+[4] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.39808 TrainLoss: 1.71149 %-Real: 0.0
+	[4] Epoch [ 3 / 60 ]; TestAccuracy: 0.33333 TestLoss: 1.82629
+Starting Epoch 4/60. lr = 0.001
+[4] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.49384 TrainLoss: 1.34477 %-Real: 0.0
+	[4] Epoch [ 4 / 60 ]; TestAccuracy: 0.45473 TestLoss: 1.44470
+Starting Epoch 5/60. lr = 0.001
+[4] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.59371 TrainLoss: 1.06375 %-Real: 0.0
+	[4] Epoch [ 5 / 60 ]; TestAccuracy: 0.43827 TestLoss: 1.33643
+Starting Epoch 6/60. lr = 0.001
+[4] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.63611 TrainLoss: 0.90932 %-Real: 0.0
+	[4] Epoch [ 6 / 60 ]; TestAccuracy: 0.63374 TestLoss: 0.99337
+Starting Epoch 7/60. lr = 0.001
+[4] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.70041 TrainLoss: 0.74255 %-Real: 0.0
+	[4] Epoch [ 7 / 60 ]; TestAccuracy: 0.57407 TestLoss: 1.30515
+Starting Epoch 8/60. lr = 0.001
+[4] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.71546 TrainLoss: 0.68241 %-Real: 0.0
+	[4] Epoch [ 8 / 60 ]; TestAccuracy: 0.78807 TestLoss: 0.58620
+Starting Epoch 9/60. lr = 0.001
+[4] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.77839 TrainLoss: 0.56987 %-Real: 0.0
+	[4] Epoch [ 9 / 60 ]; TestAccuracy: 0.70370 TestLoss: 0.82024
+Starting Epoch 10/60. lr = 0.001
+[4] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.83721 TrainLoss: 0.42693 %-Real: 0.0
+	[4] Epoch [ 10 / 60 ]; TestAccuracy: 0.74486 TestLoss: 0.78152
+Starting Epoch 11/60. lr = 0.001
+[4] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.86320 TrainLoss: 0.38340 %-Real: 0.0
+	[4] Epoch [ 11 / 60 ]; TestAccuracy: 0.73045 TestLoss: 0.81301
+Starting Epoch 12/60. lr = 0.001
+[4] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.88235 TrainLoss: 0.30262 %-Real: 0.0
+	[4] Epoch [ 12 / 60 ]; TestAccuracy: 0.82305 TestLoss: 0.54963
+Starting Epoch 13/60. lr = 0.001
+[4] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.88782 TrainLoss: 0.30212 %-Real: 0.0
+	[4] Epoch [ 13 / 60 ]; TestAccuracy: 0.82305 TestLoss: 0.49778
+Starting Epoch 14/60. lr = 0.001
+[4] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.90014 TrainLoss: 0.27328 %-Real: 0.0
+	[4] Epoch [ 14 / 60 ]; TestAccuracy: 0.85185 TestLoss: 0.38914
+Starting Epoch 15/60. lr = 0.001
+[4] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.89877 TrainLoss: 0.28555 %-Real: 0.0
+	[4] Epoch [ 15 / 60 ]; TestAccuracy: 0.84362 TestLoss: 0.45996
+Starting Epoch 16/60. lr = 0.001
+[4] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.90150 TrainLoss: 0.25650 %-Real: 0.0
+	[4] Epoch [ 16 / 60 ]; TestAccuracy: 0.90123 TestLoss: 0.24415
+Starting Epoch 17/60. lr = 0.001
+[4] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.90971 TrainLoss: 0.23171 %-Real: 0.0
+	[4] Epoch [ 17 / 60 ]; TestAccuracy: 0.90123 TestLoss: 0.29559
+Starting Epoch 18/60. lr = 0.001
+[4] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.93981 TrainLoss: 0.18101 %-Real: 0.0
+	[4] Epoch [ 18 / 60 ]; TestAccuracy: 0.81276 TestLoss: 0.51028
+Starting Epoch 19/60. lr = 0.001
+[4] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.92066 TrainLoss: 0.18802 %-Real: 0.0
+	[4] Epoch [ 19 / 60 ]; TestAccuracy: 0.83745 TestLoss: 0.47443
+Starting Epoch 20/60. lr = 0.001
+[4] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.93160 TrainLoss: 0.17636 %-Real: 0.0
+	[4] Epoch [ 20 / 60 ]; TestAccuracy: 0.90329 TestLoss: 0.29390
+Starting Epoch 21/60. lr = 0.001
+[4] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.96033 TrainLoss: 0.13790 %-Real: 0.0
+	[4] Epoch [ 21 / 60 ]; TestAccuracy: 0.87654 TestLoss: 0.35366
+Starting Epoch 22/60. lr = 0.001
+[4] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.95075 TrainLoss: 0.16331 %-Real: 0.0
+	[4] Epoch [ 22 / 60 ]; TestAccuracy: 0.87243 TestLoss: 0.41830
+Starting Epoch 23/60. lr = 0.001
+[4] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.94665 TrainLoss: 0.17452 %-Real: 0.0
+	[4] Epoch [ 23 / 60 ]; TestAccuracy: 0.89506 TestLoss: 0.45161
+Starting Epoch 24/60. lr = 0.001
+[4] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.93707 TrainLoss: 0.16485 %-Real: 0.0
+	[4] Epoch [ 24 / 60 ]; TestAccuracy: 0.87449 TestLoss: 0.37544
+Starting Epoch 25/60. lr = 0.001
+[4] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.93981 TrainLoss: 0.15255 %-Real: 0.0
+	[4] Epoch [ 25 / 60 ]; TestAccuracy: 0.92593 TestLoss: 0.17160
+Starting Epoch 26/60. lr = 0.001
+[4] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.95212 TrainLoss: 0.13095 %-Real: 0.0
+	[4] Epoch [ 26 / 60 ]; TestAccuracy: 0.81070 TestLoss: 0.67184
+Starting Epoch 27/60. lr = 0.001
+[4] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.94665 TrainLoss: 0.14817 %-Real: 0.0
+	[4] Epoch [ 27 / 60 ]; TestAccuracy: 0.87037 TestLoss: 0.53836
+Starting Epoch 28/60. lr = 0.001
+[4] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.95349 TrainLoss: 0.14178 %-Real: 0.0
+	[4] Epoch [ 28 / 60 ]; TestAccuracy: 0.91564 TestLoss: 0.22325
+Starting Epoch 29/60. lr = 0.001
+[4] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.96717 TrainLoss: 0.09152 %-Real: 0.0
+	[4] Epoch [ 29 / 60 ]; TestAccuracy: 0.86008 TestLoss: 0.50472
+Starting Epoch 30/60. lr = 0.001
+[4] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.96854 TrainLoss: 0.11229 %-Real: 0.0
+	[4] Epoch [ 30 / 60 ]; TestAccuracy: 0.89506 TestLoss: 0.45476
+Starting Epoch 31/60. lr = 0.001
+[4] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.97264 TrainLoss: 0.07844 %-Real: 0.0
+	[4] Epoch [ 31 / 60 ]; TestAccuracy: 0.90741 TestLoss: 0.24656
+Starting Epoch 32/60. lr = 0.001
+[4] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.96443 TrainLoss: 0.12010 %-Real: 0.0
+	[4] Epoch [ 32 / 60 ]; TestAccuracy: 0.87860 TestLoss: 0.38788
+Starting Epoch 33/60. lr = 0.001
+[4] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.96306 TrainLoss: 0.11533 %-Real: 0.0
+	[4] Epoch [ 33 / 60 ]; TestAccuracy: 0.92798 TestLoss: 0.25171
+Starting Epoch 34/60. lr = 0.001
+[4] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.97538 TrainLoss: 0.08624 %-Real: 0.0
+	[4] Epoch [ 34 / 60 ]; TestAccuracy: 0.93416 TestLoss: 0.21077
+Starting Epoch 35/60. lr = 0.001
+[4] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.96306 TrainLoss: 0.10186 %-Real: 0.0
+	[4] Epoch [ 35 / 60 ]; TestAccuracy: 0.88477 TestLoss: 0.44901
+Starting Epoch 36/60. lr = 0.001
+[4] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.96580 TrainLoss: 0.10154 %-Real: 0.0
+	[4] Epoch [ 36 / 60 ]; TestAccuracy: 0.90947 TestLoss: 0.36953
+Starting Epoch 37/60. lr = 0.001
+[4] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.95896 TrainLoss: 0.11387 %-Real: 0.0
+	[4] Epoch [ 37 / 60 ]; TestAccuracy: 0.93004 TestLoss: 0.29284
+Starting Epoch 38/60. lr = 0.001
+[4] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.96033 TrainLoss: 0.11475 %-Real: 0.0
+	[4] Epoch [ 38 / 60 ]; TestAccuracy: 0.87243 TestLoss: 0.43809
+Starting Epoch 39/60. lr = 0.001
+[4] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.96854 TrainLoss: 0.11283 %-Real: 0.0
+	[4] Epoch [ 39 / 60 ]; TestAccuracy: 0.90329 TestLoss: 0.40730
+Starting Epoch 40/60. lr = 0.001
+[4] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.96033 TrainLoss: 0.11975 %-Real: 0.0
+	[4] Epoch [ 40 / 60 ]; TestAccuracy: 0.88066 TestLoss: 0.46189
+Starting Epoch 41/60. lr = 0.001
+[4] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.95896 TrainLoss: 0.11197 %-Real: 0.0
+	[4] Epoch [ 41 / 60 ]; TestAccuracy: 0.89506 TestLoss: 0.33067
+Starting Epoch 42/60. lr = 0.001
+[4] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.97538 TrainLoss: 0.06818 %-Real: 0.0
+	[4] Epoch [ 42 / 60 ]; TestAccuracy: 0.90741 TestLoss: 0.30570
+Starting Epoch 43/60. lr = 0.001
+[4] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.97674 TrainLoss: 0.07522 %-Real: 0.0
+	[4] Epoch [ 43 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.27680
+Starting Epoch 44/60. lr = 0.001
+[4] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.97811 TrainLoss: 0.07792 %-Real: 0.0
+	[4] Epoch [ 44 / 60 ]; TestAccuracy: 0.92593 TestLoss: 0.24770
+Starting Epoch 45/60. lr = 0.001
+[4] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.98358 TrainLoss: 0.05112 %-Real: 0.0
+	[4] Epoch [ 45 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.22870
+Starting Epoch 46/60. lr = 0.001
+[4] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98495 TrainLoss: 0.04955 %-Real: 0.0
+	[4] Epoch [ 46 / 60 ]; TestAccuracy: 0.92798 TestLoss: 0.21644
+Starting Epoch 47/60. lr = 0.001
+[4] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.97264 TrainLoss: 0.07332 %-Real: 0.0
+	[4] Epoch [ 47 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.30531
+Starting Epoch 48/60. lr = 0.001
+[4] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.96580 TrainLoss: 0.10269 %-Real: 0.0
+	[4] Epoch [ 48 / 60 ]; TestAccuracy: 0.92593 TestLoss: 0.22452
+Starting Epoch 49/60. lr = 0.001
+[4] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.98632 TrainLoss: 0.04997 %-Real: 0.0
+	[4] Epoch [ 49 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.22689
+Starting Epoch 50/60. lr = 0.0001
+[4] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.96170 TrainLoss: 0.09558 %-Real: 0.0
+	[4] Epoch [ 50 / 60 ]; TestAccuracy: 0.93621 TestLoss: 0.20712
+Starting Epoch 51/60. lr = 0.0001
+[4] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98222 TrainLoss: 0.04324 %-Real: 0.0
+	[4] Epoch [ 51 / 60 ]; TestAccuracy: 0.94239 TestLoss: 0.20414
+Starting Epoch 52/60. lr = 0.0001
+[4] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.97264 TrainLoss: 0.06533 %-Real: 0.0
+	[4] Epoch [ 52 / 60 ]; TestAccuracy: 0.94856 TestLoss: 0.20337
+Starting Epoch 53/60. lr = 0.0001
+[4] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98085 TrainLoss: 0.05557 %-Real: 0.0
+	[4] Epoch [ 53 / 60 ]; TestAccuracy: 0.93827 TestLoss: 0.20812
+Starting Epoch 54/60. lr = 0.0001
+[4] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98632 TrainLoss: 0.04192 %-Real: 0.0
+	[4] Epoch [ 54 / 60 ]; TestAccuracy: 0.93827 TestLoss: 0.20587
+Starting Epoch 55/60. lr = 0.0001
+[4] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98495 TrainLoss: 0.03974 %-Real: 0.0
+	[4] Epoch [ 55 / 60 ]; TestAccuracy: 0.93827 TestLoss: 0.18968
+Starting Epoch 56/60. lr = 0.0001
+[4] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98495 TrainLoss: 0.05019 %-Real: 0.0
+	[4] Epoch [ 56 / 60 ]; TestAccuracy: 0.94444 TestLoss: 0.17543
+Starting Epoch 57/60. lr = 0.0001
+[4] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.97811 TrainLoss: 0.05873 %-Real: 0.0
+	[4] Epoch [ 57 / 60 ]; TestAccuracy: 0.95062 TestLoss: 0.18188
+Starting Epoch 58/60. lr = 0.0001
+[4] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.97674 TrainLoss: 0.06512 %-Real: 0.0
+	[4] Epoch [ 58 / 60 ]; TestAccuracy: 0.95473 TestLoss: 0.16570
+Starting Epoch 59/60. lr = 0.0001
+[4] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98358 TrainLoss: 0.03627 %-Real: 0.0
+	[4] Epoch [ 59 / 60 ]; TestAccuracy: 0.95885 TestLoss: 0.16428
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.2089. TNR@95TPR: 0.0000. DetAcc: 0.5041
+	ODIN (T=1000).     AUROC: 0.2571. TNR@95TPR: 0.0000. DetAcc: 0.5113
+	ODIN (T=1000) IPP. AUROC: 0.2749. TNR@95TPR: 0.0000. DetAcc: 0.5216
+**********************************************************
+Starting Iter: 0 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [2]
+Remaining Classes:  [0, 1, 3, 4, 5, 6, 7, 8, 9]
+# ID Train:  763
+# ID Test:   490
+# OOD Test:  49
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'bmp2', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[0] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.14679 TrainLoss: 0.48720 %-Real: 0.0
+	[0] Epoch [ 0 / 60 ]; TestAccuracy: 0.13469 TestLoss: 2.20001
+Starting Epoch 1/60. lr = 0.001
+[0] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.18611 TrainLoss: 0.37602 %-Real: 0.0
+	[0] Epoch [ 1 / 60 ]; TestAccuracy: 0.10408 TestLoss: 2.34570
+Starting Epoch 2/60. lr = 0.001
+[0] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.23984 TrainLoss: 0.33924 %-Real: 0.0
+	[0] Epoch [ 2 / 60 ]; TestAccuracy: 0.11837 TestLoss: 2.29417
+Starting Epoch 3/60. lr = 0.001
+[0] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.36435 TrainLoss: 0.29539 %-Real: 0.0
+	[0] Epoch [ 3 / 60 ]; TestAccuracy: 0.13673 TestLoss: 2.19251
+Starting Epoch 4/60. lr = 0.001
+[0] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.46396 TrainLoss: 0.25812 %-Real: 0.0
+	[0] Epoch [ 4 / 60 ]; TestAccuracy: 0.41837 TestLoss: 1.37322
+Starting Epoch 5/60. lr = 0.001
+[0] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.53342 TrainLoss: 0.22523 %-Real: 0.0
+	[0] Epoch [ 5 / 60 ]; TestAccuracy: 0.40204 TestLoss: 1.57202
+Starting Epoch 6/60. lr = 0.001
+[0] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.58191 TrainLoss: 0.19585 %-Real: 0.0
+	[0] Epoch [ 6 / 60 ]; TestAccuracy: 0.48980 TestLoss: 1.25356
+Starting Epoch 7/60. lr = 0.001
+[0] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.63958 TrainLoss: 0.17388 %-Real: 0.0
+	[0] Epoch [ 7 / 60 ]; TestAccuracy: 0.60816 TestLoss: 1.01964
+Starting Epoch 8/60. lr = 0.001
+[0] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.69463 TrainLoss: 0.15262 %-Real: 0.0
+	[0] Epoch [ 8 / 60 ]; TestAccuracy: 0.59388 TestLoss: 1.45180
+Starting Epoch 9/60. lr = 0.001
+[0] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.76278 TrainLoss: 0.12787 %-Real: 0.0
+	[0] Epoch [ 9 / 60 ]; TestAccuracy: 0.61837 TestLoss: 1.10447
+Starting Epoch 10/60. lr = 0.001
+[0] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.79817 TrainLoss: 0.11102 %-Real: 0.0
+	[0] Epoch [ 10 / 60 ]; TestAccuracy: 0.61633 TestLoss: 1.38707
+Starting Epoch 11/60. lr = 0.001
+[0] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.82962 TrainLoss: 0.09578 %-Real: 0.0
+	[0] Epoch [ 11 / 60 ]; TestAccuracy: 0.56735 TestLoss: 1.61775
+Starting Epoch 12/60. lr = 0.001
+[0] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.87025 TrainLoss: 0.08200 %-Real: 0.0
+	[0] Epoch [ 12 / 60 ]; TestAccuracy: 0.70816 TestLoss: 1.03748
+Starting Epoch 13/60. lr = 0.001
+[0] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.89777 TrainLoss: 0.06554 %-Real: 0.0
+	[0] Epoch [ 13 / 60 ]; TestAccuracy: 0.71020 TestLoss: 1.21577
+Starting Epoch 14/60. lr = 0.001
+[0] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.90433 TrainLoss: 0.06101 %-Real: 0.0
+	[0] Epoch [ 14 / 60 ]; TestAccuracy: 0.77143 TestLoss: 0.86860
+Starting Epoch 15/60. lr = 0.001
+[0] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.92923 TrainLoss: 0.04782 %-Real: 0.0
+	[0] Epoch [ 15 / 60 ]; TestAccuracy: 0.84082 TestLoss: 0.64368
+Starting Epoch 16/60. lr = 0.001
+[0] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.94233 TrainLoss: 0.04391 %-Real: 0.0
+	[0] Epoch [ 16 / 60 ]; TestAccuracy: 0.73265 TestLoss: 1.41820
+Starting Epoch 17/60. lr = 0.001
+[0] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.91612 TrainLoss: 0.05054 %-Real: 0.0
+	[0] Epoch [ 17 / 60 ]; TestAccuracy: 0.85102 TestLoss: 0.73606
+Starting Epoch 18/60. lr = 0.001
+[0] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.94626 TrainLoss: 0.03643 %-Real: 0.0
+	[0] Epoch [ 18 / 60 ]; TestAccuracy: 0.74898 TestLoss: 1.38803
+Starting Epoch 19/60. lr = 0.001
+[0] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.94364 TrainLoss: 0.03620 %-Real: 0.0
+	[0] Epoch [ 19 / 60 ]; TestAccuracy: 0.87143 TestLoss: 0.66608
+Starting Epoch 20/60. lr = 0.001
+[0] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.95413 TrainLoss: 0.02638 %-Real: 0.0
+	[0] Epoch [ 20 / 60 ]; TestAccuracy: 0.88571 TestLoss: 0.54931
+Starting Epoch 21/60. lr = 0.001
+[0] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.95544 TrainLoss: 0.03459 %-Real: 0.0
+	[0] Epoch [ 21 / 60 ]; TestAccuracy: 0.92857 TestLoss: 0.34458
+Starting Epoch 22/60. lr = 0.001
+[0] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.96723 TrainLoss: 0.02498 %-Real: 0.0
+	[0] Epoch [ 22 / 60 ]; TestAccuracy: 0.85918 TestLoss: 0.62438
+Starting Epoch 23/60. lr = 0.001
+[0] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.95675 TrainLoss: 0.02805 %-Real: 0.0
+	[0] Epoch [ 23 / 60 ]; TestAccuracy: 0.92449 TestLoss: 0.36369
+Starting Epoch 24/60. lr = 0.001
+[0] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.96592 TrainLoss: 0.02269 %-Real: 0.0
+	[0] Epoch [ 24 / 60 ]; TestAccuracy: 0.90816 TestLoss: 0.30630
+Starting Epoch 25/60. lr = 0.001
+[0] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.96461 TrainLoss: 0.02365 %-Real: 0.0
+	[0] Epoch [ 25 / 60 ]; TestAccuracy: 0.92653 TestLoss: 0.23766
+Starting Epoch 26/60. lr = 0.001
+[0] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.96330 TrainLoss: 0.02316 %-Real: 0.0
+	[0] Epoch [ 26 / 60 ]; TestAccuracy: 0.87347 TestLoss: 0.58835
+Starting Epoch 27/60. lr = 0.001
+[0] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.96986 TrainLoss: 0.01908 %-Real: 0.0
+	[0] Epoch [ 27 / 60 ]; TestAccuracy: 0.87551 TestLoss: 0.54777
+Starting Epoch 28/60. lr = 0.001
+[0] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.02140 %-Real: 0.0
+	[0] Epoch [ 28 / 60 ]; TestAccuracy: 0.93673 TestLoss: 0.23271
+Starting Epoch 29/60. lr = 0.001
+[0] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.96330 TrainLoss: 0.02267 %-Real: 0.0
+	[0] Epoch [ 29 / 60 ]; TestAccuracy: 0.86327 TestLoss: 0.58523
+Starting Epoch 30/60. lr = 0.001
+[0] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.98689 TrainLoss: 0.01223 %-Real: 0.0
+	[0] Epoch [ 30 / 60 ]; TestAccuracy: 0.88980 TestLoss: 0.52052
+Starting Epoch 31/60. lr = 0.001
+[0] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.97772 TrainLoss: 0.01751 %-Real: 0.0
+	[0] Epoch [ 31 / 60 ]; TestAccuracy: 0.90204 TestLoss: 0.42603
+Starting Epoch 32/60. lr = 0.001
+[0] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.98689 TrainLoss: 0.01339 %-Real: 0.0
+	[0] Epoch [ 32 / 60 ]; TestAccuracy: 0.93878 TestLoss: 0.21983
+Starting Epoch 33/60. lr = 0.001
+[0] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.98034 TrainLoss: 0.01438 %-Real: 0.0
+	[0] Epoch [ 33 / 60 ]; TestAccuracy: 0.88163 TestLoss: 0.61522
+Starting Epoch 34/60. lr = 0.001
+[0] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.01514 %-Real: 0.0
+	[0] Epoch [ 34 / 60 ]; TestAccuracy: 0.90816 TestLoss: 0.40591
+Starting Epoch 35/60. lr = 0.001
+[0] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.97641 TrainLoss: 0.01783 %-Real: 0.0
+	[0] Epoch [ 35 / 60 ]; TestAccuracy: 0.90816 TestLoss: 0.54430
+Starting Epoch 36/60. lr = 0.001
+[0] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.97641 TrainLoss: 0.01545 %-Real: 0.0
+	[0] Epoch [ 36 / 60 ]; TestAccuracy: 0.94082 TestLoss: 0.42481
+Starting Epoch 37/60. lr = 0.001
+[0] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.97903 TrainLoss: 0.01521 %-Real: 0.0
+	[0] Epoch [ 37 / 60 ]; TestAccuracy: 0.93265 TestLoss: 0.24233
+Starting Epoch 38/60. lr = 0.001
+[0] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.98427 TrainLoss: 0.01100 %-Real: 0.0
+	[0] Epoch [ 38 / 60 ]; TestAccuracy: 0.94490 TestLoss: 0.24525
+Starting Epoch 39/60. lr = 0.001
+[0] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.98165 TrainLoss: 0.01447 %-Real: 0.0
+	[0] Epoch [ 39 / 60 ]; TestAccuracy: 0.94082 TestLoss: 0.30238
+Starting Epoch 40/60. lr = 0.001
+[0] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.98558 TrainLoss: 0.00911 %-Real: 0.0
+	[0] Epoch [ 40 / 60 ]; TestAccuracy: 0.91429 TestLoss: 0.38734
+Starting Epoch 41/60. lr = 0.001
+[0] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.98296 TrainLoss: 0.01280 %-Real: 0.0
+	[0] Epoch [ 41 / 60 ]; TestAccuracy: 0.90204 TestLoss: 0.51254
+Starting Epoch 42/60. lr = 0.001
+[0] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.98558 TrainLoss: 0.01057 %-Real: 0.0
+	[0] Epoch [ 42 / 60 ]; TestAccuracy: 0.90408 TestLoss: 0.53432
+Starting Epoch 43/60. lr = 0.001
+[0] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.98165 TrainLoss: 0.01238 %-Real: 0.0
+	[0] Epoch [ 43 / 60 ]; TestAccuracy: 0.90612 TestLoss: 0.36834
+Starting Epoch 44/60. lr = 0.001
+[0] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.97772 TrainLoss: 0.01514 %-Real: 0.0
+	[0] Epoch [ 44 / 60 ]; TestAccuracy: 0.85918 TestLoss: 0.69159
+Starting Epoch 45/60. lr = 0.001
+[0] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.98296 TrainLoss: 0.01100 %-Real: 0.0
+	[0] Epoch [ 45 / 60 ]; TestAccuracy: 0.88776 TestLoss: 0.64950
+Starting Epoch 46/60. lr = 0.001
+[0] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98427 TrainLoss: 0.01244 %-Real: 0.0
+	[0] Epoch [ 46 / 60 ]; TestAccuracy: 0.91633 TestLoss: 0.47334
+Starting Epoch 47/60. lr = 0.001
+[0] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.97903 TrainLoss: 0.01542 %-Real: 0.0
+	[0] Epoch [ 47 / 60 ]; TestAccuracy: 0.94490 TestLoss: 0.25020
+Starting Epoch 48/60. lr = 0.001
+[0] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.98427 TrainLoss: 0.01062 %-Real: 0.0
+	[0] Epoch [ 48 / 60 ]; TestAccuracy: 0.89388 TestLoss: 0.54380
+Starting Epoch 49/60. lr = 0.001
+[0] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.98165 TrainLoss: 0.01182 %-Real: 0.0
+	[0] Epoch [ 49 / 60 ]; TestAccuracy: 0.90816 TestLoss: 0.51783
+Starting Epoch 50/60. lr = 0.0001
+[0] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98558 TrainLoss: 0.01277 %-Real: 0.0
+	[0] Epoch [ 50 / 60 ]; TestAccuracy: 0.92245 TestLoss: 0.42981
+Starting Epoch 51/60. lr = 0.0001
+[0] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99476 TrainLoss: 0.00649 %-Real: 0.0
+	[0] Epoch [ 51 / 60 ]; TestAccuracy: 0.93061 TestLoss: 0.35286
+Starting Epoch 52/60. lr = 0.0001
+[0] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98034 TrainLoss: 0.01225 %-Real: 0.0
+	[0] Epoch [ 52 / 60 ]; TestAccuracy: 0.92653 TestLoss: 0.31139
+Starting Epoch 53/60. lr = 0.0001
+[0] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98820 TrainLoss: 0.00860 %-Real: 0.0
+	[0] Epoch [ 53 / 60 ]; TestAccuracy: 0.93265 TestLoss: 0.29792
+Starting Epoch 54/60. lr = 0.0001
+[0] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98558 TrainLoss: 0.00874 %-Real: 0.0
+	[0] Epoch [ 54 / 60 ]; TestAccuracy: 0.93061 TestLoss: 0.28012
+Starting Epoch 55/60. lr = 0.0001
+[0] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98952 TrainLoss: 0.00725 %-Real: 0.0
+	[0] Epoch [ 55 / 60 ]; TestAccuracy: 0.93878 TestLoss: 0.25111
+Starting Epoch 56/60. lr = 0.0001
+[0] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98558 TrainLoss: 0.01106 %-Real: 0.0
+	[0] Epoch [ 56 / 60 ]; TestAccuracy: 0.94286 TestLoss: 0.22584
+Starting Epoch 57/60. lr = 0.0001
+[0] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98820 TrainLoss: 0.00736 %-Real: 0.0
+	[0] Epoch [ 57 / 60 ]; TestAccuracy: 0.94082 TestLoss: 0.22008
+Starting Epoch 58/60. lr = 0.0001
+[0] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99214 TrainLoss: 0.00635 %-Real: 0.0
+	[0] Epoch [ 58 / 60 ]; TestAccuracy: 0.93673 TestLoss: 0.23071
+Starting Epoch 59/60. lr = 0.0001
+[0] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99214 TrainLoss: 0.00635 %-Real: 0.0
+	[0] Epoch [ 59 / 60 ]; TestAccuracy: 0.93061 TestLoss: 0.25830
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.7608. TNR@95TPR: 0.2245. DetAcc: 0.7184
+	ODIN (T=1000).     AUROC: 0.7847. TNR@95TPR: 0.3061. DetAcc: 0.7337
+	ODIN (T=1000) IPP. AUROC: 0.7963. TNR@95TPR: 0.2857. DetAcc: 0.7541
+**********************************************************
+Starting Iter: 1 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [5]
+Remaining Classes:  [0, 1, 2, 3, 4, 6, 7, 8, 9]
+# ID Train:  730
+# ID Test:   486
+# OOD Test:  53
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[1] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.13151 TrainLoss: 0.45812 %-Real: 0.0
+	[1] Epoch [ 0 / 60 ]; TestAccuracy: 0.12346 TestLoss: 2.21307
+Starting Epoch 1/60. lr = 0.001
+[1] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.18219 TrainLoss: 0.36888 %-Real: 0.0
+	[1] Epoch [ 1 / 60 ]; TestAccuracy: 0.12346 TestLoss: 2.51996
+Starting Epoch 2/60. lr = 0.001
+[1] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.26027 TrainLoss: 0.34189 %-Real: 0.0
+	[1] Epoch [ 2 / 60 ]; TestAccuracy: 0.11934 TestLoss: 2.41924
+Starting Epoch 3/60. lr = 0.001
+[1] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.33562 TrainLoss: 0.30049 %-Real: 0.0
+	[1] Epoch [ 3 / 60 ]; TestAccuracy: 0.11934 TestLoss: 2.44471
+Starting Epoch 4/60. lr = 0.001
+[1] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.44795 TrainLoss: 0.25928 %-Real: 0.0
+	[1] Epoch [ 4 / 60 ]; TestAccuracy: 0.12757 TestLoss: 2.44559
+Starting Epoch 5/60. lr = 0.001
+[1] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.52877 TrainLoss: 0.22353 %-Real: 0.0
+	[1] Epoch [ 5 / 60 ]; TestAccuracy: 0.26132 TestLoss: 2.55539
+Starting Epoch 6/60. lr = 0.001
+[1] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.56575 TrainLoss: 0.20220 %-Real: 0.0
+	[1] Epoch [ 6 / 60 ]; TestAccuracy: 0.39095 TestLoss: 1.62605
+Starting Epoch 7/60. lr = 0.001
+[1] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.69452 TrainLoss: 0.16524 %-Real: 0.0
+	[1] Epoch [ 7 / 60 ]; TestAccuracy: 0.45473 TestLoss: 2.04763
+Starting Epoch 8/60. lr = 0.001
+[1] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.72877 TrainLoss: 0.14517 %-Real: 0.0
+	[1] Epoch [ 8 / 60 ]; TestAccuracy: 0.66667 TestLoss: 0.93462
+Starting Epoch 9/60. lr = 0.001
+[1] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.75068 TrainLoss: 0.13188 %-Real: 0.0
+	[1] Epoch [ 9 / 60 ]; TestAccuracy: 0.60082 TestLoss: 1.41413
+Starting Epoch 10/60. lr = 0.001
+[1] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.79315 TrainLoss: 0.11041 %-Real: 0.0
+	[1] Epoch [ 10 / 60 ]; TestAccuracy: 0.73251 TestLoss: 1.02782
+Starting Epoch 11/60. lr = 0.001
+[1] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.84658 TrainLoss: 0.09322 %-Real: 0.0
+	[1] Epoch [ 11 / 60 ]; TestAccuracy: 0.77984 TestLoss: 0.87866
+Starting Epoch 12/60. lr = 0.001
+[1] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.86438 TrainLoss: 0.07963 %-Real: 0.0
+	[1] Epoch [ 12 / 60 ]; TestAccuracy: 0.73868 TestLoss: 1.14680
+Starting Epoch 13/60. lr = 0.001
+[1] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.87671 TrainLoss: 0.07056 %-Real: 0.0
+	[1] Epoch [ 13 / 60 ]; TestAccuracy: 0.72222 TestLoss: 1.40111
+Starting Epoch 14/60. lr = 0.001
+[1] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.90000 TrainLoss: 0.05819 %-Real: 0.0
+	[1] Epoch [ 14 / 60 ]; TestAccuracy: 0.68313 TestLoss: 1.65819
+Starting Epoch 15/60. lr = 0.001
+[1] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.91507 TrainLoss: 0.05030 %-Real: 0.0
+	[1] Epoch [ 15 / 60 ]; TestAccuracy: 0.75720 TestLoss: 1.38851
+Starting Epoch 16/60. lr = 0.001
+[1] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.92877 TrainLoss: 0.04610 %-Real: 0.0
+	[1] Epoch [ 16 / 60 ]; TestAccuracy: 0.87243 TestLoss: 0.53058
+Starting Epoch 17/60. lr = 0.001
+[1] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.93699 TrainLoss: 0.03632 %-Real: 0.0
+	[1] Epoch [ 17 / 60 ]; TestAccuracy: 0.81070 TestLoss: 0.79928
+Starting Epoch 18/60. lr = 0.001
+[1] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.93288 TrainLoss: 0.03981 %-Real: 0.0
+	[1] Epoch [ 18 / 60 ]; TestAccuracy: 0.84362 TestLoss: 0.78429
+Starting Epoch 19/60. lr = 0.001
+[1] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.94521 TrainLoss: 0.03555 %-Real: 0.0
+	[1] Epoch [ 19 / 60 ]; TestAccuracy: 0.85185 TestLoss: 0.66055
+Starting Epoch 20/60. lr = 0.001
+[1] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.95479 TrainLoss: 0.03089 %-Real: 0.0
+	[1] Epoch [ 20 / 60 ]; TestAccuracy: 0.88066 TestLoss: 0.52359
+Starting Epoch 21/60. lr = 0.001
+[1] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.96027 TrainLoss: 0.02782 %-Real: 0.0
+	[1] Epoch [ 21 / 60 ]; TestAccuracy: 0.88272 TestLoss: 0.57248
+Starting Epoch 22/60. lr = 0.001
+[1] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.95479 TrainLoss: 0.02851 %-Real: 0.0
+	[1] Epoch [ 22 / 60 ]; TestAccuracy: 0.94856 TestLoss: 0.16892
+Starting Epoch 23/60. lr = 0.001
+[1] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.96712 TrainLoss: 0.02468 %-Real: 0.0
+	[1] Epoch [ 23 / 60 ]; TestAccuracy: 0.86831 TestLoss: 0.62194
+Starting Epoch 24/60. lr = 0.001
+[1] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.95890 TrainLoss: 0.02775 %-Real: 0.0
+	[1] Epoch [ 24 / 60 ]; TestAccuracy: 0.91770 TestLoss: 0.34585
+Starting Epoch 25/60. lr = 0.001
+[1] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.96712 TrainLoss: 0.02826 %-Real: 0.0
+	[1] Epoch [ 25 / 60 ]; TestAccuracy: 0.90535 TestLoss: 0.50272
+Starting Epoch 26/60. lr = 0.001
+[1] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.97123 TrainLoss: 0.02279 %-Real: 0.0
+	[1] Epoch [ 26 / 60 ]; TestAccuracy: 0.80658 TestLoss: 1.19673
+Starting Epoch 27/60. lr = 0.001
+[1] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.97123 TrainLoss: 0.02368 %-Real: 0.0
+	[1] Epoch [ 27 / 60 ]; TestAccuracy: 0.92181 TestLoss: 0.51425
+Starting Epoch 28/60. lr = 0.001
+[1] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.95753 TrainLoss: 0.02492 %-Real: 0.0
+	[1] Epoch [ 28 / 60 ]; TestAccuracy: 0.83128 TestLoss: 0.84971
+Starting Epoch 29/60. lr = 0.001
+[1] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.96575 TrainLoss: 0.02144 %-Real: 0.0
+	[1] Epoch [ 29 / 60 ]; TestAccuracy: 0.90123 TestLoss: 0.49645
+Starting Epoch 30/60. lr = 0.001
+[1] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.96575 TrainLoss: 0.02173 %-Real: 0.0
+	[1] Epoch [ 30 / 60 ]; TestAccuracy: 0.92181 TestLoss: 0.29203
+Starting Epoch 31/60. lr = 0.001
+[1] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.97260 TrainLoss: 0.01790 %-Real: 0.0
+	[1] Epoch [ 31 / 60 ]; TestAccuracy: 0.94856 TestLoss: 0.24115
+Starting Epoch 32/60. lr = 0.001
+[1] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.97397 TrainLoss: 0.01860 %-Real: 0.0
+	[1] Epoch [ 32 / 60 ]; TestAccuracy: 0.90329 TestLoss: 0.48567
+Starting Epoch 33/60. lr = 0.001
+[1] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.96438 TrainLoss: 0.02500 %-Real: 0.0
+	[1] Epoch [ 33 / 60 ]; TestAccuracy: 0.92593 TestLoss: 0.40567
+Starting Epoch 34/60. lr = 0.001
+[1] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.97123 TrainLoss: 0.01933 %-Real: 0.0
+	[1] Epoch [ 34 / 60 ]; TestAccuracy: 0.88889 TestLoss: 0.57381
+Starting Epoch 35/60. lr = 0.001
+[1] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.97808 TrainLoss: 0.01665 %-Real: 0.0
+	[1] Epoch [ 35 / 60 ]; TestAccuracy: 0.87037 TestLoss: 0.86328
+Starting Epoch 36/60. lr = 0.001
+[1] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.97945 TrainLoss: 0.01456 %-Real: 0.0
+	[1] Epoch [ 36 / 60 ]; TestAccuracy: 0.89712 TestLoss: 0.45777
+Starting Epoch 37/60. lr = 0.001
+[1] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.98493 TrainLoss: 0.01439 %-Real: 0.0
+	[1] Epoch [ 37 / 60 ]; TestAccuracy: 0.89300 TestLoss: 0.74219
+Starting Epoch 38/60. lr = 0.001
+[1] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.96986 TrainLoss: 0.01947 %-Real: 0.0
+	[1] Epoch [ 38 / 60 ]; TestAccuracy: 0.82305 TestLoss: 1.10142
+Starting Epoch 39/60. lr = 0.001
+[1] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.97123 TrainLoss: 0.01669 %-Real: 0.0
+	[1] Epoch [ 39 / 60 ]; TestAccuracy: 0.89918 TestLoss: 0.55431
+Starting Epoch 40/60. lr = 0.001
+[1] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.97945 TrainLoss: 0.01419 %-Real: 0.0
+	[1] Epoch [ 40 / 60 ]; TestAccuracy: 0.89918 TestLoss: 0.58238
+Starting Epoch 41/60. lr = 0.001
+[1] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.96575 TrainLoss: 0.01542 %-Real: 0.0
+	[1] Epoch [ 41 / 60 ]; TestAccuracy: 0.90535 TestLoss: 0.46230
+Starting Epoch 42/60. lr = 0.001
+[1] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.97808 TrainLoss: 0.01412 %-Real: 0.0
+	[1] Epoch [ 42 / 60 ]; TestAccuracy: 0.94033 TestLoss: 0.28315
+Starting Epoch 43/60. lr = 0.001
+[1] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.97534 TrainLoss: 0.01897 %-Real: 0.0
+	[1] Epoch [ 43 / 60 ]; TestAccuracy: 0.93004 TestLoss: 0.36652
+Starting Epoch 44/60. lr = 0.001
+[1] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.96438 TrainLoss: 0.01895 %-Real: 0.0
+	[1] Epoch [ 44 / 60 ]; TestAccuracy: 0.90329 TestLoss: 0.41009
+Starting Epoch 45/60. lr = 0.001
+[1] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.97123 TrainLoss: 0.01940 %-Real: 0.0
+	[1] Epoch [ 45 / 60 ]; TestAccuracy: 0.92593 TestLoss: 0.49875
+Starting Epoch 46/60. lr = 0.001
+[1] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98767 TrainLoss: 0.01078 %-Real: 0.0
+	[1] Epoch [ 46 / 60 ]; TestAccuracy: 0.91358 TestLoss: 0.52808
+Starting Epoch 47/60. lr = 0.001
+[1] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.98493 TrainLoss: 0.01233 %-Real: 0.0
+	[1] Epoch [ 47 / 60 ]; TestAccuracy: 0.91152 TestLoss: 0.44098
+Starting Epoch 48/60. lr = 0.001
+[1] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.97671 TrainLoss: 0.01608 %-Real: 0.0
+	[1] Epoch [ 48 / 60 ]; TestAccuracy: 0.96091 TestLoss: 0.13813
+Starting Epoch 49/60. lr = 0.001
+[1] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.98082 TrainLoss: 0.01366 %-Real: 0.0
+	[1] Epoch [ 49 / 60 ]; TestAccuracy: 0.93004 TestLoss: 0.48971
+Starting Epoch 50/60. lr = 0.0001
+[1] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.97534 TrainLoss: 0.01696 %-Real: 0.0
+	[1] Epoch [ 50 / 60 ]; TestAccuracy: 0.94033 TestLoss: 0.40066
+Starting Epoch 51/60. lr = 0.0001
+[1] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98767 TrainLoss: 0.01012 %-Real: 0.0
+	[1] Epoch [ 51 / 60 ]; TestAccuracy: 0.95267 TestLoss: 0.32933
+Starting Epoch 52/60. lr = 0.0001
+[1] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98219 TrainLoss: 0.01068 %-Real: 0.0
+	[1] Epoch [ 52 / 60 ]; TestAccuracy: 0.95679 TestLoss: 0.29689
+Starting Epoch 53/60. lr = 0.0001
+[1] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98630 TrainLoss: 0.01082 %-Real: 0.0
+	[1] Epoch [ 53 / 60 ]; TestAccuracy: 0.95473 TestLoss: 0.26385
+Starting Epoch 54/60. lr = 0.0001
+[1] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99178 TrainLoss: 0.00790 %-Real: 0.0
+	[1] Epoch [ 54 / 60 ]; TestAccuracy: 0.95473 TestLoss: 0.20803
+Starting Epoch 55/60. lr = 0.0001
+[1] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98904 TrainLoss: 0.00785 %-Real: 0.0
+	[1] Epoch [ 55 / 60 ]; TestAccuracy: 0.95885 TestLoss: 0.14261
+Starting Epoch 56/60. lr = 0.0001
+[1] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99452 TrainLoss: 0.00729 %-Real: 0.0
+	[1] Epoch [ 56 / 60 ]; TestAccuracy: 0.96502 TestLoss: 0.12386
+Starting Epoch 57/60. lr = 0.0001
+[1] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98767 TrainLoss: 0.00835 %-Real: 0.0
+	[1] Epoch [ 57 / 60 ]; TestAccuracy: 0.96296 TestLoss: 0.12547
+Starting Epoch 58/60. lr = 0.0001
+[1] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98082 TrainLoss: 0.00922 %-Real: 0.0
+	[1] Epoch [ 58 / 60 ]; TestAccuracy: 0.95473 TestLoss: 0.14577
+Starting Epoch 59/60. lr = 0.0001
+[1] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98904 TrainLoss: 0.00652 %-Real: 0.0
+	[1] Epoch [ 59 / 60 ]; TestAccuracy: 0.95679 TestLoss: 0.15428
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.7349. TNR@95TPR: 0.3962. DetAcc: 0.7259
+	ODIN (T=1000).     AUROC: 0.7576. TNR@95TPR: 0.4717. DetAcc: 0.7227
+	ODIN (T=1000) IPP. AUROC: 0.7984. TNR@95TPR: 0.5094. DetAcc: 0.7585
+**********************************************************
+Starting Iter: 2 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [0]
+Remaining Classes:  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# ID Train:  690
+# ID Test:   481
+# OOD Test:  58
+NEW TRAINING CLASS MAPPING:  {0: 'bmp2', 1: 'btr70', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: 'bmp2', 1: 'btr70', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[2] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.13043 TrainLoss: 0.49756 %-Real: 0.0
+	[2] Epoch [ 0 / 60 ]; TestAccuracy: 0.10811 TestLoss: 2.22545
+Starting Epoch 1/60. lr = 0.001
+[2] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.21884 TrainLoss: 0.36390 %-Real: 0.0
+	[2] Epoch [ 1 / 60 ]; TestAccuracy: 0.12474 TestLoss: 2.39606
+Starting Epoch 2/60. lr = 0.001
+[2] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.33478 TrainLoss: 0.31261 %-Real: 0.0
+	[2] Epoch [ 2 / 60 ]; TestAccuracy: 0.33680 TestLoss: 1.85135
+Starting Epoch 3/60. lr = 0.001
+[2] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.43043 TrainLoss: 0.27191 %-Real: 0.0
+	[2] Epoch [ 3 / 60 ]; TestAccuracy: 0.37838 TestLoss: 1.64586
+Starting Epoch 4/60. lr = 0.001
+[2] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.49855 TrainLoss: 0.24296 %-Real: 0.0
+	[2] Epoch [ 4 / 60 ]; TestAccuracy: 0.43867 TestLoss: 1.39668
+Starting Epoch 5/60. lr = 0.001
+[2] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.55362 TrainLoss: 0.21485 %-Real: 0.0
+	[2] Epoch [ 5 / 60 ]; TestAccuracy: 0.47609 TestLoss: 1.47441
+Starting Epoch 6/60. lr = 0.001
+[2] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.61159 TrainLoss: 0.19074 %-Real: 0.0
+	[2] Epoch [ 6 / 60 ]; TestAccuracy: 0.39085 TestLoss: 1.70674
+Starting Epoch 7/60. lr = 0.001
+[2] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.69855 TrainLoss: 0.16045 %-Real: 0.0
+	[2] Epoch [ 7 / 60 ]; TestAccuracy: 0.39501 TestLoss: 1.93182
+Starting Epoch 8/60. lr = 0.001
+[2] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.71014 TrainLoss: 0.14168 %-Real: 0.0
+	[2] Epoch [ 8 / 60 ]; TestAccuracy: 0.57588 TestLoss: 1.35503
+Starting Epoch 9/60. lr = 0.001
+[2] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.76957 TrainLoss: 0.12586 %-Real: 0.0
+	[2] Epoch [ 9 / 60 ]; TestAccuracy: 0.68191 TestLoss: 0.87035
+Starting Epoch 10/60. lr = 0.001
+[2] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.77826 TrainLoss: 0.11371 %-Real: 0.0
+	[2] Epoch [ 10 / 60 ]; TestAccuracy: 0.57173 TestLoss: 1.62843
+Starting Epoch 11/60. lr = 0.001
+[2] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.79420 TrainLoss: 0.10782 %-Real: 0.0
+	[2] Epoch [ 11 / 60 ]; TestAccuracy: 0.70062 TestLoss: 0.83017
+Starting Epoch 12/60. lr = 0.001
+[2] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.83333 TrainLoss: 0.09597 %-Real: 0.0
+	[2] Epoch [ 12 / 60 ]; TestAccuracy: 0.66528 TestLoss: 1.10205
+Starting Epoch 13/60. lr = 0.001
+[2] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.84493 TrainLoss: 0.08260 %-Real: 0.0
+	[2] Epoch [ 13 / 60 ]; TestAccuracy: 0.69647 TestLoss: 0.87639
+Starting Epoch 14/60. lr = 0.001
+[2] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.87826 TrainLoss: 0.07004 %-Real: 0.0
+	[2] Epoch [ 14 / 60 ]; TestAccuracy: 0.74844 TestLoss: 0.89631
+Starting Epoch 15/60. lr = 0.001
+[2] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.88841 TrainLoss: 0.06060 %-Real: 0.0
+	[2] Epoch [ 15 / 60 ]; TestAccuracy: 0.72557 TestLoss: 1.16766
+Starting Epoch 16/60. lr = 0.001
+[2] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.93768 TrainLoss: 0.04282 %-Real: 0.0
+	[2] Epoch [ 16 / 60 ]; TestAccuracy: 0.84823 TestLoss: 0.67459
+Starting Epoch 17/60. lr = 0.001
+[2] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.94638 TrainLoss: 0.03403 %-Real: 0.0
+	[2] Epoch [ 17 / 60 ]; TestAccuracy: 0.83368 TestLoss: 0.60034
+Starting Epoch 18/60. lr = 0.001
+[2] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.95072 TrainLoss: 0.03595 %-Real: 0.0
+	[2] Epoch [ 18 / 60 ]; TestAccuracy: 0.82744 TestLoss: 0.66865
+Starting Epoch 19/60. lr = 0.001
+[2] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.93333 TrainLoss: 0.03463 %-Real: 0.0
+	[2] Epoch [ 19 / 60 ]; TestAccuracy: 0.82121 TestLoss: 0.88484
+Starting Epoch 20/60. lr = 0.001
+[2] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.95652 TrainLoss: 0.03099 %-Real: 0.0
+	[2] Epoch [ 20 / 60 ]; TestAccuracy: 0.90644 TestLoss: 0.41669
+Starting Epoch 21/60. lr = 0.001
+[2] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.96087 TrainLoss: 0.03075 %-Real: 0.0
+	[2] Epoch [ 21 / 60 ]; TestAccuracy: 0.86902 TestLoss: 0.61347
+Starting Epoch 22/60. lr = 0.001
+[2] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.94638 TrainLoss: 0.03002 %-Real: 0.0
+	[2] Epoch [ 22 / 60 ]; TestAccuracy: 0.93555 TestLoss: 0.29662
+Starting Epoch 23/60. lr = 0.001
+[2] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.97971 TrainLoss: 0.01682 %-Real: 0.0
+	[2] Epoch [ 23 / 60 ]; TestAccuracy: 0.89397 TestLoss: 0.47258
+Starting Epoch 24/60. lr = 0.001
+[2] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.96957 TrainLoss: 0.02609 %-Real: 0.0
+	[2] Epoch [ 24 / 60 ]; TestAccuracy: 0.90229 TestLoss: 0.41886
+Starting Epoch 25/60. lr = 0.001
+[2] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.97101 TrainLoss: 0.02323 %-Real: 0.0
+	[2] Epoch [ 25 / 60 ]; TestAccuracy: 0.89813 TestLoss: 0.35910
+Starting Epoch 26/60. lr = 0.001
+[2] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.96812 TrainLoss: 0.02526 %-Real: 0.0
+	[2] Epoch [ 26 / 60 ]; TestAccuracy: 0.91268 TestLoss: 0.38325
+Starting Epoch 27/60. lr = 0.001
+[2] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.97246 TrainLoss: 0.01946 %-Real: 0.0
+	[2] Epoch [ 27 / 60 ]; TestAccuracy: 0.84823 TestLoss: 0.67099
+Starting Epoch 28/60. lr = 0.001
+[2] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.97391 TrainLoss: 0.01890 %-Real: 0.0
+	[2] Epoch [ 28 / 60 ]; TestAccuracy: 0.88358 TestLoss: 0.43202
+Starting Epoch 29/60. lr = 0.001
+[2] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.97391 TrainLoss: 0.01760 %-Real: 0.0
+	[2] Epoch [ 29 / 60 ]; TestAccuracy: 0.91684 TestLoss: 0.32891
+Starting Epoch 30/60. lr = 0.001
+[2] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.97391 TrainLoss: 0.02541 %-Real: 0.0
+	[2] Epoch [ 30 / 60 ]; TestAccuracy: 0.91060 TestLoss: 0.38622
+Starting Epoch 31/60. lr = 0.001
+[2] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.98261 TrainLoss: 0.01568 %-Real: 0.0
+	[2] Epoch [ 31 / 60 ]; TestAccuracy: 0.85655 TestLoss: 0.68978
+Starting Epoch 32/60. lr = 0.001
+[2] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.96377 TrainLoss: 0.02322 %-Real: 0.0
+	[2] Epoch [ 32 / 60 ]; TestAccuracy: 0.87942 TestLoss: 0.53077
+Starting Epoch 33/60. lr = 0.001
+[2] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.97681 TrainLoss: 0.01385 %-Real: 0.0
+	[2] Epoch [ 33 / 60 ]; TestAccuracy: 0.82952 TestLoss: 0.99402
+Starting Epoch 34/60. lr = 0.001
+[2] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.97971 TrainLoss: 0.01439 %-Real: 0.0
+	[2] Epoch [ 34 / 60 ]; TestAccuracy: 0.89189 TestLoss: 0.49247
+Starting Epoch 35/60. lr = 0.001
+[2] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.98986 TrainLoss: 0.00968 %-Real: 0.0
+	[2] Epoch [ 35 / 60 ]; TestAccuracy: 0.87526 TestLoss: 0.57045
+Starting Epoch 36/60. lr = 0.001
+[2] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.97971 TrainLoss: 0.01308 %-Real: 0.0
+	[2] Epoch [ 36 / 60 ]; TestAccuracy: 0.89189 TestLoss: 0.49440
+Starting Epoch 37/60. lr = 0.001
+[2] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.99130 TrainLoss: 0.00712 %-Real: 0.0
+	[2] Epoch [ 37 / 60 ]; TestAccuracy: 0.92723 TestLoss: 0.28196
+Starting Epoch 38/60. lr = 0.001
+[2] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.98261 TrainLoss: 0.01348 %-Real: 0.0
+	[2] Epoch [ 38 / 60 ]; TestAccuracy: 0.93555 TestLoss: 0.21827
+Starting Epoch 39/60. lr = 0.001
+[2] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.98261 TrainLoss: 0.01182 %-Real: 0.0
+	[2] Epoch [ 39 / 60 ]; TestAccuracy: 0.88773 TestLoss: 0.41504
+Starting Epoch 40/60. lr = 0.001
+[2] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.97391 TrainLoss: 0.01455 %-Real: 0.0
+	[2] Epoch [ 40 / 60 ]; TestAccuracy: 0.87110 TestLoss: 0.57717
+Starting Epoch 41/60. lr = 0.001
+[2] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.97971 TrainLoss: 0.01538 %-Real: 0.0
+	[2] Epoch [ 41 / 60 ]; TestAccuracy: 0.85239 TestLoss: 0.64036
+Starting Epoch 42/60. lr = 0.001
+[2] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.98551 TrainLoss: 0.00965 %-Real: 0.0
+	[2] Epoch [ 42 / 60 ]; TestAccuracy: 0.92931 TestLoss: 0.26303
+Starting Epoch 43/60. lr = 0.001
+[2] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.98841 TrainLoss: 0.00969 %-Real: 0.0
+	[2] Epoch [ 43 / 60 ]; TestAccuracy: 0.93763 TestLoss: 0.23781
+Starting Epoch 44/60. lr = 0.001
+[2] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.98841 TrainLoss: 0.00813 %-Real: 0.0
+	[2] Epoch [ 44 / 60 ]; TestAccuracy: 0.89397 TestLoss: 0.45085
+Starting Epoch 45/60. lr = 0.001
+[2] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.97681 TrainLoss: 0.01420 %-Real: 0.0
+	[2] Epoch [ 45 / 60 ]; TestAccuracy: 0.91684 TestLoss: 0.38688
+Starting Epoch 46/60. lr = 0.001
+[2] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98986 TrainLoss: 0.00707 %-Real: 0.0
+	[2] Epoch [ 46 / 60 ]; TestAccuracy: 0.90852 TestLoss: 0.42094
+Starting Epoch 47/60. lr = 0.001
+[2] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.98696 TrainLoss: 0.00975 %-Real: 0.0
+	[2] Epoch [ 47 / 60 ]; TestAccuracy: 0.91268 TestLoss: 0.46753
+Starting Epoch 48/60. lr = 0.001
+[2] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.98986 TrainLoss: 0.00810 %-Real: 0.0
+	[2] Epoch [ 48 / 60 ]; TestAccuracy: 0.91684 TestLoss: 0.42868
+Starting Epoch 49/60. lr = 0.001
+[2] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.98261 TrainLoss: 0.00975 %-Real: 0.0
+	[2] Epoch [ 49 / 60 ]; TestAccuracy: 0.92931 TestLoss: 0.30334
+Starting Epoch 50/60. lr = 0.0001
+[2] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98406 TrainLoss: 0.00886 %-Real: 0.0
+	[2] Epoch [ 50 / 60 ]; TestAccuracy: 0.93347 TestLoss: 0.28475
+Starting Epoch 51/60. lr = 0.0001
+[2] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98986 TrainLoss: 0.00573 %-Real: 0.0
+	[2] Epoch [ 51 / 60 ]; TestAccuracy: 0.94387 TestLoss: 0.25812
+Starting Epoch 52/60. lr = 0.0001
+[2] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98551 TrainLoss: 0.00994 %-Real: 0.0
+	[2] Epoch [ 52 / 60 ]; TestAccuracy: 0.94595 TestLoss: 0.25215
+Starting Epoch 53/60. lr = 0.0001
+[2] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99565 TrainLoss: 0.00368 %-Real: 0.0
+	[2] Epoch [ 53 / 60 ]; TestAccuracy: 0.93971 TestLoss: 0.25481
+Starting Epoch 54/60. lr = 0.0001
+[2] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99130 TrainLoss: 0.00649 %-Real: 0.0
+	[2] Epoch [ 54 / 60 ]; TestAccuracy: 0.94179 TestLoss: 0.24761
+Starting Epoch 55/60. lr = 0.0001
+[2] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99565 TrainLoss: 0.00365 %-Real: 0.0
+	[2] Epoch [ 55 / 60 ]; TestAccuracy: 0.94179 TestLoss: 0.25009
+Starting Epoch 56/60. lr = 0.0001
+[2] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99565 TrainLoss: 0.00489 %-Real: 0.0
+	[2] Epoch [ 56 / 60 ]; TestAccuracy: 0.94179 TestLoss: 0.24768
+Starting Epoch 57/60. lr = 0.0001
+[2] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99275 TrainLoss: 0.00453 %-Real: 0.0
+	[2] Epoch [ 57 / 60 ]; TestAccuracy: 0.94387 TestLoss: 0.24528
+Starting Epoch 58/60. lr = 0.0001
+[2] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99565 TrainLoss: 0.00454 %-Real: 0.0
+	[2] Epoch [ 58 / 60 ]; TestAccuracy: 0.94179 TestLoss: 0.23635
+Starting Epoch 59/60. lr = 0.0001
+[2] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98551 TrainLoss: 0.00970 %-Real: 0.0
+	[2] Epoch [ 59 / 60 ]; TestAccuracy: 0.94595 TestLoss: 0.21079
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.8706. TNR@95TPR: 0.3103. DetAcc: 0.8124
+	ODIN (T=1000).     AUROC: 0.8592. TNR@95TPR: 0.2931. DetAcc: 0.8032
+	ODIN (T=1000) IPP. AUROC: 0.8778. TNR@95TPR: 0.3448. DetAcc: 0.8186
+**********************************************************
+Starting Iter: 3 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [2]
+Remaining Classes:  [0, 1, 3, 4, 5, 6, 7, 8, 9]
+# ID Train:  763
+# ID Test:   490
+# OOD Test:  49
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'bmp2', 2: 'm1', 3: 'm2', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[3] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.14548 TrainLoss: 0.46306 %-Real: 0.0
+	[3] Epoch [ 0 / 60 ]; TestAccuracy: 0.14082 TestLoss: 2.20963
+Starting Epoch 1/60. lr = 0.001
+[3] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.16514 TrainLoss: 0.37543 %-Real: 0.0
+	[3] Epoch [ 1 / 60 ]; TestAccuracy: 0.12245 TestLoss: 2.26445
+Starting Epoch 2/60. lr = 0.001
+[3] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.27130 TrainLoss: 0.32706 %-Real: 0.0
+	[3] Epoch [ 2 / 60 ]; TestAccuracy: 0.12245 TestLoss: 2.25357
+Starting Epoch 3/60. lr = 0.001
+[3] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.36959 TrainLoss: 0.29543 %-Real: 0.0
+	[3] Epoch [ 3 / 60 ]; TestAccuracy: 0.13878 TestLoss: 2.27682
+Starting Epoch 4/60. lr = 0.001
+[3] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.47837 TrainLoss: 0.25007 %-Real: 0.0
+	[3] Epoch [ 4 / 60 ]; TestAccuracy: 0.30408 TestLoss: 2.12091
+Starting Epoch 5/60. lr = 0.001
+[3] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.55439 TrainLoss: 0.21117 %-Real: 0.0
+	[3] Epoch [ 5 / 60 ]; TestAccuracy: 0.33061 TestLoss: 1.82959
+Starting Epoch 6/60. lr = 0.001
+[3] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.63434 TrainLoss: 0.18325 %-Real: 0.0
+	[3] Epoch [ 6 / 60 ]; TestAccuracy: 0.42245 TestLoss: 1.65478
+Starting Epoch 7/60. lr = 0.001
+[3] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.70249 TrainLoss: 0.15677 %-Real: 0.0
+	[3] Epoch [ 7 / 60 ]; TestAccuracy: 0.46327 TestLoss: 2.11113
+Starting Epoch 8/60. lr = 0.001
+[3] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.73788 TrainLoss: 0.13849 %-Real: 0.0
+	[3] Epoch [ 8 / 60 ]; TestAccuracy: 0.58776 TestLoss: 1.36681
+Starting Epoch 9/60. lr = 0.001
+[3] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.81782 TrainLoss: 0.10779 %-Real: 0.0
+	[3] Epoch [ 9 / 60 ]; TestAccuracy: 0.61224 TestLoss: 1.34806
+Starting Epoch 10/60. lr = 0.001
+[3] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.84797 TrainLoss: 0.09471 %-Real: 0.0
+	[3] Epoch [ 10 / 60 ]; TestAccuracy: 0.62653 TestLoss: 1.85248
+Starting Epoch 11/60. lr = 0.001
+[3] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.89253 TrainLoss: 0.07422 %-Real: 0.0
+	[3] Epoch [ 11 / 60 ]; TestAccuracy: 0.60408 TestLoss: 1.58962
+Starting Epoch 12/60. lr = 0.001
+[3] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.89122 TrainLoss: 0.06417 %-Real: 0.0
+	[3] Epoch [ 12 / 60 ]; TestAccuracy: 0.59592 TestLoss: 2.16305
+Starting Epoch 13/60. lr = 0.001
+[3] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.92005 TrainLoss: 0.05539 %-Real: 0.0
+	[3] Epoch [ 13 / 60 ]; TestAccuracy: 0.73265 TestLoss: 1.08193
+Starting Epoch 14/60. lr = 0.001
+[3] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.92005 TrainLoss: 0.04566 %-Real: 0.0
+	[3] Epoch [ 14 / 60 ]; TestAccuracy: 0.73673 TestLoss: 1.32404
+Starting Epoch 15/60. lr = 0.001
+[3] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.91612 TrainLoss: 0.04526 %-Real: 0.0
+	[3] Epoch [ 15 / 60 ]; TestAccuracy: 0.83061 TestLoss: 0.62218
+Starting Epoch 16/60. lr = 0.001
+[3] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.94626 TrainLoss: 0.03674 %-Real: 0.0
+	[3] Epoch [ 16 / 60 ]; TestAccuracy: 0.79184 TestLoss: 1.14107
+Starting Epoch 17/60. lr = 0.001
+[3] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.94889 TrainLoss: 0.03684 %-Real: 0.0
+	[3] Epoch [ 17 / 60 ]; TestAccuracy: 0.86122 TestLoss: 0.63062
+Starting Epoch 18/60. lr = 0.001
+[3] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.95151 TrainLoss: 0.03116 %-Real: 0.0
+	[3] Epoch [ 18 / 60 ]; TestAccuracy: 0.77551 TestLoss: 1.06629
+Starting Epoch 19/60. lr = 0.001
+[3] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.93709 TrainLoss: 0.03311 %-Real: 0.0
+	[3] Epoch [ 19 / 60 ]; TestAccuracy: 0.79796 TestLoss: 1.04586
+Starting Epoch 20/60. lr = 0.001
+[3] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.95675 TrainLoss: 0.02865 %-Real: 0.0
+	[3] Epoch [ 20 / 60 ]; TestAccuracy: 0.82653 TestLoss: 0.83186
+Starting Epoch 21/60. lr = 0.001
+[3] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.95675 TrainLoss: 0.02198 %-Real: 0.0
+	[3] Epoch [ 21 / 60 ]; TestAccuracy: 0.82245 TestLoss: 0.91072
+Starting Epoch 22/60. lr = 0.001
+[3] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.95806 TrainLoss: 0.02532 %-Real: 0.0
+	[3] Epoch [ 22 / 60 ]; TestAccuracy: 0.85918 TestLoss: 0.69442
+Starting Epoch 23/60. lr = 0.001
+[3] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.98165 TrainLoss: 0.01756 %-Real: 0.0
+	[3] Epoch [ 23 / 60 ]; TestAccuracy: 0.86531 TestLoss: 0.74042
+Starting Epoch 24/60. lr = 0.001
+[3] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.01919 %-Real: 0.0
+	[3] Epoch [ 24 / 60 ]; TestAccuracy: 0.81224 TestLoss: 1.05726
+Starting Epoch 25/60. lr = 0.001
+[3] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.98558 TrainLoss: 0.01167 %-Real: 0.0
+	[3] Epoch [ 25 / 60 ]; TestAccuracy: 0.83265 TestLoss: 0.82497
+Starting Epoch 26/60. lr = 0.001
+[3] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.97903 TrainLoss: 0.01561 %-Real: 0.0
+	[3] Epoch [ 26 / 60 ]; TestAccuracy: 0.76939 TestLoss: 1.51050
+Starting Epoch 27/60. lr = 0.001
+[3] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.96855 TrainLoss: 0.02378 %-Real: 0.0
+	[3] Epoch [ 27 / 60 ]; TestAccuracy: 0.80408 TestLoss: 1.05715
+Starting Epoch 28/60. lr = 0.001
+[3] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.96592 TrainLoss: 0.02006 %-Real: 0.0
+	[3] Epoch [ 28 / 60 ]; TestAccuracy: 0.81633 TestLoss: 1.07398
+Starting Epoch 29/60. lr = 0.001
+[3] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.96068 TrainLoss: 0.02068 %-Real: 0.0
+	[3] Epoch [ 29 / 60 ]; TestAccuracy: 0.83265 TestLoss: 0.86817
+Starting Epoch 30/60. lr = 0.001
+[3] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.96461 TrainLoss: 0.02075 %-Real: 0.0
+	[3] Epoch [ 30 / 60 ]; TestAccuracy: 0.82857 TestLoss: 0.83822
+Starting Epoch 31/60. lr = 0.001
+[3] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.01595 %-Real: 0.0
+	[3] Epoch [ 31 / 60 ]; TestAccuracy: 0.84898 TestLoss: 1.01757
+Starting Epoch 32/60. lr = 0.001
+[3] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.98165 TrainLoss: 0.01454 %-Real: 0.0
+	[3] Epoch [ 32 / 60 ]; TestAccuracy: 0.79592 TestLoss: 1.32380
+Starting Epoch 33/60. lr = 0.001
+[3] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.96986 TrainLoss: 0.01764 %-Real: 0.0
+	[3] Epoch [ 33 / 60 ]; TestAccuracy: 0.81633 TestLoss: 0.80080
+Starting Epoch 34/60. lr = 0.001
+[3] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.98034 TrainLoss: 0.01284 %-Real: 0.0
+	[3] Epoch [ 34 / 60 ]; TestAccuracy: 0.89184 TestLoss: 0.44947
+Starting Epoch 35/60. lr = 0.001
+[3] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.98165 TrainLoss: 0.01374 %-Real: 0.0
+	[3] Epoch [ 35 / 60 ]; TestAccuracy: 0.88980 TestLoss: 0.64339
+Starting Epoch 36/60. lr = 0.001
+[3] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.97510 TrainLoss: 0.01535 %-Real: 0.0
+	[3] Epoch [ 36 / 60 ]; TestAccuracy: 0.86122 TestLoss: 0.79386
+Starting Epoch 37/60. lr = 0.001
+[3] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.98820 TrainLoss: 0.00930 %-Real: 0.0
+	[3] Epoch [ 37 / 60 ]; TestAccuracy: 0.88980 TestLoss: 0.54107
+Starting Epoch 38/60. lr = 0.001
+[3] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.98034 TrainLoss: 0.01284 %-Real: 0.0
+	[3] Epoch [ 38 / 60 ]; TestAccuracy: 0.90000 TestLoss: 0.43883
+Starting Epoch 39/60. lr = 0.001
+[3] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.99083 TrainLoss: 0.00688 %-Real: 0.0
+	[3] Epoch [ 39 / 60 ]; TestAccuracy: 0.90612 TestLoss: 0.43883
+Starting Epoch 40/60. lr = 0.001
+[3] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.98952 TrainLoss: 0.00884 %-Real: 0.0
+	[3] Epoch [ 40 / 60 ]; TestAccuracy: 0.90000 TestLoss: 0.49330
+Starting Epoch 41/60. lr = 0.001
+[3] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.98558 TrainLoss: 0.01167 %-Real: 0.0
+	[3] Epoch [ 41 / 60 ]; TestAccuracy: 0.94898 TestLoss: 0.22354
+Starting Epoch 42/60. lr = 0.001
+[3] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.98296 TrainLoss: 0.01347 %-Real: 0.0
+	[3] Epoch [ 42 / 60 ]; TestAccuracy: 0.91633 TestLoss: 0.55338
+Starting Epoch 43/60. lr = 0.001
+[3] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.98034 TrainLoss: 0.00972 %-Real: 0.0
+	[3] Epoch [ 43 / 60 ]; TestAccuracy: 0.88367 TestLoss: 0.66566
+Starting Epoch 44/60. lr = 0.001
+[3] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.98034 TrainLoss: 0.01210 %-Real: 0.0
+	[3] Epoch [ 44 / 60 ]; TestAccuracy: 0.86327 TestLoss: 0.82232
+Starting Epoch 45/60. lr = 0.001
+[3] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.98427 TrainLoss: 0.01187 %-Real: 0.0
+	[3] Epoch [ 45 / 60 ]; TestAccuracy: 0.87755 TestLoss: 0.64591
+Starting Epoch 46/60. lr = 0.001
+[3] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98558 TrainLoss: 0.00959 %-Real: 0.0
+	[3] Epoch [ 46 / 60 ]; TestAccuracy: 0.88367 TestLoss: 0.64318
+Starting Epoch 47/60. lr = 0.001
+[3] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.98034 TrainLoss: 0.01137 %-Real: 0.0
+	[3] Epoch [ 47 / 60 ]; TestAccuracy: 0.88776 TestLoss: 0.58025
+Starting Epoch 48/60. lr = 0.001
+[3] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.97379 TrainLoss: 0.01397 %-Real: 0.0
+	[3] Epoch [ 48 / 60 ]; TestAccuracy: 0.89592 TestLoss: 0.51734
+Starting Epoch 49/60. lr = 0.001
+[3] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.98820 TrainLoss: 0.00874 %-Real: 0.0
+	[3] Epoch [ 49 / 60 ]; TestAccuracy: 0.88776 TestLoss: 0.86339
+Starting Epoch 50/60. lr = 0.0001
+[3] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98296 TrainLoss: 0.01252 %-Real: 0.0
+	[3] Epoch [ 50 / 60 ]; TestAccuracy: 0.89388 TestLoss: 0.78071
+Starting Epoch 51/60. lr = 0.0001
+[3] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98952 TrainLoss: 0.00854 %-Real: 0.0
+	[3] Epoch [ 51 / 60 ]; TestAccuracy: 0.89796 TestLoss: 0.69458
+Starting Epoch 52/60. lr = 0.0001
+[3] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99083 TrainLoss: 0.00701 %-Real: 0.0
+	[3] Epoch [ 52 / 60 ]; TestAccuracy: 0.91020 TestLoss: 0.63132
+Starting Epoch 53/60. lr = 0.0001
+[3] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98165 TrainLoss: 0.00996 %-Real: 0.0
+	[3] Epoch [ 53 / 60 ]; TestAccuracy: 0.92041 TestLoss: 0.59643
+Starting Epoch 54/60. lr = 0.0001
+[3] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99345 TrainLoss: 0.00475 %-Real: 0.0
+	[3] Epoch [ 54 / 60 ]; TestAccuracy: 0.92653 TestLoss: 0.57002
+Starting Epoch 55/60. lr = 0.0001
+[3] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99476 TrainLoss: 0.00498 %-Real: 0.0
+	[3] Epoch [ 55 / 60 ]; TestAccuracy: 0.92857 TestLoss: 0.56006
+Starting Epoch 56/60. lr = 0.0001
+[3] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99345 TrainLoss: 0.00612 %-Real: 0.0
+	[3] Epoch [ 56 / 60 ]; TestAccuracy: 0.93265 TestLoss: 0.53820
+Starting Epoch 57/60. lr = 0.0001
+[3] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98952 TrainLoss: 0.00847 %-Real: 0.0
+	[3] Epoch [ 57 / 60 ]; TestAccuracy: 0.93061 TestLoss: 0.51233
+Starting Epoch 58/60. lr = 0.0001
+[3] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98952 TrainLoss: 0.00981 %-Real: 0.0
+	[3] Epoch [ 58 / 60 ]; TestAccuracy: 0.93061 TestLoss: 0.49482
+Starting Epoch 59/60. lr = 0.0001
+[3] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99476 TrainLoss: 0.00494 %-Real: 0.0
+	[3] Epoch [ 59 / 60 ]; TestAccuracy: 0.92653 TestLoss: 0.49142
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.5679. TNR@95TPR: 0.0000. DetAcc: 0.6194
+	ODIN (T=1000).     AUROC: 0.6057. TNR@95TPR: 0.0000. DetAcc: 0.6245
+	ODIN (T=1000) IPP. AUROC: 0.6063. TNR@95TPR: 0.0000. DetAcc: 0.6112
+**********************************************************
+Starting Iter: 4 / 5 for K = 0.0 and J = 1
+**********************************************************
+Class: 2s1	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+Class: bmp2	Nmj: 107 	Smj: 52	Tmj: 0	Tsj: 55
+Class: btr70	Nmj: 92 	Smj: 49	Tmj: 0	Tsj: 43
+Class: m1	Nmj: 129 	Smj: 51	Tmj: 0	Tsj: 78
+Class: m2	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m35	Nmj: 129 	Smj: 53	Tmj: 0	Tsj: 76
+Class: m548	Nmj: 128 	Smj: 53	Tmj: 0	Tsj: 75
+Class: m60	Nmj: 176 	Smj: 60	Tmj: 0	Tsj: 116
+Class: t72	Nmj: 108 	Smj: 52	Tmj: 0	Tsj: 56
+Class: zsu23	Nmj: 174 	Smj: 58	Tmj: 0	Tsj: 116
+len( train ):  806
+len( test ):   539
+ORIGINAL CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm2', 5: 'm35', 6: 'm548', 7: 'm60', 8: 't72', 9: 'zsu23'}
+HOLDOUT CLASSES:  [4]
+Remaining Classes:  [0, 1, 2, 3, 5, 6, 7, 8, 9]
+# ID Train:  731
+# ID Test:   486
+# OOD Test:  53
+NEW TRAINING CLASS MAPPING:  {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+NEW TESTING CLASS MAPPING:   {0: '2s1', 1: 'bmp2', 2: 'btr70', 3: 'm1', 4: 'm35', 5: 'm548', 6: 'm60', 7: 't72', 8: 'zsu23'}
+Starting Epoch 0/60. lr = 0.001
+[4] Epoch [ 0 / 60 ]; lr: 0.001 TrainAccuracy: 0.15321 TrainLoss: 0.49666 %-Real: 0.0
+	[4] Epoch [ 0 / 60 ]; TestAccuracy: 0.12346 TestLoss: 2.21814
+Starting Epoch 1/60. lr = 0.001
+[4] Epoch [ 1 / 60 ]; lr: 0.001 TrainAccuracy: 0.20930 TrainLoss: 0.36487 %-Real: 0.0
+	[4] Epoch [ 1 / 60 ]; TestAccuracy: 0.12346 TestLoss: 2.24931
+Starting Epoch 2/60. lr = 0.001
+[4] Epoch [ 2 / 60 ]; lr: 0.001 TrainAccuracy: 0.32285 TrainLoss: 0.31497 %-Real: 0.0
+	[4] Epoch [ 2 / 60 ]; TestAccuracy: 0.11934 TestLoss: 2.36997
+Starting Epoch 3/60. lr = 0.001
+[4] Epoch [ 3 / 60 ]; lr: 0.001 TrainAccuracy: 0.39945 TrainLoss: 0.27599 %-Real: 0.0
+	[4] Epoch [ 3 / 60 ]; TestAccuracy: 0.11934 TestLoss: 2.45895
+Starting Epoch 4/60. lr = 0.001
+[4] Epoch [ 4 / 60 ]; lr: 0.001 TrainAccuracy: 0.51984 TrainLoss: 0.24126 %-Real: 0.0
+	[4] Epoch [ 4 / 60 ]; TestAccuracy: 0.24486 TestLoss: 2.25364
+Starting Epoch 5/60. lr = 0.001
+[4] Epoch [ 5 / 60 ]; lr: 0.001 TrainAccuracy: 0.55814 TrainLoss: 0.20575 %-Real: 0.0
+	[4] Epoch [ 5 / 60 ]; TestAccuracy: 0.25926 TestLoss: 2.36220
+Starting Epoch 6/60. lr = 0.001
+[4] Epoch [ 6 / 60 ]; lr: 0.001 TrainAccuracy: 0.63064 TrainLoss: 0.18284 %-Real: 0.0
+	[4] Epoch [ 6 / 60 ]; TestAccuracy: 0.36626 TestLoss: 2.22516
+Starting Epoch 7/60. lr = 0.001
+[4] Epoch [ 7 / 60 ]; lr: 0.001 TrainAccuracy: 0.71819 TrainLoss: 0.15069 %-Real: 0.0
+	[4] Epoch [ 7 / 60 ]; TestAccuracy: 0.48354 TestLoss: 1.45630
+Starting Epoch 8/60. lr = 0.001
+[4] Epoch [ 8 / 60 ]; lr: 0.001 TrainAccuracy: 0.76607 TrainLoss: 0.12910 %-Real: 0.0
+	[4] Epoch [ 8 / 60 ]; TestAccuracy: 0.58230 TestLoss: 1.49834
+Starting Epoch 9/60. lr = 0.001
+[4] Epoch [ 9 / 60 ]; lr: 0.001 TrainAccuracy: 0.77702 TrainLoss: 0.11652 %-Real: 0.0
+	[4] Epoch [ 9 / 60 ]; TestAccuracy: 0.67284 TestLoss: 1.04977
+Starting Epoch 10/60. lr = 0.001
+[4] Epoch [ 10 / 60 ]; lr: 0.001 TrainAccuracy: 0.83447 TrainLoss: 0.09930 %-Real: 0.0
+	[4] Epoch [ 10 / 60 ]; TestAccuracy: 0.66872 TestLoss: 1.31243
+Starting Epoch 11/60. lr = 0.001
+[4] Epoch [ 11 / 60 ]; lr: 0.001 TrainAccuracy: 0.86731 TrainLoss: 0.07692 %-Real: 0.0
+	[4] Epoch [ 11 / 60 ]; TestAccuracy: 0.65432 TestLoss: 1.66949
+Starting Epoch 12/60. lr = 0.001
+[4] Epoch [ 12 / 60 ]; lr: 0.001 TrainAccuracy: 0.88782 TrainLoss: 0.06959 %-Real: 0.0
+	[4] Epoch [ 12 / 60 ]; TestAccuracy: 0.63169 TestLoss: 1.81531
+Starting Epoch 13/60. lr = 0.001
+[4] Epoch [ 13 / 60 ]; lr: 0.001 TrainAccuracy: 0.90834 TrainLoss: 0.05561 %-Real: 0.0
+	[4] Epoch [ 13 / 60 ]; TestAccuracy: 0.69136 TestLoss: 1.53572
+Starting Epoch 14/60. lr = 0.001
+[4] Epoch [ 14 / 60 ]; lr: 0.001 TrainAccuracy: 0.93160 TrainLoss: 0.04571 %-Real: 0.0
+	[4] Epoch [ 14 / 60 ]; TestAccuracy: 0.75720 TestLoss: 1.07701
+Starting Epoch 15/60. lr = 0.001
+[4] Epoch [ 15 / 60 ]; lr: 0.001 TrainAccuracy: 0.93023 TrainLoss: 0.04455 %-Real: 0.0
+	[4] Epoch [ 15 / 60 ]; TestAccuracy: 0.77572 TestLoss: 1.14607
+Starting Epoch 16/60. lr = 0.001
+[4] Epoch [ 16 / 60 ]; lr: 0.001 TrainAccuracy: 0.93981 TrainLoss: 0.03773 %-Real: 0.0
+	[4] Epoch [ 16 / 60 ]; TestAccuracy: 0.82922 TestLoss: 0.78585
+Starting Epoch 17/60. lr = 0.001
+[4] Epoch [ 17 / 60 ]; lr: 0.001 TrainAccuracy: 0.95075 TrainLoss: 0.03216 %-Real: 0.0
+	[4] Epoch [ 17 / 60 ]; TestAccuracy: 0.79835 TestLoss: 1.09927
+Starting Epoch 18/60. lr = 0.001
+[4] Epoch [ 18 / 60 ]; lr: 0.001 TrainAccuracy: 0.95759 TrainLoss: 0.03078 %-Real: 0.0
+	[4] Epoch [ 18 / 60 ]; TestAccuracy: 0.75514 TestLoss: 1.51629
+Starting Epoch 19/60. lr = 0.001
+[4] Epoch [ 19 / 60 ]; lr: 0.001 TrainAccuracy: 0.93570 TrainLoss: 0.03592 %-Real: 0.0
+	[4] Epoch [ 19 / 60 ]; TestAccuracy: 0.90123 TestLoss: 0.41102
+Starting Epoch 20/60. lr = 0.001
+[4] Epoch [ 20 / 60 ]; lr: 0.001 TrainAccuracy: 0.93981 TrainLoss: 0.03707 %-Real: 0.0
+	[4] Epoch [ 20 / 60 ]; TestAccuracy: 0.80658 TestLoss: 1.20538
+Starting Epoch 21/60. lr = 0.001
+[4] Epoch [ 21 / 60 ]; lr: 0.001 TrainAccuracy: 0.96170 TrainLoss: 0.02424 %-Real: 0.0
+	[4] Epoch [ 21 / 60 ]; TestAccuracy: 0.81687 TestLoss: 1.01561
+Starting Epoch 22/60. lr = 0.001
+[4] Epoch [ 22 / 60 ]; lr: 0.001 TrainAccuracy: 0.95622 TrainLoss: 0.03445 %-Real: 0.0
+	[4] Epoch [ 22 / 60 ]; TestAccuracy: 0.87449 TestLoss: 0.77908
+Starting Epoch 23/60. lr = 0.001
+[4] Epoch [ 23 / 60 ]; lr: 0.001 TrainAccuracy: 0.95349 TrainLoss: 0.02821 %-Real: 0.0
+	[4] Epoch [ 23 / 60 ]; TestAccuracy: 0.87449 TestLoss: 0.65221
+Starting Epoch 24/60. lr = 0.001
+[4] Epoch [ 24 / 60 ]; lr: 0.001 TrainAccuracy: 0.96854 TrainLoss: 0.01925 %-Real: 0.0
+	[4] Epoch [ 24 / 60 ]; TestAccuracy: 0.88066 TestLoss: 0.48533
+Starting Epoch 25/60. lr = 0.001
+[4] Epoch [ 25 / 60 ]; lr: 0.001 TrainAccuracy: 0.96717 TrainLoss: 0.02393 %-Real: 0.0
+	[4] Epoch [ 25 / 60 ]; TestAccuracy: 0.89300 TestLoss: 0.64081
+Starting Epoch 26/60. lr = 0.001
+[4] Epoch [ 26 / 60 ]; lr: 0.001 TrainAccuracy: 0.96854 TrainLoss: 0.02365 %-Real: 0.0
+	[4] Epoch [ 26 / 60 ]; TestAccuracy: 0.91564 TestLoss: 0.33937
+Starting Epoch 27/60. lr = 0.001
+[4] Epoch [ 27 / 60 ]; lr: 0.001 TrainAccuracy: 0.96854 TrainLoss: 0.02364 %-Real: 0.0
+	[4] Epoch [ 27 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.55624
+Starting Epoch 28/60. lr = 0.001
+[4] Epoch [ 28 / 60 ]; lr: 0.001 TrainAccuracy: 0.97674 TrainLoss: 0.01637 %-Real: 0.0
+	[4] Epoch [ 28 / 60 ]; TestAccuracy: 0.97531 TestLoss: 0.13403
+Starting Epoch 29/60. lr = 0.001
+[4] Epoch [ 29 / 60 ]; lr: 0.001 TrainAccuracy: 0.98358 TrainLoss: 0.01368 %-Real: 0.0
+	[4] Epoch [ 29 / 60 ]; TestAccuracy: 0.90535 TestLoss: 0.49225
+Starting Epoch 30/60. lr = 0.001
+[4] Epoch [ 30 / 60 ]; lr: 0.001 TrainAccuracy: 0.97811 TrainLoss: 0.01731 %-Real: 0.0
+	[4] Epoch [ 30 / 60 ]; TestAccuracy: 0.87243 TestLoss: 0.92667
+Starting Epoch 31/60. lr = 0.001
+[4] Epoch [ 31 / 60 ]; lr: 0.001 TrainAccuracy: 0.98769 TrainLoss: 0.01171 %-Real: 0.0
+	[4] Epoch [ 31 / 60 ]; TestAccuracy: 0.90329 TestLoss: 0.55161
+Starting Epoch 32/60. lr = 0.001
+[4] Epoch [ 32 / 60 ]; lr: 0.001 TrainAccuracy: 0.97538 TrainLoss: 0.01587 %-Real: 0.0
+	[4] Epoch [ 32 / 60 ]; TestAccuracy: 0.86214 TestLoss: 0.82929
+Starting Epoch 33/60. lr = 0.001
+[4] Epoch [ 33 / 60 ]; lr: 0.001 TrainAccuracy: 0.97538 TrainLoss: 0.01564 %-Real: 0.0
+	[4] Epoch [ 33 / 60 ]; TestAccuracy: 0.84774 TestLoss: 0.98403
+Starting Epoch 34/60. lr = 0.001
+[4] Epoch [ 34 / 60 ]; lr: 0.001 TrainAccuracy: 0.96580 TrainLoss: 0.02038 %-Real: 0.0
+	[4] Epoch [ 34 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.33629
+Starting Epoch 35/60. lr = 0.001
+[4] Epoch [ 35 / 60 ]; lr: 0.001 TrainAccuracy: 0.96443 TrainLoss: 0.02164 %-Real: 0.0
+	[4] Epoch [ 35 / 60 ]; TestAccuracy: 0.92798 TestLoss: 0.33636
+Starting Epoch 36/60. lr = 0.001
+[4] Epoch [ 36 / 60 ]; lr: 0.001 TrainAccuracy: 0.97264 TrainLoss: 0.01731 %-Real: 0.0
+	[4] Epoch [ 36 / 60 ]; TestAccuracy: 0.91152 TestLoss: 0.54083
+Starting Epoch 37/60. lr = 0.001
+[4] Epoch [ 37 / 60 ]; lr: 0.001 TrainAccuracy: 0.97811 TrainLoss: 0.01316 %-Real: 0.0
+	[4] Epoch [ 37 / 60 ]; TestAccuracy: 0.88889 TestLoss: 0.75331
+Starting Epoch 38/60. lr = 0.001
+[4] Epoch [ 38 / 60 ]; lr: 0.001 TrainAccuracy: 0.97127 TrainLoss: 0.01945 %-Real: 0.0
+	[4] Epoch [ 38 / 60 ]; TestAccuracy: 0.90741 TestLoss: 0.60534
+Starting Epoch 39/60. lr = 0.001
+[4] Epoch [ 39 / 60 ]; lr: 0.001 TrainAccuracy: 0.97811 TrainLoss: 0.01466 %-Real: 0.0
+	[4] Epoch [ 39 / 60 ]; TestAccuracy: 0.91564 TestLoss: 0.33641
+Starting Epoch 40/60. lr = 0.001
+[4] Epoch [ 40 / 60 ]; lr: 0.001 TrainAccuracy: 0.96990 TrainLoss: 0.01875 %-Real: 0.0
+	[4] Epoch [ 40 / 60 ]; TestAccuracy: 0.87860 TestLoss: 0.68659
+Starting Epoch 41/60. lr = 0.001
+[4] Epoch [ 41 / 60 ]; lr: 0.001 TrainAccuracy: 0.97674 TrainLoss: 0.01472 %-Real: 0.0
+	[4] Epoch [ 41 / 60 ]; TestAccuracy: 0.94239 TestLoss: 0.22444
+Starting Epoch 42/60. lr = 0.001
+[4] Epoch [ 42 / 60 ]; lr: 0.001 TrainAccuracy: 0.98085 TrainLoss: 0.01289 %-Real: 0.0
+	[4] Epoch [ 42 / 60 ]; TestAccuracy: 0.94650 TestLoss: 0.25921
+Starting Epoch 43/60. lr = 0.001
+[4] Epoch [ 43 / 60 ]; lr: 0.001 TrainAccuracy: 0.98769 TrainLoss: 0.01005 %-Real: 0.0
+	[4] Epoch [ 43 / 60 ]; TestAccuracy: 0.88272 TestLoss: 0.87387
+Starting Epoch 44/60. lr = 0.001
+[4] Epoch [ 44 / 60 ]; lr: 0.001 TrainAccuracy: 0.97674 TrainLoss: 0.01612 %-Real: 0.0
+	[4] Epoch [ 44 / 60 ]; TestAccuracy: 0.94650 TestLoss: 0.26182
+Starting Epoch 45/60. lr = 0.001
+[4] Epoch [ 45 / 60 ]; lr: 0.001 TrainAccuracy: 0.98906 TrainLoss: 0.00952 %-Real: 0.0
+	[4] Epoch [ 45 / 60 ]; TestAccuracy: 0.92798 TestLoss: 0.27708
+Starting Epoch 46/60. lr = 0.001
+[4] Epoch [ 46 / 60 ]; lr: 0.001 TrainAccuracy: 0.98358 TrainLoss: 0.01133 %-Real: 0.0
+	[4] Epoch [ 46 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.44931
+Starting Epoch 47/60. lr = 0.001
+[4] Epoch [ 47 / 60 ]; lr: 0.001 TrainAccuracy: 0.98222 TrainLoss: 0.01105 %-Real: 0.0
+	[4] Epoch [ 47 / 60 ]; TestAccuracy: 0.88272 TestLoss: 0.58846
+Starting Epoch 48/60. lr = 0.001
+[4] Epoch [ 48 / 60 ]; lr: 0.001 TrainAccuracy: 0.98632 TrainLoss: 0.01057 %-Real: 0.0
+	[4] Epoch [ 48 / 60 ]; TestAccuracy: 0.92387 TestLoss: 0.30903
+Starting Epoch 49/60. lr = 0.001
+[4] Epoch [ 49 / 60 ]; lr: 0.001 TrainAccuracy: 0.99042 TrainLoss: 0.00860 %-Real: 0.0
+	[4] Epoch [ 49 / 60 ]; TestAccuracy: 0.92798 TestLoss: 0.31136
+Starting Epoch 50/60. lr = 0.0001
+[4] Epoch [ 50 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98085 TrainLoss: 0.01037 %-Real: 0.0
+	[4] Epoch [ 50 / 60 ]; TestAccuracy: 0.92798 TestLoss: 0.32697
+Starting Epoch 51/60. lr = 0.0001
+[4] Epoch [ 51 / 60 ]; lr: 0.0001 TrainAccuracy: 0.97674 TrainLoss: 0.01163 %-Real: 0.0
+	[4] Epoch [ 51 / 60 ]; TestAccuracy: 0.94650 TestLoss: 0.33805
+Starting Epoch 52/60. lr = 0.0001
+[4] Epoch [ 52 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99179 TrainLoss: 0.00759 %-Real: 0.0
+	[4] Epoch [ 52 / 60 ]; TestAccuracy: 0.95062 TestLoss: 0.37839
+Starting Epoch 53/60. lr = 0.0001
+[4] Epoch [ 53 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99042 TrainLoss: 0.00876 %-Real: 0.0
+	[4] Epoch [ 53 / 60 ]; TestAccuracy: 0.93827 TestLoss: 0.44257
+Starting Epoch 54/60. lr = 0.0001
+[4] Epoch [ 54 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99042 TrainLoss: 0.00747 %-Real: 0.0
+	[4] Epoch [ 54 / 60 ]; TestAccuracy: 0.93827 TestLoss: 0.42837
+Starting Epoch 55/60. lr = 0.0001
+[4] Epoch [ 55 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98632 TrainLoss: 0.01011 %-Real: 0.0
+	[4] Epoch [ 55 / 60 ]; TestAccuracy: 0.94650 TestLoss: 0.37621
+Starting Epoch 56/60. lr = 0.0001
+[4] Epoch [ 56 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98769 TrainLoss: 0.00840 %-Real: 0.0
+	[4] Epoch [ 56 / 60 ]; TestAccuracy: 0.95062 TestLoss: 0.33826
+Starting Epoch 57/60. lr = 0.0001
+[4] Epoch [ 57 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99316 TrainLoss: 0.00498 %-Real: 0.0
+	[4] Epoch [ 57 / 60 ]; TestAccuracy: 0.95062 TestLoss: 0.32667
+Starting Epoch 58/60. lr = 0.0001
+[4] Epoch [ 58 / 60 ]; lr: 0.0001 TrainAccuracy: 0.98906 TrainLoss: 0.00762 %-Real: 0.0
+	[4] Epoch [ 58 / 60 ]; TestAccuracy: 0.95062 TestLoss: 0.30158
+Starting Epoch 59/60. lr = 0.0001
+[4] Epoch [ 59 / 60 ]; lr: 0.0001 TrainAccuracy: 0.99179 TrainLoss: 0.00487 %-Real: 0.0
+	[4] Epoch [ 59 / 60 ]; TestAccuracy: 0.95267 TestLoss: 0.28111
+Computing OOD scores for ID...
+Computing OOD scores for holdout...
+Computing OOD Statistics...
+** DATASET: holdout **
+	Baseline.          AUROC: 0.8945. TNR@95TPR: 0.3396. DetAcc: 0.8482
+	ODIN (T=1000).     AUROC: 0.9126. TNR@95TPR: 0.4151. DetAcc: 0.8596
+	ODIN (T=1000) IPP. AUROC: 0.9065. TNR@95TPR: 0.3396. DetAcc: 0.8625
+
+
+
+Printing Final Accuracy + OOD Detection stats for 5 Runs with K = 0.0 and J = 1
+
+Accuracy:  Min: 0.9143; Max: 0.9588; Avg: 0.9299; Std: 0.0159; Len: 5
+ILR Accuracy:  Min: 0.9265; Max: 0.9568; Avg: 0.9425; Std: 0.0120; Len: 5
+**********************************************************************
+* Dataset: holdout
+**********************************************************************
+	Baseline (AUROC):               Min: 0.2089; Max: 0.8732; Avg: 0.6230; Std: 0.2252; Len: 5
+	Baseline (TNR@TPR95):           Min: 0.0000; Max: 0.2642; Avg: 0.0855; Std: 0.0974; Len: 5
+	Baseline (DETACC):              Min: 0.5041; Max: 0.8266; Avg: 0.6682; Std: 0.1054; Len: 5
+
+**********************************************************************
+* ILR Dataset: holdout
+**********************************************************************
+	Baseline (AUROC):               Min: 0.5679; Max: 0.8945; Avg: 0.7657; Std: 0.1164; Len: 5
+	Baseline (TNR@TPR95):           Min: 0.0000; Max: 0.3962; Avg: 0.2541; Std: 0.1387; Len: 5
+	Baseline (DETACC):              Min: 0.6194; Max: 0.8482; Avg: 0.7449; Std: 0.0801; Len: 5
+

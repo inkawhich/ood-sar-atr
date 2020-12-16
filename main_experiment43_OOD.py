@@ -40,7 +40,7 @@ DSIZE = 64
 
 # Percentage of measured data for training the sample classifier (range = [0, 1])
 K = float(sys.argv[1])
-# Number of classes to hold out as OOD classes (range = [1, 8]) 
+# Number of classes to hold out as OOD classes (range = [1, 8])
 NUM_HOLDOUT_CLASSES = int(sys.argv[2])
 
 # Path to SAMPLE dataset
@@ -49,7 +49,7 @@ dataset_root = "./SAMPLE_dataset/png_images/qpm"
 REPEAT_ITERS = 5
 #DATASETS = ["ID","holdout","mnist","random", "cifar10"]
 DATASETS = ["ID","holdout"]
-SEED = 1234567	
+SEED = 1234567
 
 # SAMPLE Classifier Learning Params
 num_epochs = 60
@@ -65,14 +65,12 @@ dropout = 0.4
 MEAN = torch.tensor([0.5], dtype=torch.float32).view([1,1,1]).to(device)
 STD  = torch.tensor([0.5], dtype=torch.float32).view([1,1,1]).to(device)
 
-	
-
 #####################################################################################################################
 # Main Loop over classifers - for each of these loops we train a model from scratch on the sample
 #    data then test its OOD detection performance
 #####################################################################################################################
 
-# Initialize stat keepers. For example, 
+# Initialize stat keepers. For example,
 STAT_accuracy = []
 STAT_ood_baseline = {}
 STAT_ood_odin = {}
@@ -110,7 +108,7 @@ for ITER in range(REPEAT_ITERS):
 
 	#################################################################################################################
 	# Create dataset splits
-	
+
 	# Create the measured/synthetic split training and test data
 	full_train_list,full_test_list = create_split.create_mixed_dataset_exp41(dataset_root, K)
 	clsmap = helpers.get_class_mapping_from_dataset_list(full_train_list)
