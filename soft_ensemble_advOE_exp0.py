@@ -99,7 +99,7 @@ for cls_method in CLS:
                 # Create dataset splits
                 # Create the measured/synthetic split training and test data
                 splits = create_split.create_dataset_splits(
-                    dataset_root, K, holdout_classes)
+                    dataset_root, K, holdout_classes, advOE=True)
                 ID_trainlist, ID_testlist, OOD_testlist, bce_weights, OE_trainlist = splits
                 ID_trainloader, ID_testloader, OOD_testloader, OE_trainloader = \
                     create_split.get_data_loaders(
