@@ -21,7 +21,8 @@ import matplotlib.pyplot as plt
 import sklearn.covariance
 
 
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+# device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = 'cpu'
 
 ############################################################################################################
 # For hooking the intermediate layer activations of a sample model
@@ -160,9 +161,17 @@ def generate_ood_scores_ODIN_and_BASELINE(base_model, loader, T, norm_mean, norm
                 # Recompute prediction scores
                 new_outs = base_model((pert_dat-norm_mean)/norm_std)
                 # Save new confidence values as ODIN scores
-                baseline_scores.extend( list(torch.max( F.softmax(initial_outs.data.clone().detach(), dim=1), dim=1)[0].cpu().numpy()) )
-                odin_scores.extend(     list(torch.max( F.softmax(initial_outs.data.clone().detach()/T, dim=1), dim=1)[0].cpu().numpy()) )
-                odin_ipp_scores.extend( list(torch.max( F.softmax(new_outs.data.clone().detach()/T, dim=1), dim=1)[0].cpu().numpy()) )
+                # baseline_scores.extend( list(torch.max( F.softmax(initial_outs.data.clone().detach(), dim=1), dim=1)[0].cpu().numpy()) )
+                # odin_scores.extend(     list(torch.max( F.softmax(initial_outs.data.clone().detach()/T, dim=1), dim=1)[0].cpu().numpy()) )
+                # odin_ipp_scores.extend( list(torch.max( F.softmax(new_outs.data.clone().detach()/T, dim=1), dim=1)[0].cpu().numpy()) )
+                baseline_scores.extend( list(torch.max(
+                    torch.sigmoid(initial_outs.data.clone().detach()), 1)[0].cpu().numpy()) )
+                baseline_scores.extend( list(torch.max(
+                    torch.sigmoid(initial_outs.data.clone().detach()), 1)[0].cpu().numpy()) )
+                odin_scores.extend(     list(torch.max(
+                    torch.sigmoid(initial_outs.data.clone().detach()/T), dim=1)[0].cpu().numpy()))
+                odin_ipp_scores.extend( list(torch.max(
+                    torch.sigmoid(new_outs.data.clone().detach()/T), dim=1)[0].cpu().numpy()) )
 
     else:
         with torch.no_grad():
