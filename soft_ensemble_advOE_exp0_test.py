@@ -85,15 +85,15 @@ for c in CLS:
 
 
 for cls_method in CLS:
-    for holdout in [0,1,2,3,4,5,6,7,8,9]:
+    for holdout in [0,1,2,3,4,5,6,7]:
         holdout_classes = [holdout]
         for ITER in range(REPEAT_ITERS):
             print(40*'*')
-            print("Starting Iter: {} / {} for K = {} and J = {}, Cls={}, Holdout={}".format(
+            print("Loading Iter: {} / {} for K = {} and J = {}, Cls={}, Holdout={}".format(
                 ITER,REPEAT_ITERS,K,NUM_HOLDOUT_CLASSES, cls_method, holdout))
             print(40*'*')
             for submod in range(10-NUM_HOLDOUT_CLASSES):
-                print("Training submodel {} of {}".format(submod, 10-NUM_HOLDOUT_CLASSES))
+                print("Loading submodel {} of {}".format(submod, 10-NUM_HOLDOUT_CLASSES))
                 print(40*"-")
 
                 # Create dataset splits
@@ -110,32 +110,13 @@ for cls_method in CLS:
                 net = models.resnet18(num_classes=10-NUM_HOLDOUT_CLASSES,
                                       drop_prob=dropout,
                                       cls_method=cls_method).to(device)
-
-                # Training Loop
-                net, final_test_acc = training_helpers.train_model_advOE(
-                    net, num_epochs, ID_trainloader, OE_trainloader,
-                    data_mean=MEAN,
-                    data_std=STD,
-                    lr=learning_rate,
-                    lmbda=.5,
-                    weight_decay=weight_decay,
-                    scheduler=[40],
-                    testloader=ID_testloader,
-                    weights=bce_weights,
-                )
-
-                STAT_accuracy[cls_method].append(final_test_acc)
-
+                checkpoint_name = "{}K{}_J{}_SEED{}_ITER{}_HLD{}_SubMod{}" \
+                    "_checkpoint.pth.tar".format(
+                    SAVE_CKPT, int(100*K), int(NUM_HOLDOUT_CLASSES), SEED,
+                    ITER, holdout, submod)
+                checkpoint = torch.load(checkpoint_name)
+                net.load_state_dict(checkpoint['state_dict'])
                 net.eval()
-
-                # Optional: Save model checkpoint and move to next iter
-                helpers.save_checkpoint(
-                    {'test_acc': final_test_acc,
-                     'state_dict': net.state_dict()},
-                    False,
-                    "{}K{}_J{}_SEED{}_ITER{}_HLD{}_SubMod{}".format(
-                        SAVE_CKPT, int(100*K), int(NUM_HOLDOUT_CLASSES), 
-                        SEED, ITER, holdout, submod))
 
                 # Test ID and OOD data {{{
                 # Hook into Net for Mahalanobis layer
@@ -152,7 +133,9 @@ for cls_method in CLS:
                         hooked_activation_dict[name]=output
                     return hook
                 for l in MAHALA_LAYER_SET:
-                    hook_handles.append(ood_helpers.set_model_hook(l, net, get_activation(l), device))
+                    hook_handles.append(
+                        ood_helpers.set_model_hook(
+                            l, net, get_activation(l), device))
                 with torch.no_grad():
                     dd = torch.zeros(1,1,64,64).uniform_().to(device)
                     net(dd)
@@ -220,6 +203,7 @@ for cls_method in CLS:
                     STAT_ood[cls_method]['baseline'][str(submod)][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
                     STAT_ood[cls_method]['baseline'][str(submod)][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
                     STAT_ood[cls_method]['baseline'][str(submod)][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+                    STAT_ood[cls_method]['baseline'][str(submod)][DATASETS[dd]]["scores"].append(baseline_scores_dict)
 
                     metric_results = callog.metric(
                         np.array(odin_scores_dict["ID"]),
@@ -232,6 +216,7 @@ for cls_method in CLS:
                     STAT_ood[cls_method]['odin'][str(submod)][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
                     STAT_ood[cls_method]['odin'][str(submod)][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
                     STAT_ood[cls_method]['odin'][str(submod)][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+                    STAT_ood[cls_method]['odin'][str(submod)][DATASETS[dd]]["scores"].append(odin_scores_dict)
 
                     metric_results = callog.metric(
                         np.array(mahala_scores_dict["ID"]),
@@ -244,6 +229,7 @@ for cls_method in CLS:
                     STAT_ood[cls_method]['mahala'][str(submod)][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
                     STAT_ood[cls_method]['mahala'][str(submod)][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
                     STAT_ood[cls_method]['mahala'][str(submod)][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+                    STAT_ood[cls_method]['mahala'][str(submod)][DATASETS[dd]]["scores"].append(mahala_scores_dict)
 
                     metric_results = callog.metric(
                         np.array(odin_ipp_scores_dict["ID"]),
@@ -256,6 +242,7 @@ for cls_method in CLS:
                     STAT_ood[cls_method]['odin_ipp'][str(submod)][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
                     STAT_ood[cls_method]['odin_ipp'][str(submod)][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
                     STAT_ood[cls_method]['odin_ipp'][str(submod)][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+                    STAT_ood[cls_method]['odin_ipp'][str(submod)][DATASETS[dd]]["scores"].append(odin_ipp_scores_dict)
 
                     metric_results = callog.metric(
                         np.array(mahala_ipp_scores_dict["ID"]),
@@ -268,9 +255,11 @@ for cls_method in CLS:
                     STAT_ood[cls_method]['mahala_ipp'][str(submod)][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
                     STAT_ood[cls_method]['mahala_ipp'][str(submod)][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
                     STAT_ood[cls_method]['mahala_ipp'][str(submod)][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+                    STAT_ood[cls_method]['mahala_ipp'][str(submod)][DATASETS[dd]]["scores"].append(mahala_ipp_scores_dict)
 
-with open(SAVE_CKPT+'experiment_stats.pickle', 'wb') as f:
-    pickle.dump({'acc':STAT_accuracy, 'ood': STAT_ood}, f)
+        print("Storing stats for holdout {}".format(holdout))
+        with open(SAVE_CKPT+'experiment_stats_with_scores_hld{}.pickle'.format(holdout), 'wb') as f:
+             pickle.dump({'acc':STAT_accuracy, 'ood': STAT_ood}, f)
 
 
 # # Print Final Run Statistics {{{

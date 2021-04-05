@@ -5,25 +5,17 @@
 
 
 from __future__ import print_function
-#import numpy as np
-#import sys
-#import os
-#import random
+import numpy as np
 import torch
 import torch.nn as nn
-#import torch.utils.data as utilsdata
 import torch.nn.functional as F
-#import torchvision
-#import torchvision.transforms as transforms
-import matplotlib
-matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
-#import scipy.stats as st
 from torch.autograd import Variable
-#import torch.nn.functional as F
 from torch.autograd.gradcheck import zero_gradients
+import time
 
 import helpers
+import create_split
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -88,6 +80,7 @@ def gradient_wrt_data(model,device,data,lbl):
     return grad.data.detach()
 
 def gradient_wrt_data_OE(model,device,data,lbl):
+    torch.autograd.set_detect_anomaly(True)
     # Manually Normalize
     mean = torch.tensor([0.5], dtype=torch.float32).view([1,1,1]).to(device)
     std = torch.tensor([0.5], dtype=torch.float32).view([1,1,1]).to(device)
@@ -96,9 +89,7 @@ def gradient_wrt_data_OE(model,device,data,lbl):
     dat.requires_grad = True
     out = model(dat)
     # Calculate loss
-    loss = F.log_softmax(out, 1)
-    loss *= -(1./out.size(1))
-    loss = loss.sum(1)
+    loss = OESoftmaxLoss()(out, lbl)
     # zero all old gradients in the model
     model.zero_grad()
     # Back prop the loss to calculate gradients
@@ -162,14 +153,16 @@ def PGD_Linf_attack(model, device, dat, lbl, eps, alpha, iters, withOE=False, cl
     return x_adv.data.clone().detach()
 
 
-
 class BCELoss:
     """Binary Cross Entropy criteria for use with ILR classifiers"""
     def __init__(self, weights=None):
         self.weights = weights
 
     def to_one_hot(self, inp, num_classes):
-        if inp.max() <= 1:
+        if inp.max() <= 0:
+            out = torch.zeros((inp.size()[0], num_classes), dtype=float,
+                              requires_grad=False, device=device)
+        elif inp.max() <= 1:
             out = inp.view(-1,1).float()
         else:
             out = torch.zeros((inp.size()[0], num_classes), dtype=float,
@@ -180,6 +173,8 @@ class BCELoss:
     def __call__(self, outputs, labels):
         num_classes = outputs.shape[1]
         lbls = self.to_one_hot(labels, num_classes)
+        if lbls.shape != outputs.shape:
+            import pdb; pdb.set_trace()
         loss = F.binary_cross_entropy_with_logits(outputs, lbls,
                                                   pos_weight=self.weights)
         return loss
@@ -202,15 +197,74 @@ class L2Loss:
 
 class OESoftmaxLoss:
     """Binary Cross Entropy criteria for use with ILR classifiers"""
-    def __init__(self,):
-        pass
+    def __init__(self, reduction="mean"):
+        self.reduction = "none" if reduction is None else reduction
 
     def __call__(self, outputs, labels):
-        num_classes = outputs.size(1)
-        loss = F.log_softmax(outputs,1)
-        loss *= -(1./num_classes)
-        loss = loss.sum(1)
-        return loss.sum()
+        num_classes = torch.tensor(outputs.size(1), dtype=float)
+        loss = (-((1./num_classes) * F.log_softmax(outputs, 1)).sum(1))
+        if self.reduction.lower() == "mean":
+            loss = loss.mean()
+        elif self.reduction.lower() == "sum":
+            loss = loss.sum()
+        return loss
+
+
+def hard_negative_mining_pass(
+    net, dataloader, prune_factor=0.75,
+    criterion=OESoftmaxLoss(reduction=None),
+    data_mean=torch.tensor([0.5], dtype=torch.float32).view(
+        [1, 1, 1]).to(device),
+    data_std=torch.tensor([0.5], dtype=torch.float32).view(
+        [1, 1, 1]).to(device),
+    batch_size=128,
+    dsize=64,
+        ):
+    """Perform hard negative sampling
+
+    Parameters
+    ----------
+    net : nn.Module
+    dataloader : torch.utils.data.DataLoader
+    prune_factor : float
+        percentage of original dataset to prune
+    criterion : nn.Loss
+    data_mean : float
+    data_std : float
+    """
+    net.eval()
+    # DATA AUGMENTATION AND LOSS FXN CONFIGS
+    # gaussian_std = 0.4
+    gaussian_std = 0.3
+    # gaussian_std = 0.05
+    running_total = 0
+    all_losses = np.empty((0,))
+    all_pths = []
+    with torch.no_grad():
+        for data, labels, pth in dataloader:
+            data = data.to(device)
+            labels = labels.to(device)
+
+            if(gaussian_std != 0):
+                data += torch.randn_like(data)*gaussian_std
+                data = torch.clamp(data, 0, 1)
+
+            # Forward pass data through model. Normalize before forward pass
+            outputs = net((data-data_mean)/data_std)
+
+            loss = criterion(outputs, labels)
+            running_total += labels.size(0)
+            all_losses = np.concatenate((all_losses, loss.cpu().numpy()), -1)
+            all_pths.extend(list(pth))
+
+        num_to_keep = round((1-prune_factor) * running_total)
+        sorted_idxs = np.argsort(-all_losses)  # Sort descending
+        pths_to_keep = [[p, -1] for i, p in enumerate(all_pths)
+                        if i in sorted_idxs[:num_to_keep]]
+        pruned_dataloader = create_split.get_oe_data_loader(
+            pths_to_keep, dsize, batch_size)
+    net.train()
+    return pruned_dataloader
 
 
 ###############################################################################
@@ -225,6 +279,8 @@ def train_model(net, epochs, trainloader,
                 scheduler=None,
                 testloader=None,
                 weights=None,
+                batch_size=128,
+                dsize=61,
                ):
     """Training helper function
 
@@ -258,10 +314,10 @@ def train_model(net, epochs, trainloader,
     if scheduler is None:
         scheduler = torch.optim.lr_scheduler.MultiStepLR(
             optimizer, gamma=0.1, milestones=[int(epochs*0.5)])
-    elif scheduler is list:
+    elif type(scheduler) is list:
         scheduler = torch.optim.lr_scheduler.MultiStepLR(
             optimizer, gamma=0.1, milestones=scheduler)
-    elif scheduler is tuple:
+    elif type(scheduler) is tuple:
         scheduler = torch.optim.lr_scheduler.MultiStepLR(
             optimizer, gamma=scheduler[1], milestones=scheduler[0])
 
@@ -378,6 +434,8 @@ def train_model(net, epochs, trainloader,
             epoch,epochs,optimizer.param_groups[0]['lr'],
             train_acc,train_loss,percent_real))
 
+        scheduler.step()
+
         # Test
         if testloader is not None:
             test_acc,test_loss = helpers.test_model(
@@ -401,11 +459,17 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
                 data_mean=torch.tensor([0.5], dtype=torch.float32).view([1,1,1]).to(device),
                 data_std=torch.tensor([0.5], dtype=torch.float32).view([1,1,1]).to(device),
                 lr=0.001,
+                lmbda=0.5,
                 weight_decay=0.,
                 optimizer=None,
                 scheduler=None,
                 testloader=None,
                 weights=None,
+                batch_size=128,
+                dsize=64,
+                neg_hard_smpl_epochs=None,
+                neg_hard_smpl_factor=0.75,
+                OHOM=False,
                ):
     """Training helper function
 
@@ -439,10 +503,10 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
     if scheduler is None:
         scheduler = torch.optim.lr_scheduler.MultiStepLR(
             optimizer, gamma=0.1, milestones=[int(epochs*0.5)])
-    elif scheduler is list:
+    elif type(scheduler) is list:
         scheduler = torch.optim.lr_scheduler.MultiStepLR(
             optimizer, gamma=0.1, milestones=scheduler)
-    elif scheduler is tuple:
+    elif type(scheduler) is tuple:
         scheduler = torch.optim.lr_scheduler.MultiStepLR(
             optimizer, gamma=scheduler[1], milestones=scheduler[0])
 
@@ -462,28 +526,35 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
 
 
     # DATA AUGMENTATION AND LOSS FXN CONFIGS
-    gaussian_std = 0.4
-    # gaussian_std = 0.3
+    # gaussian_std = 0.4
+    gaussian_std = 0.3
     # gaussian_std = 0.05
 
     #LBLSMOOTHING_PARAM = 0.1 # Only for label smoothing
     #MIXUP_ALPHA = 0.1  # Only for mixup
-    #AT_EPS = 2./255.; AT_ALPHA = 0.5/255.; AT_ITERS = 7
-    AT_EPS = 4./255.; AT_ALPHA = 1./255. ; AT_ITERS = 7
-    #AT_EPS = 8./255.; AT_ALPHA = 2./255. ; AT_ITERS = 7
+    # AT_EPS = 2./255.; AT_ALPHA = 0.5/255.; AT_ITERS = 7
+    # AT_EPS = 4./255.; AT_ALPHA = 1./255. ; AT_ITERS = 7
+    AT_EPS = 8./255.; AT_ALPHA = 2./255. ; AT_ITERS = 7
+    # AT_EPS = 16./255.; AT_ALPHA = 3./255. ; AT_ITERS = 7
 
     best_acc = 0.
-
     for epoch in range(epochs):
+        OEiter = iter(OE_trainloader)
 
         running_correct = 0.
         running_total = 0.
         running_loss_sum = 0.
         running_real_cnt = 0.
 
+        oe_running_correct = 0.
+        oe_running_total = 0.
+        oe_running_loss_sum = 0.
 
-        for batch_idx,((data,labels,pth), (oedata,oelabels,oepth)) in enumerate(
-                zip(trainloader, OE_trainloader)):
+        # for batch_idx,((data,labels,pth), (oedata,oelabels,oepth)) in enumerate(
+        #         zip(trainloader, OE_trainloader)):
+        for batch_idx,(data,labels,pth) in enumerate(trainloader):
+            oedata,oelabels,_ = next(OEiter)
+
             data = data.to(device); labels = labels.to(device)
             oedata = oedata.to(device); oelabels = oelabels.to(device)
 
@@ -536,14 +607,20 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
             oeoutputs = net((oedata-data_mean)/data_std)
             # VANILLA CROSS-ENTROPY
             loss = criterion(outputs, labels)
-            if net.cls_method == 'ilr':
-                loss += criterion(oeoutputs, oelabels)
-            elif net.cls_method == 'softmax':
-                loss += OESoftmaxLoss()(oeoutputs, oelabels)
 
+            if net.cls_method == 'ilr':
+                oeloss = criterion(oeoutputs, oelabels)
+                total_loss = oeloss + loss
+            elif OHOM and net.cls_method == 'softmax':
+                oeloss = lmbda * OESoftmaxLoss(reduction=None)(oeoutputs, oelabels)
+                oeloss,_ = oeloss.sort(descending=True)
+                oeloss = oeloss[:oeloss.shape[0]//5].mean()
+                total_loss = oeloss + loss
+            elif net.cls_method == 'softmax':
+                oeloss = lmbda * OESoftmaxLoss()(oeoutputs, oelabels)
+                total_loss = oeloss + loss
             else:
                 raise ValueError
-
             # LABEL SMOOTHING LOSS
             #sl = smooth_one_hot(labels,num_classes,smoothing=LBLSMOOTHING_PARAM)
             #loss =  xent_with_soft_targets(outputs, sl)
@@ -555,21 +632,22 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
             # Calculate gradient and update parameters
             optimizer.zero_grad()
             net.zero_grad()
-            loss.backward()
+            total_loss.backward()
             #torch.nn.utils.clip_grad_norm(net.parameters(), max_norm=10., norm_type=2)  # COSINE LOSS
             optimizer.step()
-
-            # Measure accuracy and loss for this batch
+# Measure accuracy and loss for this batch
             try:
                 preds = net.predict(outputs)
-                oepreds = net.predict(oeoutputs)
+                oepreds = net.predict(oeoutputs, with_oe=True)
             except:
                 _, preds= outputs.max(1)
-            running_total += labels.size(0) + oelabels.size(0)
+            running_total += labels.size(0) #+ oelabels.size(0)
+            oe_running_total += oelabels.size(0)
             running_correct += preds.eq(labels).sum().item()
-            running_correct += oepreds.eq(oelabels).sum().item()
+            oe_running_correct += oepreds.eq(oelabels).sum().item() # assuming all labels=-1
             #running_correct += (lam * preds.eq(targets_a.data).cpu().sum().float() + (1 - lam) * preds.eq(targets_b.data).cpu().sum().float()) # MIXUP
             running_loss_sum += loss.item()
+            oe_running_loss_sum += oeloss.item()
 
             # Compute measured/synthetic split for the batch
             for tp in pth:
@@ -579,17 +657,25 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
         train_acc = running_correct/running_total
         train_loss =  running_loss_sum/len(trainloader)
         percent_real = running_real_cnt/running_total
+        oe_train_acc = oe_running_correct/oe_running_total
+        oe_train_loss =  oe_running_loss_sum/len(OE_trainloader)
 
-        print("Epoch [ {} / {} ]; lr: {} TrainAccuracy: {:.5f} TrainLoss: {:.5f} %-Real: {}".format(
-            epoch,epochs,optimizer.param_groups[0]['lr'],
-            train_acc,train_loss,percent_real))
+        print("Epoch [ {} / {} ]; lr: {}\n" \
+              "\tTrainAccuracy: {:.5f} TrainLoss: {:.5f} %-Real: {}\n" \
+              "\tOE Accuracy: {:.5f} OE Loss: {:.5f}".format(
+                epoch, epochs, optimizer.param_groups[0]['lr'],
+                train_acc, train_loss, percent_real,
+                oe_train_acc, oe_train_loss,
+              ))
+
+        scheduler.step()
 
         # Test
         if testloader is not None:
             test_acc,test_loss = helpers.test_model(
                 net,device,testloader,data_mean,data_std, criterion=criterion)
-            print("\tEpoch [ {} / {} ]; TestAccuracy: {:.5f} TestLoss: {:.5f}".format(
-                epoch,epochs,test_acc,test_loss))
+            print("\tTestAccuracy: {:.5f} TestLoss: {:.5f}".format(
+                test_acc,test_loss))
             final_test_acc = test_acc
 
             if (checkpoint_prefix is not None) and (test_acc>best_acc):
@@ -599,6 +685,14 @@ def train_model_advOE(net, epochs, trainloader, OE_trainloader,
                     {'test_acc':test_acc, 'state_dict': net.state_dict()},
                     checkpoint_prefix+'_best_checkpoint.pth.tar')
 
+        # Hard sample mining
+        if (epoch in neg_hard_smpl_epochs):
+            print("Hard Negative Sampling...")
+            time_start =time.time()
+            OE_trainloader = hard_negative_mining_pass(
+                net, OE_trainloader, prune_factor=0.75, data_mean=data_mean,
+                data_std=data_std, batch_size=batch_size, dsize=dsize)
+            print("Completed in {} seconds".format(time.time()-time_start))
     return net, final_test_acc
 
 

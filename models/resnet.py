@@ -181,7 +181,7 @@ class ResNet(nn.Module):
         x = self.fc(x)
         return x
 
-    def predict(self, preds, return_norms=False, bce_thresh=0.5):
+    def predict(self, preds, return_norms=False, bce_thresh=0.5, with_oe=False):
         if self.cls_method == 'l2':
             gt = torch.eye(preds.shape[1]).to(device)
             p_tile = preds.view(preds.shape[0], 1, -1).repeat(1, preds.shape[1], 1)
@@ -192,7 +192,11 @@ class ResNet(nn.Module):
         elif (self.cls_method == 'ilr') and (preds.size(1) == 1):
             ps = (torch.sigmoid(preds) > bce_thresh).int().squeeze()
         else:
-            _, ps = preds.max(1)
+            if with_oe:
+                ps, _ = preds.max(1)
+                ps = (ps < 0.25) * -1
+            else:
+                _, ps = preds.max(1)
         return ps
 
 

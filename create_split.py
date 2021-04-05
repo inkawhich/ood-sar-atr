@@ -66,58 +66,59 @@ def create_OE_dataset(root):
     for fname in all_imgs:
         dataset_list.append([fname,-1])
     assert(len(dataset_list)==len(all_imgs))
-    print("len( AdvOE ): ",len(dataset_list))
+    print("len( full AdvOE ): ",len(dataset_list))
     return dataset_list
 
 def create_dataset_splits(dataset_root, K, holdout_classes, advOE=False):
-        full_train_list, full_test_list = create_mixed_dataset_exp41(dataset_root, K)
-        clsmap = helpers.get_class_mapping_from_dataset_list(full_train_list)
-        print("ORIGINAL CLASS MAPPING: ",clsmap)
-        print("HOLDOUT CLASSES: ",holdout_classes)
-        remaining_classes = [x for x in list(range(10)) if x not in holdout_classes]
-        print("Remaining Classes: ",remaining_classes)
+    full_train_list, full_test_list = create_mixed_dataset_exp41(dataset_root, K)
+    clsmap = helpers.get_class_mapping_from_dataset_list(full_train_list)
+    print("ORIGINAL CLASS MAPPING: ",clsmap)
+    print("HOLDOUT CLASSES: ",holdout_classes)
+    remaining_classes = [x for x in list(range(10)) if x not in holdout_classes]
+    print("Remaining Classes: ",remaining_classes)
 
-        # Remove the holdout class data from the training dataset and reassign labels
-        ID_trainlist = []
-        for elem in full_train_list:
-            if elem[1] in holdout_classes:
-                continue
-            else:
-                ID_trainlist.append([elem[0], remaining_classes.index(elem[1])])
-        # Split the test dataset into ID and OOD data and reassign labels
-        ID_testlist = []; OOD_testlist = []
-        for elem in full_test_list:
-            if elem[1] in holdout_classes:
-                OOD_testlist.append([elem[0],0])
-            else:
-                ID_testlist.append([elem[0], remaining_classes.index(elem[1])])
+    # Remove the holdout class data from the training dataset and reassign labels
+    ID_trainlist = []
+    for elem in full_train_list:
+        if elem[1] in holdout_classes:
+            continue
+        else:
+            ID_trainlist.append([elem[0], remaining_classes.index(elem[1])])
+    # Split the test dataset into ID and OOD data and reassign labels
+    ID_testlist = []; OOD_testlist = []
+    for elem in full_test_list:
+        if elem[1] in holdout_classes:
+            OOD_testlist.append([elem[0],0])
+        else:
+            ID_testlist.append([elem[0], remaining_classes.index(elem[1])])
 
-        print("# ID Train: ",len(ID_trainlist))
-        print("# ID Test:  ",len(ID_testlist))
-        print("# OOD Test: ",len(OOD_testlist))
+    print("# ID Train: ",len(ID_trainlist))
+    print("# ID Test:  ",len(ID_testlist))
+    print("# OOD Test: ",len(OOD_testlist))
 
-        clsmap = helpers.get_class_mapping_from_dataset_list(ID_trainlist)
-        print("NEW TRAINING CLASS MAPPING: ",clsmap)
-        clsmap = helpers.get_class_mapping_from_dataset_list(ID_testlist)
-        print("NEW TESTING CLASS MAPPING:  ",clsmap)
+    clsmap = helpers.get_class_mapping_from_dataset_list(ID_trainlist)
+    print("NEW TRAINING CLASS MAPPING: ",clsmap)
+    clsmap = helpers.get_class_mapping_from_dataset_list(ID_testlist)
+    print("NEW TESTING CLASS MAPPING:  ",clsmap)
 
-        class_counts = torch.zeros((10-len(holdout_classes)),
-                                   dtype=torch.float32).to(device)
-        for i in ID_trainlist:
-            class_counts[i[1]] += 1
-            bce_weights = (class_counts.sum()-class_counts)/class_counts
+    class_counts = torch.zeros((10-len(holdout_classes)),
+                               dtype=torch.float32).to(device)
+    for i in ID_trainlist:
+        class_counts[i[1]] += 1
+        bce_weights = (class_counts.sum()-class_counts)/class_counts
 
-        if advOE:
-            full_OE_trainlist = create_OE_dataset('./ships-big/')
-            OE_inds = random.sample(list(range(len(full_OE_trainlist))),
-                                    len(ID_trainlist))
-            OE_trainlist = [full_OE_trainlist[i] for i in OE_inds]
-            return ID_trainlist, ID_testlist, OOD_testlist, bce_weights, OE_trainlist
-        return ID_trainlist, ID_testlist, OOD_testlist, bce_weights
+    if advOE:
+        full_OE_trainlist = create_OE_dataset('./ships-big/')
+        # OE_inds = random.sample(list(range(len(full_OE_trainlist))),
+        #                         len(ID_trainlist))
+        # OE_trainlist = [full_OE_trainlist[i] for i in OE_inds]
+        print("# OE Train: ",len(full_OE_trainlist))
+        return ID_trainlist, ID_testlist, OOD_testlist, bce_weights, full_OE_trainlist
+    return ID_trainlist, ID_testlist, OOD_testlist, bce_weights
 
 
 def create_bce_dataset_splits(dataset_root, K, holdout_classes, bce_class,
-                              advOE=False):
+                              advOE=False, eq_smpl=True):
         full_train_list, full_test_list = create_mixed_dataset_exp41(dataset_root, K)
         clsmap = helpers.get_class_mapping_from_dataset_list(full_train_list)
         print("ORIGINAL CLASS MAPPING: ",clsmap)
@@ -139,10 +140,15 @@ def create_bce_dataset_splits(dataset_root, K, holdout_classes, bce_class,
 
         # Sample from  the negatives to balance train list
         num_pos_train = len(ID_trainlist)
-        neg_inds = random.sample(list(range(len(ID_trainlist_neg))),
-                                 min(len(ID_trainlist), len(ID_trainlist_neg)))
-        num_neg_train = len(neg_inds)
-        ID_trainlist.extend([ID_trainlist_neg[i] for i in neg_inds])
+        if eq_smpl:
+            neg_inds = random.sample(list(range(len(ID_trainlist_neg))),
+                                     min(len(ID_trainlist), len(ID_trainlist_neg)))
+            num_neg_train = len(neg_inds)
+            ID_trainlist.extend([ID_trainlist_neg[i] for i in neg_inds])
+        else:
+            num_neg_train = len(ID_trainlist_neg)
+            ID_trainlist.extend(ID_trainlist_neg)
+
 
         # Split the test dataset into ID and OOD data and reassign labels
         ID_testlist = []; ID_testlist_neg = []; OOD_testlist = []
@@ -183,8 +189,22 @@ def create_bce_dataset_splits(dataset_root, K, holdout_classes, bce_class,
         return ID_trainlist, ID_testlist, OOD_testlist
 
 
+def get_oe_data_loader(OE_trainlist, dsize=64, batch_size=128):
+    data_transform_oe = transforms.Compose([
+        transforms.Resize(dsize),
+        transforms.Grayscale(),
+        transforms.CenterCrop(dsize),
+        transforms.ToTensor()])
+    OE_trainloader = utilsdata.DataLoader(
+        custom_dset.Dataset_fromPythonList(OE_trainlist,
+                                           transform=data_transform_oe),
+        batch_size=batch_size, shuffle=True, num_workers=2, timeout=1000,
+    )
+    return OE_trainloader
+
+
 def get_data_loaders(ID_trainlist, ID_testlist, OOD_testlist, OE_trainlist=None,
-                     dsize=64, batch_size=128):
+                     dsize=64, batch_size=128, OHOM=False):
     # Construct datasets and dataloaders
     data_transform = transforms.Compose([
         transforms.Grayscale(),
@@ -209,9 +229,15 @@ def get_data_loaders(ID_trainlist, ID_testlist, OOD_testlist, OE_trainlist=None,
             transforms.Grayscale(),
             transforms.CenterCrop(dsize),
             transforms.ToTensor()])
-        OE_trainloader = utilsdata.DataLoader(
-            custom_dset.Dataset_fromPythonList(OE_trainlist, transform=data_transform_oe),
-            batch_size=batch_size, shuffle=True, num_workers=2, timeout=1000,
-        )
+        if OHOM:
+            OE_trainloader = utilsdata.DataLoader(
+                custom_dset.Dataset_fromPythonList(OE_trainlist, transform=data_transform_oe),
+                batch_size=5*batch_size, shuffle=True, num_workers=2, timeout=1000,
+            )
+        else:
+            OE_trainloader = utilsdata.DataLoader(
+                custom_dset.Dataset_fromPythonList(OE_trainlist, transform=data_transform_oe),
+                batch_size=batch_size, shuffle=True, num_workers=2, timeout=1000,
+            )
         return ID_trainloader, ID_testloader, OOD_testloader, OE_trainloader
     return ID_trainloader, ID_testloader, OOD_testloader

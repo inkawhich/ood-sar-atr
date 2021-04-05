@@ -21,8 +21,8 @@ import matplotlib.pyplot as plt
 import sklearn.covariance
 
 
-# device = 'cuda' if torch.cuda.is_available() else 'cpu'
-device = 'cpu'
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+# device = 'cpu'
 
 ############################################################################################################
 # For hooking the intermediate layer activations of a sample model
@@ -127,6 +127,7 @@ def get_ood_dataloader(dsetname,dsize,bsize=32,shuf=False):
 #   - IPP = boolean for whether or not to do the input preprocessing step
 #   - eps = epsilon of perturbation if IPP is set
 def generate_ood_scores_ODIN_and_BASELINE(base_model, loader, T, norm_mean, norm_std, IPP=False, eps=0.):
+    base_model.eval()
     baseline_scores = []
     odin_scores = []
     odin_ipp_scores = []
@@ -148,7 +149,7 @@ def generate_ood_scores_ODIN_and_BASELINE(base_model, loader, T, norm_mean, norm
             dat.requires_grad = True
             # Initial forward pass
             initial_outs = base_model((dat-norm_mean)/norm_std)
-            # Get predicted labels 
+            # Get predicted labels
             _,initial_preds = initial_outs.max(1)
             # Compute gradient w.r.t. data using predicted labels
             tmploss = F.cross_entropy(initial_outs,initial_preds)
@@ -161,17 +162,15 @@ def generate_ood_scores_ODIN_and_BASELINE(base_model, loader, T, norm_mean, norm
                 # Recompute prediction scores
                 new_outs = base_model((pert_dat-norm_mean)/norm_std)
                 # Save new confidence values as ODIN scores
-                # baseline_scores.extend( list(torch.max( F.softmax(initial_outs.data.clone().detach(), dim=1), dim=1)[0].cpu().numpy()) )
-                # odin_scores.extend(     list(torch.max( F.softmax(initial_outs.data.clone().detach()/T, dim=1), dim=1)[0].cpu().numpy()) )
-                # odin_ipp_scores.extend( list(torch.max( F.softmax(new_outs.data.clone().detach()/T, dim=1), dim=1)[0].cpu().numpy()) )
-                baseline_scores.extend( list(torch.max(
-                    torch.sigmoid(initial_outs.data.clone().detach()), 1)[0].cpu().numpy()) )
-                baseline_scores.extend( list(torch.max(
-                    torch.sigmoid(initial_outs.data.clone().detach()), 1)[0].cpu().numpy()) )
-                odin_scores.extend(     list(torch.max(
-                    torch.sigmoid(initial_outs.data.clone().detach()/T), dim=1)[0].cpu().numpy()))
-                odin_ipp_scores.extend( list(torch.max(
-                    torch.sigmoid(new_outs.data.clone().detach()/T), dim=1)[0].cpu().numpy()) )
+                baseline_scores.extend( list(torch.max( F.softmax(initial_outs.data.clone().detach(), dim=1), dim=1)[0].cpu().numpy()) )
+                odin_scores.extend(     list(torch.max( F.softmax(initial_outs.data.clone().detach()/T, dim=1), dim=1)[0].cpu().numpy()) )
+                odin_ipp_scores.extend( list(torch.max( F.softmax(new_outs.data.clone().detach()/T, dim=1), dim=1)[0].cpu().numpy()) )
+                # baseline_scores.extend( list(torch.max(
+                #     torch.sigmoid(initial_outs.data.clone().detach()), 1)[0].cpu().numpy()) )
+                # odin_scores.extend(     list(torch.max(
+                #     torch.sigmoid(initial_outs.data.clone().detach()/T), dim=1)[0].cpu().numpy()))
+                # odin_ipp_scores.extend( list(torch.max(
+                #     torch.sigmoid(new_outs.data.clone().detach()/T), dim=1)[0].cpu().numpy()) )
 
     else:
         with torch.no_grad():
@@ -365,3 +364,137 @@ def generate_ood_scores_MAHALANOBIS(
                 mahalanobis_scores.extend(list(lyr_scores.cpu().numpy()))   
 
     return mahalanobis_scores,mahalanobis_ipp_scores
+
+
+# def calc_ood_stats(net, num_holdout_classes, id_trainloader, DATASETS
+#                    id_testloader, ood_testloader):
+#     ## Gather OOD Stats
+#     MAHALA_LAYER_SET = [
+#         "resnet18_2",
+#         "resnet18_2_2",
+#         "resnet18_2_2_2",
+#         "resnet18_2_2_2_2",
+#     ]
+#     hooked_activation_dict = {}; hook_handles = []
+#     def get_activation(name):
+#         def hook(module, input, output):
+#             hooked_activation_dict[name]=output
+#         return hook
+
+#     for l in MAHALA_LAYER_SET:
+#         hook_handles.append(set_model_hook(l, net, get_activation(l), device))
+
+#     with torch.no_grad():
+#         dd = torch.zeros(1,1,64,64).uniform_().to(device)
+#         net(dd)
+#         dd = None
+#     for l in MAHALA_LAYER_SET:
+#         activation_shape = hooked_activation_dict[l].shape[1]
+#         print("Hooked Layer: {}; Shape: {}; Min: {}; Max: {}".format(
+#             l, hooked_activation_dict[l].shape,
+#             hooked_activation_dict[l].min(),
+#             hooked_activation_dict[l].max()))
+
+#     layer_means, layer_precisions = compute_empirical_means_and_precision(
+#         net, hooked_activation_dict, MAHALA_LAYER_SET,
+#         id_trainloader, 10-num_holdout_classes)
+
+
+#     baseline_scores_dict = {}
+#     odin_scores_dict = {}
+#     odin_ipp_scores_dict = {}
+#     mahala_scores_dict = {}
+#     mahala_ipp_scores_dict = {}
+
+#     for dset in DATASETS:
+#         print("Computing OOD scores for {}...".format(dset))
+#         currloader = None
+#         if dset == "ID":
+#             currloader = id_testloader
+#         elif dset == "holdout":
+#             currloader = ood_testloader
+#         else:
+#             currloader = get_ood_dataloader(dset,DSIZE,bsize=128,shuf=False)
+
+#         # COMPUTE OOD SCORES FOR THIS DATASET
+#         base_scores,odin_scores,odin_ipp_scores = \
+#                 generate_ood_scores_ODIN_and_BASELINE(
+#                     net, currloader, 1000., MEAN, STD, IPP=True,
+#                     eps=0.01)
+#         mahalanobis_scores,mahalanobis_ipp_scores = \
+#                 generate_ood_scores_MAHALANOBIS(
+#                     net, currloader, hooked_activation_dict,
+#                     MAHALA_LAYER_SET, layer_means,
+#                     layer_precisions, MEAN, STD, IPP=True,
+#                     eps=0.01)
+
+#         # Save raw OOD scores into dictionaries
+#         baseline_scores_dict[dset] = base_scores
+#         odin_scores_dict[dset] = odin_scores
+#         odin_ipp_scores_dict[dset] = odin_ipp_scores
+#         mahala_scores_dict[dset] = mahalanobis_scores
+#         mahala_ipp_scores_dict[dset] = mahalanobis_ipp_scores
+
+#     print("Computing OOD Statistics...")
+#     for dd in range(1,len(DATASETS)):
+#         print("** DATASET: {} **".format(DATASETS[dd]))
+
+#         metric_results = callog.metric(
+#             np.array(baseline_scores_dict["ID"]),
+#             np.array(baseline_scores_dict[DATASETS[dd]]) )
+#         print("\tBaseline.          AUROC: {:.4f}. TNR@95TPR: {:.4f}. DetAcc: {:.4f}".format(
+#             metric_results['TMP']['AUROC'],
+#             metric_results['TMP']['TNR'],
+#             metric_results['TMP']['DTACC'],
+#         ))
+#         STAT_ood['baseline'][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
+#         STAT_ood['baseline'][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
+#         STAT_ood['baseline'][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+
+#         metric_results = callog.metric(
+#             np.array(odin_scores_dict["ID"]),
+#             np.array(odin_scores_dict[DATASETS[dd]]))
+#         print("\tODIN (T=1000).     AUROC: {:.4f}. TNR@95TPR: {:.4f}. DetAcc: {:.4f}".format(
+#             metric_results['TMP']['AUROC'],
+#             metric_results['TMP']['TNR'],
+#             metric_results['TMP']['DTACC'],
+#         ))
+#         STAT_ood['odin'][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
+#         STAT_ood['odin'][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
+#         STAT_ood['odin'][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+
+#         metric_results = callog.metric(
+#             np.array(mahala_scores_dict["ID"]),
+#             np.array(mahala_scores_dict[DATASETS[dd]]) )
+#         print("\tMahalanobis.       AUROC: {:.4f}. TNR@95TPR: {:.4f}. DetAcc: {:.4f}".format(
+#             metric_results['TMP']['AUROC'],
+#             metric_results['TMP']['TNR'],
+#             metric_results['TMP']['DTACC'],
+#         ))
+#         STAT_ood['mahala'][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
+#         STAT_ood['mahala'][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
+#         STAT_ood['mahala'][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+
+#         metric_results = callog.metric(
+#             np.array(odin_ipp_scores_dict["ID"]),
+#             np.array(odin_ipp_scores_dict[DATASETS[dd]]) )
+#         print("\tODIN (T=1000) IPP. AUROC: {:.4f}. TNR@95TPR: {:.4f}. DetAcc: {:.4f}".format(
+#             metric_results['TMP']['AUROC'],
+#             metric_results['TMP']['TNR'],
+#             metric_results['TMP']['DTACC'],
+#         ))
+#         STAT_ood['odin_ipp'][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
+#         STAT_ood['odin_ipp'][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
+#         STAT_ood['odin_ipp'][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
+
+#         metric_results = callog.metric(
+#             np.array(mahala_ipp_scores_dict["ID"]),
+#             np.array(mahala_ipp_scores_dict[DATASETS[dd]]) )
+#         print("\tMahalanobis IPP.   AUROC: {:.4f}. TNR@95TPR: {:.4f}. DetAcc: {:.4f}".format(
+#             metric_results['TMP']['AUROC'],
+#             metric_results['TMP']['TNR'],
+#             metric_results['TMP']['DTACC'],
+#         ))
+#         STAT_ood['mahala_ipp'][DATASETS[dd]]["auroc"].append(metric_results['TMP']['AUROC'])
+#         STAT_ood['mahala_ipp'][DATASETS[dd]]["tnr"].append(metric_results['TMP']['TNR'])
+#         STAT_ood['mahala_ipp'][DATASETS[dd]]["dtacc"].append(metric_results['TMP']['DTACC'])
